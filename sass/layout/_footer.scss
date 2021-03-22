@@ -1,0 +1,83 @@
+footer{
+  padding: 7.5rem 0 5rem;
+  background: white;
+
+  .footer-logo{
+    max-width: 100px;
+  }
+
+  h4{
+    font-weight: $semibold;
+    color: #48515F;
+    margin-bottom: 20px;
+  }
+
+  ul{
+    list-style: none;
+    padding: 0;
+
+    li{
+      margin-bottom: 10px;
+
+      a{
+        font-weight: $semibold;
+        color: #8A989E;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  select{
+    background: url(../img/double-arrows.png) no-repeat 100% top;
+    background-size: 18px;
+  }
+
+  .first-row{
+    padding: 0 0 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $black;
+  }
+
+  .socials{
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $mobile_width) {
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    img {
+      max-height: 24px;
+
+      @media only screen and (max-width: $mobile_width) {
+        max-height: 18px;
+        padding: 0 1rem 0 1rem;
+      }
+    }
+  }
+
+  p{
+    font-weight: $light;
+
+    @media only screen and (max-width: $mobile_width) {
+     font-size: 1.5rem;
+     text-align: center;
+    }
+  }
+
+  .links{
+    a{
+      margin-left: 30px;
+      font-weight: $light;
+      color: $black;
+
+      @media only screen and (max-width: $mobile_width) {
+        font-size: 1.5rem;
+        margin-left: 15px;
+       }
+
+    }
+  }
+}

@@ -1,0 +1,73 @@
+form {
+  &.newsletter{
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $mobile_width) {
+      flex-direction: column;   
+    }
+  }
+
+  input[type="text"], input[type="email"], select, option{
+    width: 100%;
+    border: none;
+    border-bottom: 1.4px solid #A9B3B8;
+    border-radius: 0;
+    background: transparent;
+    margin-right: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-bottom: 3px;
+    outline: none;
+    color: #9AA7AC;
+    font-size: 1.8rem;
+
+    @media only screen and (max-width: $mobile_width) {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: $light;  
+    }
+  }
+
+  select{
+    background: url(../img/select-arrow.png) no-repeat 100% center;
+    background-size: 24px;
+
+    @media only screen and (max-width: $mobile_width) {
+      background-size: 20px;  
+    }
+  }
+
+  input[type="submit"]{
+    background: #86AEF8;
+    border-radius: 20px;
+    padding: 5px 30px;
+    color: white;
+    border: 2px solid #86AEF8;
+
+    @media only screen and (max-width: $mobile_width) {
+      width: 40%;  
+      padding: 5px 0; 
+    }
+  }
+
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #9AA7AC;
+    font-size: 1.8rem;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #9AA7AC;
+    font-size: 1.8rem;
+    opacity: 1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #9AA7AC;
+    font-size: 1.8rem;
+    opacity: 1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #9AA7AC;
+    font-size: 1.8rem;
+  }
+}

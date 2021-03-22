@@ -1,0 +1,122 @@
+//.sign-up-btn {
+//  background-color: #8F53FF;
+//  color: #fff;
+//  font-size: .9em;
+//  border-radius: 1.5em;
+//  font-family: "circular-bold";
+//  padding: 0.5em 1.2em 0.5em 1.2em;
+//}
+//
+//.square-btn {
+//  border-radius: 4px !important;
+//  padding-right: 2em !important;
+//  padding-left: 2em !important;
+//}
+
+.btn{
+  border-radius: 8px;
+  color: white;
+  border: 2px solid;
+  font-size: 1.6rem;
+  padding: 6px 20px;
+  cursor: pointer;
+
+  &.small{
+    font-size: 14px;
+  }
+
+  &.white{
+    background: white;
+    border-color: white;
+
+    &:hover{
+      background: transparent;
+      color: white;
+    }
+  }
+
+  &.blue{
+    background: $blue;
+    border-color: $blue;
+
+    &:hover{
+      background: white;
+      color: $blue;
+    }
+  }
+
+  &.red{
+    background: $red;
+    border-color: $red;
+
+    &:hover{
+      background: white;
+      color: $red;
+    }
+
+    &.naked{
+      background: transparent;
+      color: $red;
+    }
+  }
+
+  &.green{
+    background: $green;
+    border-color: $green;
+
+    &:hover{
+      background: white;
+      color: $green;
+    }
+
+    &.naked{
+      background: transparent;
+      color: $green;
+    }
+  }
+
+  &.muted-green{
+    background: $muted-green;
+    border-color: $muted-green;
+
+    &:hover{
+      background: white;
+      color: $muted-green;
+    }
+
+    &.naked{
+      background: transparent;
+      color: $muted-green;
+    }
+  }
+
+  &.yellow{
+    background: $yellow;
+    border-color: $yellow;
+
+    &:hover{
+      background: transparent;
+      color: $yellow;
+    }
+  }
+
+  &.green{
+    background: $green;
+    border-color: $green;
+
+    &:hover{
+      background: transparent;
+      color: $green;
+    }
+  }
+
+  &.center{
+    display: table;
+    margin: 0 auto;
+  }
+
+  &.big{
+    font-size: 1.8rem;
+    padding: 6px 50px;
+  }
+}

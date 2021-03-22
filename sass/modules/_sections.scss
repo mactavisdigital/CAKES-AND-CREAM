@@ -1,0 +1,82 @@
+
+.logo{
+  margin-bottom: 60px;
+}
+
+.login-form {
+  font-family:SF Pro Text;
+
+  .bord {
+    background-color: #ffff;
+    padding-top: 20px;
+
+    .form-check {
+      text-align: left!important;
+      padding-left: 0px;
+    }
+  }
+  
+
+  p{
+      margin-top: 25px;
+  }
+
+  .form-control {
+      padding-top: 33px;
+      padding-bottom: 33px;
+      border-radius: 10px;
+  }
+
+
+  .login-wrap {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background: #fff;
+    margin-bottom: 30px;
+
+    input {
+      width: 100%;
+      background: transparent;
+      border-radius: 10px 0px 0px 10px;
+      border: 1px solid #ced4da;
+      padding: 15px;
+      padding-bottom: 35px;
+    }
+
+    button {
+      background-color: #2586EF;
+      border-radius: 0px 10px 10px 0px;
+      border: 1px solid #ced4da;
+      padding: 15px;
+      padding-bottom: 35px;
+    }
+  }
+
+  
+  .login-wrap:hover  .login-btn{
+    background-color: #434951 !important;
+  }
+  
+
+  a {
+    
+      p{
+      color: #2586EF;
+      font-size: 12px;
+      padding-bottom: 20px;
+  }
+  }
+
+  .btn {
+      border-radius: 10px;
+      margin-top: 41px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
+  .btn-primary{
+    background-color: #2586EF;
+  }
+}
+
