@@ -20,7 +20,6 @@
   }
 }
 
-
 @include do-font-face('SFProText', 'sfpro-text-regular', '../fonts/', 'ttf', normal, normal);
 @include do-font-face('SFProText', 'sfpro-text-medium', '../fonts/', 'ttf', bold, normal);
 @include do-font-face('Qumpellka', 'qumpellka', '../fonts/', 'otf', normal, normal);
