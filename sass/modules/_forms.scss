@@ -1,73 +1,56 @@
-form {
-  &.newsletter{
-    display: flex;
-    justify-content: space-between;
+label.checkbox-wrapper {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
-    @media only screen and (max-width: $mobile_width) {
-      flex-direction: column;   
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .checkmark:after {
+      display: block;
     }
   }
 
-  input[type="text"], input[type="email"], select, option{
-    width: 100%;
-    border: none;
-    border-bottom: 1.4px solid #A9B3B8;
-    border-radius: 0;
-    background: transparent;
-    margin-right: 15px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding-bottom: 3px;
-    outline: none;
-    color: #9AA7AC;
-    font-size: 1.8rem;
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: $grey;
 
-    @media only screen and (max-width: $mobile_width) {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-      font-weight: $light;  
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+
+      left: 8px;
+      top: 4px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
     }
   }
 
-  select{
-    background: url(../img/select-arrow.png) no-repeat 100% center;
-    background-size: 24px;
-
-    @media only screen and (max-width: $mobile_width) {
-      background-size: 20px;  
-    }
+  &:hover input ~ .checkmark {
+    //background-color: #ccc;
   }
 
-  input[type="submit"]{
-    background: #86AEF8;
-    border-radius: 20px;
-    padding: 5px 30px;
-    color: white;
-    border: 2px solid #86AEF8;
-
-    @media only screen and (max-width: $mobile_width) {
-      width: 40%;  
-      padding: 5px 0; 
-    }
-  }
-
-  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #9AA7AC;
-    font-size: 1.8rem;
-  }
-  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #9AA7AC;
-    font-size: 1.8rem;
-    opacity: 1;
-  }
-  ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: #9AA7AC;
-    font-size: 1.8rem;
-    opacity: 1;
-  }
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #9AA7AC;
-    font-size: 1.8rem;
+  input:checked ~ .checkmark {
+    background-color: #2196F3;
   }
 }
