@@ -3,6 +3,10 @@
   src: url(/img/FontsFree-Net-SFProText-Regular.ttf);
 }
 @font-face {
+  font-family: QumpellkaNo12;
+  src: url(/img/QumpellkaNo12.otf);
+}
+@font-face {
   font-family: "Proxima";
   src: url(../fonts/Proxima-Nova-Alt-Light.otf) format("opentype");
   font-weight: 300;
@@ -429,6 +433,31 @@ form :-ms-input-placeholder {
   font-size: 1.8rem;
 }
 
+.booking-options h6 {
+  background-image: url(/img/Bokheader.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background-position: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  font-family: QumpellkaNo12;
+  color: #fff;
+}
+.booking-options .form-check-label {
+  margin-bottom: 15px;
+}
+.booking-options .btn-primary {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
 .btn {
   border-radius: 8px;
   color: white;
@@ -578,6 +607,9 @@ form :-ms-input-placeholder {
 }
 .login-form .btn-primary {
   background-color: #2586EF;
+}
+.login-form .btn-primary:focus {
+  background-color: #434951 !important;
 }
 
 .color-blue {

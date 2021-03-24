@@ -78,5 +78,9 @@
   .btn-primary{
     background-color: #2586EF;
   }
+
+  .btn-primary:focus {
+    background-color: #434951 !important;
+  }
 }
 
