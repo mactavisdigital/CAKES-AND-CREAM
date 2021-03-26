@@ -1,7 +1,3 @@
-// Font Stacks
-
-//$font-url : 'https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Playfair+Display:700';
-
 @mixin do-font-face($name, $file-name, $url, $type, $weight, $style){
   @font-face {
     font-family: $name;
@@ -24,29 +20,15 @@
   }
 }
 
-@font-face {
-  font-family: SF Pro Text;
-  src: url(/img/FontsFree-Net-SFProText-Regular.ttf);
-}
+@include do-font-face('SFProText', 'sfpro-text-regular', '../fonts/', 'ttf', normal, normal);
+@include do-font-face('SFProText', 'sfpro-text-medium', '../fonts/', 'ttf', bold, normal);
+@include do-font-face('Qumpellka', 'qumpellka', '../fonts/', 'otf', normal, normal);
 
-@font-face {
-  font-family: QumpellkaNo12;
-  src: url(/img/QumpellkaNo12.otf);
-}
+$sfpro          : 'SFProText', sans-serif;
+$qumpellka      : 'Qumpellka', cursive;
 
-
-@include do-font-face('Proxima', 'Proxima-Nova-Alt-Light', '../fonts/', 'otf', 300, normal);
-@include do-font-face('Proxima', 'Proxima-Nova-Alt-Regular', '../fonts/', 'otf', normal, normal);
-@include do-font-face('Proxima', 'Proxima-Nova-Alt-Semibold', '../fonts/', 'otf', 500, normal);
-@include do-font-face('Proxima', 'Proxima-Nova-Alt-Bold', '../fonts/', 'otf', bold, normal);
-@include do-font-face('Proxima', 'Proxima-Nova-Alt-Black', '../fonts/', 'otf', 900, normal);
-@include do-font-face('Quicksand', 'Quicksand-Bold', '../fonts/', 'otf', normal, normal);
-
-$proxima        : 'Proxima', sans-serif;
-$quicksand      : 'Quicksand', sans-serif;
-
-$ffh            : $proxima;
-$ffb            : $proxima;
+$ffh            : $qumpellka;
+$ffb            : $sfpro;
 
 $light          : 300;
 $normal         : normal;
@@ -54,24 +36,9 @@ $semibold       : 500;
 $bold           : bold;
 $black-weight   : 900;
 
-// Colors
 
-$black      : #48515F;
-$blue       : #246DFB;
-$blue-grey  : #8492a5;
-$blue-light : #4578D7;
-//$grey     : #504d52;
-//$grey     : #7E8283;
-$mid-grey   : #C5C6C5;
-$light-grey : #F6F7FB;
-$grey       : #898989;
-//$dark-grey  : #5c5c5c;
-$dark-grey  : #707070;
-$darker-grey: #444444;
-$red        : #D6186F;
-$true-red   : red;
-$purple     : #7964FF;
-$green      : #53C901;
-$muted-green: #25CEA0;
-$yellow     : #FFFC2A;
-$orange     : #FD5F20;
+// Colors
+$blue           : #2586EF;
+$deep-blue      : #0059BA;
+$grey           : #90A4AE;
+$black          : #555555;
