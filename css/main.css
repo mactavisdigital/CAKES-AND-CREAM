@@ -328,29 +328,27 @@ label.checkbox-wrapper input:checked ~ .checkmark {
   background-color: #2196F3;
 }
 
-.booking-options h6 {
-  background-image: url(/img/Bokheader.png);
-  background-size: 80%;
-  background-repeat: no-repeat;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  background-position: center;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 23px;
-  font-family: QumpellkaNo12;
-  color: #fff;
+input[type=text], input[type=email], input[type=password], select, option {
+  width: 100%;
+  border: none;
+  border-bottom: 1.4px solid #A9B3B8;
+  border-radius: 0;
+  background: transparent;
+  margin-right: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-bottom: 3px;
+  outline: none;
+  color: #9AA7AC;
+  font-size: 1.8rem;
 }
-.booking-options .form-check-label {
-  margin-bottom: 15px;
-}
-.booking-options .btn-primary {
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 8px;
-  font-size: 14px;
+@media only screen and (max-width: 576px) {
+  input[type=text], input[type=email], input[type=password], select, option {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
 }
 
 .btn {
@@ -431,55 +429,71 @@ section.login-form .form-wrapper .form-group input {
 section.login-form .form-wrapper button {
   margin: 20px 0;
 }
-
-.booking-options .container [type=radio]:checked,
-.booking-options .container [type=radio]:not(:checked) {
-  position: absolute;
-  left: -9999px;
+section.booking-options {
+  height: 100vh;
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
 }
-.booking-options .container [type=radio]:checked + label,
-.booking-options .container [type=radio]:not(:checked) + label {
+section.booking-options .container {
+  display: block;
   position: relative;
-  padding-left: 28px;
+  padding-left: 25px;
+  margin-bottom: 20px;
   cursor: pointer;
-  line-height: 20px;
-  display: inline-block;
-  color: #666;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.booking-options .container [type=radio]:checked + label:before,
-.booking-options .container [type=radio]:not(:checked) + label:before {
-  content: "";
+section.booking-options .container input {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #ddd;
-  border-radius: 100%;
-  background: #fff;
-}
-.booking-options .container [type=radio]:checked + label:after,
-.booking-options .container [type=radio]:not(:checked) + label:after {
-  content: "";
-  width: 12px;
-  height: 12px;
-  background: #F87DA9;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.booking-options .container [type=radio]:not(:checked) + label:after {
   opacity: 0;
-  -webkit-transform: scale(0);
-  transform: scale(0);
+  cursor: pointer;
 }
-.booking-options .container [type=radio]:checked + label:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+section.booking-options .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+section.booking-options .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+section.booking-options .container input:checked ~ .checkmark {
+  background-color: #E0E0E0;
+}
+section.booking-options .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+section.booking-options .container input:checked ~ .checkmark:after {
+  display: block;
+}
+section.booking-options .container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2F80ED;
+}
+section.customer-dets {
+  background: url(/img/bgimg2.png) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+section.customer-dets .w-100 form input {
+  display: block;
 }
 
 .color-blue {
@@ -491,4 +505,11 @@ section.login-form .form-wrapper button {
   padding-right: 2rem;
 }
 
-/*# sourceMappingURL=style.css.map */
+.progress {
+  border-radius: 50px;
+}
+.progress .bg-primary {
+  background: #2586EF !important;
+}
+
+/*# sourceMappingURL=main.css.map */
