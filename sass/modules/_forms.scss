@@ -21,6 +21,8 @@ label.checkbox-wrapper {
     }
   }
 
+  
+
   .checkmark {
     position: absolute;
     top: 0;
@@ -55,32 +57,26 @@ label.checkbox-wrapper {
   }
 }
 
-.booking-options {
 
-  h6 {
-    background-image: url(/img/Bokheader.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    background-position: center;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 23px;
-    font-family: QumpellkaNo12;
-    color: #fff;
-  }
 
-  .form-check-label {
-    margin-bottom: 15px;
-  }
+input[type="text"], input[type="email"], input[type="password"], select, option{
+  width: 100%;
+  border: none;
+  border-bottom: 1.4px solid #A9B3B8;
+  border-radius: 0;
+  background: transparent;
+  margin-right: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-bottom: 3px;
+  outline: none;
+  color: #9AA7AC;
+  font-size: 1.8rem;
 
-  .btn-primary {
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 8px;
-    font-size: 14px;
+  @media only screen and (max-width: $mobile_width) {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: $light;  
   }
 }
