@@ -235,6 +235,12 @@ th {
   padding: 0;
 }
 
+form .form-group ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 12px;
+  color: #CFCFCF;
+}
+
 html, body {
   overflow-x: hidden;
   font-size: 62.5%;
@@ -283,6 +289,10 @@ a {
 
 .p-7 {
   padding-top: 75px;
+}
+
+.date {
+  max-width: 50%;
 }
 
 label.checkbox-wrapper {
@@ -358,10 +368,11 @@ input[type=text], input[type=email], input[type=password], select, option {
 .btn {
   border-radius: 8px;
   color: white;
-  font-size: 14px;
+  font-size: 12px;
   padding: 6px 20px;
   cursor: pointer;
   background: #2586EF;
+  width: 35%;
 }
 .btn:hover {
   background: white;
@@ -505,6 +516,19 @@ section.customer-dets .w-100 form input {
 section.customer-dets .w-100 form .info {
   justify-content: space-between;
 }
+section.customer-dets .w-100 form .info .btn-primary {
+  min-width: 80px;
+  max-width: 80px;
+}
+section.customer-dets .w-100 form .date {
+  background: url(/img/Cal-icon.png) no-repeat right 2px;
+  background-size: 17px;
+}
+section.customer-dets .w-100 form select {
+  background: url(/img/Selectbg.png) no-repeat right;
+  border-radius: 8px 8px 4px 4px;
+  background-position-x: 264px;
+}
 
 .color-blue {
   color: #2586EF;
@@ -520,6 +544,69 @@ section.customer-dets .w-100 form .info {
 }
 .progress .bg-primary {
   background: #2586EF !important;
+}
+
+.prv {
+  background: #90A4AE !important;
+  border: 1px #90A4AE solid;
+}
+
+div.fm {
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+div.fm .container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+div.fm .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+div.fm .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+div.fm .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+div.fm .container input:checked ~ .checkmark {
+  background-color: #E0E0E0;
+}
+div.fm .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+div.fm .container input:checked ~ .checkmark:after {
+  display: block;
+}
+div.fm .container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2F80ED;
 }
 
 /*# sourceMappingURL=main.css.map */

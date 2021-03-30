@@ -370,3 +370,13 @@ td,
 th {
     padding: 0;
 }
+
+form {
+
+    .form-group{
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            font-size: 12px;
+            color: #CFCFCF;
+          }
+    }
+}
