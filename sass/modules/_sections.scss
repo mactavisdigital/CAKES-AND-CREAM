@@ -1,23 +1,23 @@
-section{
+section {
   &.login-form {
     background-image: url(../img/bgimg.png);
     height: 100vh;
 
-    .blob{
+    .blob {
       position: absolute;
       top: 0;
     }
 
-    .logo{
+    .logo {
       height: 80px;
-      margin-bottom: 30px;
+      margin: 80px 0 30px;
     }
 
-    .form-wrapper{
+    .form-wrapper {
       background: white;
       padding: 15px;
 
-      p{
+      p {
         text-align: center;
         margin-bottom: 20px;
       }
@@ -31,7 +31,7 @@ section{
         flex-direction: column;
         position: relative;
 
-        &::after{
+        &::after {
           position: absolute;
           content: "";
           height: 45px;
@@ -42,35 +42,35 @@ section{
           right: 0;
         }
 
-        &.email{
-          &::after{
+        &.email {
+          &::after {
             background: $grey url("../img/user.svg") no-repeat center;
           }
 
-          &.active{
-            &::after{
+          &.active {
+            &::after {
               background: $blue url("../img/user.svg") no-repeat center;
             }
           }
         }
 
-        &.password{
-          &::after{
+        &.password {
+          &::after {
             background: $grey url("../img/padlock.svg") no-repeat center;
           }
 
-          &.active{
-            &::after{
+          &.active {
+            &::after {
               background: $blue url("../img/padlock.svg") no-repeat center;
             }
           }
         }
 
-        &.active{
+        &.active {
           border: 1px solid $blue;
         }
 
-        label{
+        label {
           margin: 3px 0 0 10px;
         }
 
@@ -81,127 +81,28 @@ section{
         }
       }
 
-      button{
+      button {
         margin: 20px 0;
       }
     }
   }
 
+  &.booking-options {
 
-  
-&.booking-options {
-  height: 100vh;
-  .container {
-    display: block;
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* Hide the browser's default radio button */
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  /* Create a custom radio button */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: #eee;
-    border-radius: 50%;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .container input:checked ~ .checkmark {
-    background-color: #E0E0E0;
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
-  .container .checkmark:after {
-    top: 5px;
-    left: 5px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #2F80ED;
-  }
-}
-
-  &.customer-dets {
-    background: url(/img/bgimg2.png) no-repeat;
-    background-size: cover;
-    height: 100vh;
-
-    .w-100{
-      form {
-
-        
-    .form-group {
-      margin-bottom: 3rem !important;
-    }
-        input {
-          display: block;
-        }
-
-        .info{
-          justify-content: space-between;
-
-          .btn-primary {
-            min-width: 80px;
-            max-width: 80px;
-          }
-        }
-
-        .date{
-          background: url(/img/Cal-icon.png) no-repeat right 2px;
-          background-size: 17px;
-        }
-
-        select {
-          background: url(/img/Selectbg.png) no-repeat right;
-          border-radius: 8px 8px 4px 4px;
-          background-position-x: 264px;
-        }
-      }
-    }
   }
 
-  &.customer-service {
+  &.customer-details{
+
+  }
+
+  &.order-summary {
     .shade {
       p {
         color: #999999;
       }
     }
 
-    .b-t{
+    .b-t {
       border-top: 2px solid #333333;
       border-bottom: 2px solid #333333;
     }

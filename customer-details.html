@@ -11,109 +11,93 @@
 </head>
 
 <body>
-<section class="customer-dets">
-    <div class="container p-7">
+
+<nav class="navbar navbar-offcanvas navbar-expand-sm">
+    <a class="navbar-brand" href="#"><img src="img/profile.jpg" alt=""> Gbolade O.</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+        <img src="img/menu.svg">
+    </button>
+
+    <div class="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="customer-details">
+    <div class="container">
         <div class="row">
-            <div class="col d-flex align-items-center">
-                <div class="w-100">
+            <div class="col">
+                <h1>Customer Details</h1>
 
-                    <div class="prg-section">
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" style="width:15%;"></div>
+                <form action="#">
+                    <div class="d-flex">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text">
                         </div>
-                        
-                        <div class="justify-content-between">
-                        <p class="d-inline">15% Complete</p>
-                        <p class="d-inline float-right">1 of 4</p>
-                    </div>
-                    </div>
-                        
-                        <h1>Customer Details</h1>
 
-                        <form class="sign-in" action="#">
-                            <div class="form-group email">
-                                <label>Name</label>
-                                <input type="text">
-                                <span class="info">
-                                    <p class="d-inline">First Name</p>
-                                    <p class="d-inline float-right">Last Name</p>
-                                </span>
-                            </div>
-
-                            <div class="form-group password">
-                                <label>Phone Number</label>
-                                <input type="text">
-                            </div>
-
-                            <div class="form-group password">
-                                <label>Email Address</label>
-                                <input type="text">
-                            </div>
-
-                            <div class="form-group password">
-                                <label>Date Of Birth</label>
-                                
-                             <input data-toggle="modal" data-target="#myModal" class="date" placeholder="DD/MM/YYYY" type="text">
-                            </div>
-                        </form>
-
-                        
-
-                            <!--MODAL-->
-            <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <button class="close" data-dismiss="modal">
-                            <img src="/img/Vector.png" alt="">
-                        </button>
-                        <div class="modal-body text-center">
-                            
-                            <div class="container">
-                                <div><p class="float-left d-inline">June 2020 <img src="img\right-arrow.png" alt=""></p>
-                                    
-                                    <div class="float-right d-inline">
-                                        <img src="img\la.png" alt="">
-                                        <img src="img\ra.png" alt="">
-                                    </div>
-
-
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text">
                         </div>
                     </div>
-                </div>
-            </div>
 
-                        <div class="info">
-                            <button class="btn btn-primary" type="button">Previous</button>
-                            <button class="btn btn-primary float-right" type="button">Next</button>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="form-group">
+                            <label>Birth Date</label>
+                            <input type="text">
                         </div>
+
+                        <div class="form-group">
+                            <label>Birth Month</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Birth Year</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="btn-row">
+                    <button class="btn" type="button">Previous</button>
+                    <button class="btn" type="button">Next</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
-<script src="http://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<footer class="fixed-bottom d-flex align-items-center justify-content-between">
+    <p class="w-100">Customer Service App. &copy; Cakes & Cream.</p>
+</footer>
 
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker11').datetimepicker({
-                daysOfWeekDisabled: [0, 6]
-            });
-        });
-     </script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

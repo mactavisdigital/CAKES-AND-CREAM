@@ -1,0 +1,50 @@
+nav.navbar{
+  background-color: $blue;
+  margin-bottom: 20px;
+
+  .navbar-brand {
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+
+    img{
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  .navbar-toggler{
+    img{
+      height: 28px;
+    }
+  }
+
+  .navbar-nav{
+    a{
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
+
+  .offcanvas-collapse {
+    position: fixed;
+    top: 60px;
+    bottom: 33px;
+    z-index: 10000;
+    width: 100%;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: $blue;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: -webkit-transform .3s ease-in-out;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  .offcanvas-collapse.open {
+    transform: translateX(-1rem); /* Account for horizontal padding on navbar */
+  }
+}
