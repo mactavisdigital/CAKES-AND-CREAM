@@ -192,10 +192,18 @@ section{
         }
       }
     }
-
-    
   }
 
-  
+  &.customer-service {
+    .shade {
+      p {
+        color: #999999;
+      }
+    }
 
+    .b-t{
+      border-top: 2px solid #333333;
+      border-bottom: 2px solid #333333;
+    }
+  }
 }

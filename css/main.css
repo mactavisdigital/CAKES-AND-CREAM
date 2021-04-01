@@ -529,6 +529,13 @@ section.customer-dets .w-100 form select {
   border-radius: 8px 8px 4px 4px;
   background-position-x: 264px;
 }
+section.customer-service .shade p {
+  color: #999999;
+}
+section.customer-service .b-t {
+  border-top: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+}
 
 .color-blue {
   color: #2586EF;
