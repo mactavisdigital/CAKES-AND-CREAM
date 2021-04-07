@@ -235,6 +235,12 @@ th {
   padding: 0;
 }
 
+form .form-group ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 12px;
+  color: #CFCFCF;
+}
+
 html, body {
   overflow-x: hidden;
   font-size: 62.5%;
@@ -279,6 +285,23 @@ a {
 
 *:focus, *:active {
   outline: none;
+}
+
+.p-7 {
+  padding-top: 75px;
+}
+
+.date {
+  max-width: 50%;
+}
+
+.num {
+  font-size: 24px;
+  text-align: center;
+}
+
+.shade p {
+  color: #999999 !important;
 }
 
 label.checkbox-wrapper {
@@ -328,38 +351,37 @@ label.checkbox-wrapper input:checked ~ .checkmark {
   background-color: #2196F3;
 }
 
-.booking-options h6 {
-  background-image: url(/img/Bokheader.png);
-  background-size: 80%;
-  background-repeat: no-repeat;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  background-position: center;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 23px;
-  font-family: QumpellkaNo12;
-  color: #fff;
+input[type=text], input[type=email], input[type=password], select, option {
+  width: 100%;
+  border: none;
+  border-bottom: 1.4px solid #A9B3B8;
+  border-radius: 0;
+  background: transparent;
+  margin-right: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-bottom: 3px;
+  outline: none;
+  color: #9AA7AC;
+  font-size: 1.8rem;
 }
-.booking-options .form-check-label {
-  margin-bottom: 15px;
-}
-.booking-options .btn-primary {
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 8px;
-  font-size: 14px;
+@media only screen and (max-width: 576px) {
+  input[type=text], input[type=email], input[type=password], select, option {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
 }
 
 .btn {
   border-radius: 8px;
   color: white;
-  font-size: 14px;
+  font-size: 12px;
   padding: 6px 20px;
   cursor: pointer;
   background: #2586EF;
+  width: 35%;
 }
 .btn:hover {
   background: white;
@@ -431,55 +453,246 @@ section.login-form .form-wrapper .form-group input {
 section.login-form .form-wrapper button {
   margin: 20px 0;
 }
-
-.booking-options .container [type=radio]:checked,
-.booking-options .container [type=radio]:not(:checked) {
-  position: absolute;
-  left: -9999px;
+section.booking-options {
+  height: 100vh;
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
 }
-.booking-options .container [type=radio]:checked + label,
-.booking-options .container [type=radio]:not(:checked) + label {
+section.booking-options .container {
+  display: block;
   position: relative;
-  padding-left: 28px;
+  padding-left: 25px;
+  margin-bottom: 20px;
   cursor: pointer;
-  line-height: 20px;
-  display: inline-block;
-  color: #666;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.booking-options .container [type=radio]:checked + label:before,
-.booking-options .container [type=radio]:not(:checked) + label:before {
-  content: "";
+section.booking-options .container input {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #ddd;
-  border-radius: 100%;
-  background: #fff;
-}
-.booking-options .container [type=radio]:checked + label:after,
-.booking-options .container [type=radio]:not(:checked) + label:after {
-  content: "";
-  width: 12px;
-  height: 12px;
-  background: #F87DA9;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.booking-options .container [type=radio]:not(:checked) + label:after {
   opacity: 0;
-  -webkit-transform: scale(0);
-  transform: scale(0);
+  cursor: pointer;
 }
-.booking-options .container [type=radio]:checked + label:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+section.booking-options .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+section.booking-options .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+section.booking-options .container input:checked ~ .checkmark {
+  background-color: #E0E0E0;
+}
+section.booking-options .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+section.booking-options .container input:checked ~ .checkmark:after {
+  display: block;
+}
+section.booking-options .container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2F80ED;
+}
+section.customer-dets {
+  background: url(/img/bgimg2.png) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+section.customer-dets .w-100 form .form-group {
+  margin-bottom: 3rem !important;
+}
+section.customer-dets .w-100 form input {
+  display: block;
+}
+section.customer-dets .w-100 form .info {
+  justify-content: space-between;
+}
+section.customer-dets .w-100 form .info .btn-primary {
+  min-width: 80px;
+  max-width: 80px;
+}
+section.customer-dets .w-100 form .date {
+  background: url(/img/Cal-icon.png) no-repeat right 2px;
+  background-size: 17px;
+}
+section.customer-dets .w-100 form select {
+  background: url(/img/Selectbg.png) no-repeat right;
+  border-radius: 8px 8px 4px 4px;
+  background-position-x: 264px;
+}
+section.customer-service {
+  background: url(/img/bgimg2.png) no-repeat;
+  background-size: cover;
+}
+section.customer-service .shade p {
+  color: #999999;
+}
+section.customer-service .b-t {
+  border-top: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+}
+section.customer-care .today-date {
+  display: flex !important;
+  align-items: center;
+}
+section.customer-care .today-date .day-num {
+  font-size: 40px;
+}
+section.customer-care .today-date .day {
+  line-height: 10px;
+}
+section.customer-care .dash-rating {
+  text-align: center;
+}
+section.customer-care .dash-rating p:first-child {
+  font-size: 24px;
+}
+section.customer-care .ico {
+  position: relative;
+  background-color: rgba(242, 153, 74, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  /* left: 6px; */
+}
+section.customer-care .ico .day-num {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+section.customer-care .ico1 {
+  position: relative;
+  background-color: rgba(37, 134, 239, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  /* left: 6px; */
+}
+section.customer-care .ico1 .day-num {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+section.customer-care .ico2 {
+  position: relative;
+  background-color: rgba(235, 87, 87, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  /* left: 6px; */
+}
+section.customer-care .ico2 .day-num {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+section.customer-care .ico3 {
+  position: relative;
+  background-color: rgba(20, 238, 131, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  /* left: 6px; */
+}
+section.customer-care .ico3 .day-num {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+section.customer-care .sort {
+  display: flex;
+  align-items: center !important;
+  justify-content: flex-end;
+}
+section.customer-care .sort .dropdown .dropdown-menu {
+  transform: translate(-85%, 50%) !important;
+}
+section.customer-care .accordion {
+  width: 100%;
+  padding: 10px 0;
+}
+section.customer-care .accordion .item {
+  border: none;
+}
+section.customer-care .accordion .accordion-head {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+section.customer-care .accordion .accordion-text {
+  color: #000;
+  padding: 10px 15px 20px;
+}
+section.customer-care .accordion .item-header {
+  border-bottom: none;
+  border-radius: 5px;
+}
+section.customer-care .accordion .accord-btn.collapsed img {
+  transform: rotate(0deg);
+}
+section.customer-care .accordion .accord-btn {
+  width: 100%;
+  display: flex;
+  background-color: transparent !important;
+  border: none !important;
+  align-items: center;
+  text-align: left;
+}
+section.customer-care .accordion .accord-btn .accordion-p {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin: auto 0;
+}
+section.customer-care .accordion .acc-arr {
+  position: relative;
+  margin-right: 35px;
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  background: #2586EF;
+}
+section.customer-care .accordion .acc-arr img {
+  position: absolute;
+  top: 41%;
+  left: 32%;
+}
+section.customer-care .accordion .accord-btn img {
+  transform: rotate(180deg);
+}
+section.customer-care .accordion .pending {
+  background: #eb5757;
+}
+section.customer-care .accordion .balance {
+  background: blue;
+}
+section.customer-care .accordion .processing {
+  background: yellow;
+}
+section.customer-care .accordion .paid {
+  background: rgba(0, 128, 0, 0.2);
 }
 
 .color-blue {
@@ -489,6 +702,76 @@ section.login-form .form-wrapper button {
 .pad {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.progress {
+  border-radius: 50px;
+}
+.progress .bg-primary {
+  background: #2586EF !important;
+}
+
+.prv {
+  background: #90A4AE !important;
+  border: 1px #90A4AE solid;
+}
+
+div.fm {
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+div.fm .container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+div.fm .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+div.fm .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+div.fm .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+div.fm .container input:checked ~ .checkmark {
+  background-color: #E0E0E0;
+}
+div.fm .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+div.fm .container input:checked ~ .checkmark:after {
+  display: block;
+}
+div.fm .container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2F80ED;
 }
 
 /*# sourceMappingURL=style.css.map */

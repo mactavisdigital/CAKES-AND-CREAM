@@ -271,4 +271,178 @@ section {
       }
     }
   }
+
+  &.customer-care {
+    .today-date{
+      display: flex !important;
+      align-items: center;
+      
+
+      .day-num {
+        font-size: 40px;
+      }
+
+      .day {
+        line-height: 10px;
+      }
+    }
+
+    .dash-rating {
+      
+      text-align: center;
+
+      p:first-child {
+        font-size: 24px;
+        // line-height: 10px;
+      }
+    }
+    .ico {
+       position: relative;
+    background-color: rgb(242, 153, 74, 0.2);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    /* left: 6px; */
+
+    .day-num {
+      top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    }
+    }
+
+    .ico1 {
+      position: relative;
+   background-color: rgb(37, 134, 239, 0.2);
+   border-radius: 50%;
+   width: 48px;
+   height: 48px;
+   /* left: 6px; */
+
+   .day-num {
+     top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   }
+   }
+
+   .ico2 {
+    position: relative;
+ background-color: rgb(235, 87, 87, 0.2);
+ border-radius: 50%;
+ width: 48px;
+ height: 48px;
+ /* left: 6px; */
+
+ .day-num {
+   top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ position: absolute;
+ }
+ }
+
+ .ico3 {
+  position: relative;
+background-color: rgb(20, 238, 131, 0.2);
+border-radius: 50%;
+width: 48px;
+height: 48px;
+/* left: 6px; */
+
+.day-num {
+ top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+}
+}
+
+    .sort{
+      display: flex;
+      align-items: center !important;
+      justify-content: flex-end;
+
+      .dropdown{
+
+      .dropdown-menu {
+        transform: translate(-85%, 50%) !important;
+    }}
+    }
+
+    // .mu{
+    //   width: 100% !important;
+    //   transform: translate3d(0px, 30px, 0px) !important;
+    //   border: 0px;
+    // }
+
+    // DROPDOWN // DROPDOWN
+    .accordion {
+      width: 100%;
+      padding: 10px 0;
+      .item {
+        border: none;
+      }
+      .accordion-head {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+      }
+      .accordion-text {
+        color: #000;
+        padding: 10px 15px 20px;
+      }
+      .item-header {
+        border-bottom: none;
+        border-radius: 5px;
+      }
+      .accord-btn.collapsed img {
+        transform: rotate(0deg);
+      }
+      .accord-btn {
+        width: 100%;
+        display: flex;
+        background-color: transparent !important;
+        border: none !important;
+        align-items: center;
+        text-align: left;
+        .accordion-p {
+          font-size: 16px;
+          color: #000;
+          font-weight: $bold;
+          margin: auto 0;
+        }
+      }
+      .acc-arr {
+        position: relative;
+        margin-right: 35px;
+        border-radius: 50px;
+        width: 35px;
+        height: 35px;
+        background: $blue;
+        img {
+          position: absolute;
+          top: 41%;
+          left: 32%;
+        }
+      }
+      .accord-btn img {
+        transform: rotate(180deg);
+      }
+      .pending {
+        background: rgb(235, 87, 87);
+      }
+      .balance {
+        background: blue;
+      }
+      .processing {
+        background: yellow;
+      }
+      .paid {
+        background: rgb(0, 128, 0, 0.2);
+      }
+    }
+  }
 }
