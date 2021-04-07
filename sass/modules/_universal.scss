@@ -89,6 +89,9 @@ div {
   }
 }
 
+
+
+
 /* ACCORDION */
 .accordion {
   padding: 10px 0;
@@ -152,25 +155,25 @@ div {
     transform: rotate(180deg);
   }
 
-  // All Dropdown arrow color styling
+  // All Dropdown arrow and text color styling
   .pending {
-    background: $orange;
+    background: $red;
   }
   .pending-text {
-    color: $orange;
+    color: $red;
   }
 
-  
+
   .processing {
     background: $blue;
   }
 
 
   .balance {
-    background: $yellow;
+    background: $orange;
   }
   .balance-text {
-  color: $yellow;
+  color: $orange;
   }
 
 
@@ -180,4 +183,10 @@ div {
   .paid-text {
     color: $green;
   }
+}
+
+.orderid-text {
+  color: $deep-black;
+  font-size: 16px;
+  font-weight: $semibold;
 }
