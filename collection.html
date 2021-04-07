@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <section class="customer-care">
+    <section class="customer-care collection">
         <div class="container p-7">
             <div class="row justify-content-between">
                 <div class="col-6">
@@ -48,8 +48,8 @@
                 <div class="col-12">
                     <div class="d-flex justify-content-between">
                         <div class="d-flex">
-                            <p>Orders</p>
-                            <img src="img\order.svg" alt="">
+                            <p>Collection</p>
+                            <img class="i-size" src="img\collection.svg" alt="">
                         </div>
 
                         <div>
@@ -60,16 +60,16 @@
 
                 <div class="col-12">
                     <div class="row my-5">
-                        <div class="col-6 a-orders" data-toggle="collapse"
+                        <div class="col-4 a-orders" data-toggle="collapse"
                         data-target="#allOrders" aria-controls="collapseOne">
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-4">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
                                     <div class="ico1">
-                                        <img src="img\all2.svg" class="day-num">
+                                        <img src="img\box2.svg" class="day-num">
                                     </div>
                                 </div>
 
-                                <div class="col-7">
+                                <div class="col-sm-6">
                                     <div class="dash-rating">
                                         <p class="">252</p>
                                         <p class="">All</p>
@@ -79,16 +79,16 @@
                             </div>
 
                         </div>
-                        <div class="col-6 p-orders" data-toggle="collapse"
+                        <div class="col-4 p-orders" data-toggle="collapse"
                         data-target="#pendingOrders" aria-controls="collapseOne">
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-4">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
                                     <div class="ico2">
                                         <img src="img\clock.svg" class="day-num">
                                     </div>
                                 </div>
 
-                                <div class="col-7">
+                                <div class="col-sm-6">
                                     <div class="dash-rating">
                                         <p>32</p>
                                         <p>Pending</p>
@@ -96,45 +96,48 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-
-                    <div class="row my-5">
-                        <div class="col-6 o-orders" data-toggle="collapse"
+                        <div class="col-4 o-orders" data-toggle="collapse"
                         data-target="#ongoingOrders" aria-controls="collapseOne">
 
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-4">
-                                    <div class="ico">
-                                        <img src="img\ongo.svg" class="day-num">
-                                    </div>
-                                </div>
-
-                                <div class="col-7">
-                                    <div class="dash-rating">
-                                        <p>32</p>
-                                        <p>Ongoing</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-6 c-orders" data-toggle="collapse"
-                        data-target="#completeOrders" aria-controls="collapseOne">
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-4">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6 text-center">
                                     <div class="ico3">
                                         <img src="img\tick.svg" class="day-num">
                                     </div>
                                 </div>
 
-                                <div class="col-7">
+                                <div class="col-sm-6">
                                     <div class="dash-rating">
                                         <p>32</p>
                                         <p>Completed</p>
                                     </div>
                                 </div>
                             </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row my-5">
+                        
+
+                        <!-- <div class="col-6 c-orders" data-toggle="collapse"
+                        data-target="#completeOrders" aria-controls="collapseOne">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <div class="ico">
+                                        <img src="img\assigned.svg" class="day-num">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <div class="dash-rating">
+                                        <p>32</p>
+                                        <p>Assigned</p>
+                                    </div>
+                                </div>
+                            </div> -->
 
                             <!-- <div class="card">
                                 <div class="card-body">
@@ -159,7 +162,7 @@
                     <!-- PENDING ORDERS -->
                     <div class="collapse" id="pendingOrders">
                         <p class="d-inline">Pending Orders</p>
-                        <img class="d-inline" src="img\warning.svg" alt="">
+                        <img class="d-inline" src="img\messages.svg" alt="">
                         <div class="col-12 border-top">
                             <div class="accordion " id="accordionExample">
                                 <div class="item">
@@ -253,7 +256,7 @@
                 <div class="col-12">
                     <div class="collapse" id="allOrders">
                         <p class="d-inline">Pending Orders</p>
-                        <img class="d-inline" src="img\warning.svg" alt="">
+                        <img class="d-inline" src="img\messages.svg" alt="">
                         <div class="col-12 border-top">
                             <div class="accordion " id="accordionExample">
                                 <div class="item">
@@ -347,7 +350,7 @@
                 <div class="col-12">
                     <div class="collapse" id="ongoingOrders">
                         <p class="d-inline">Pending Orders</p>
-                        <img class="d-inline" src="img\warning.svg" alt="">
+                        <img class="d-inline" src="img\messages.svg" alt="">
                         <div class="col-12 border-top">
                             <div class="accordion " id="accordionExample">
                                 <div class="item">
@@ -442,7 +445,7 @@
                 <div class="col-12">
                     <div class="collapse" id="completeOrders">
                         <p class="d-inline">Pending Orders</p>
-                        <img class="d-inline" src="img\warning.svg" alt="">
+                        <img class="d-inline" src="img\messages.svg" alt="">
                         <div class="col-12 border-top">
                             <div class="accordion " id="accordionExample">
                                 <div class="item">
