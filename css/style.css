@@ -316,6 +316,10 @@ a {
   color: #999999 !important;
 }
 
+.lack {
+  text-decoration: none;
+}
+
 nav.navbar {
   background-color: #2586EF;
   margin-bottom: 20px;
@@ -893,6 +897,12 @@ section.customer-care .sort {
 }
 section.customer-care .sort .dropdown .dropdown-menu {
   transform: translate(-85%, 50%) !important;
+}
+section.customer-care .ico2 {
+  left: 15px;
+}
+section.customer-care .ico3 {
+  left: 15px;
 }
 
 .color-blue {
