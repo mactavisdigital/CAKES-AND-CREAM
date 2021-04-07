@@ -294,6 +294,23 @@ a {
   outline: none !important;
 }
 
+.p-7 {
+  padding-top: 75px;
+}
+
+.date {
+  max-width: 50%;
+}
+
+.num {
+  font-size: 24px;
+  text-align: center;
+}
+
+.shade p {
+  color: #999999 !important;
+}
+
 nav.navbar {
   background-color: #2586EF;
   margin-bottom: 20px;
@@ -462,7 +479,13 @@ label.radio-wrapper .checkmark::after {
   text-align: center;
 }
 
-input[type=text], input[type=email], input[type=date], input[type=time], input[type=password], select, option {
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=time],
+input[type=password],
+select,
+option {
   width: 100%;
   border: none;
   border-bottom: 1.5px solid #90A4AE;
@@ -478,11 +501,57 @@ input[type=text], input[type=email], input[type=date], input[type=time], input[t
   font-size: 1.8rem;
 }
 @media only screen and (max-width: 576px) {
-  input[type=text], input[type=email], input[type=date], input[type=time], input[type=password], select, option {
+  input[type=text],
+input[type=email],
+input[type=date],
+input[type=time],
+input[type=password],
+select,
+option {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: 300;
   }
+}
+
+.openBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+.overlay .overlay-content {
+  position: relative;
+  top: 10%;
+  width: 90%;
+  height: 45px;
+  padding: 0 35px 0px 10px;
+  margin: 0 auto;
+  background: #F2F2F2;
+  border-radius: 50px;
+}
+.overlay .overlay-content .search-input {
+  width: 90%;
+  height: 100% !important;
+  margin: auto;
+  border: none;
+}
+.overlay .overlay-content .closebtn {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
 }
 
 .btn {
@@ -497,6 +566,22 @@ input[type=text], input[type=email], input[type=date], input[type=time], input[t
 .btn:hover {
   background: white;
   color: #2586EF;
+}
+
+.bottom-btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 45px 0 15px;
+}
+
+.close-btn {
+  background: #fff !important;
+  border: 1px solid #2586EF !important;
+  color: #2586EF;
+}
+.close-btn:hover {
+  background: #2586EF !important;
+  color: #fff !important;
 }
 
 section.login-form {
@@ -570,6 +655,278 @@ section.order-summary .shade p {
 section.order-summary .b-t {
   border-top: 2px solid #333333;
   border-bottom: 2px solid #333333;
+}
+section.order-summary .print {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 40px 0 25px;
+}
+section.order-summary .print a {
+  text-decoration: none;
+  border-bottom: 1px solid #2586EF;
+  color: #2586EF;
+  margin-left: 5px;
+}
+section.order-summary .order-head {
+  color: #333333;
+  font-weight: bold;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #90A4AE;
+}
+section.order-summary .add-paymt {
+  display: flex;
+  margin: 35px 0 15px;
+}
+section.order-summary .add-paymt p {
+  color: #0059BA;
+}
+section.order-summary .add-paymt .add-icon {
+  width: 19px;
+  height: 19px;
+  background-color: #0059BA;
+  margin-left: 7px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+section.data-sorting {
+  height: 100vh;
+}
+section.data-sorting .edit {
+  display: flex;
+}
+section.data-sorting .edit .edit-img {
+  position: relative;
+  color: #2586EF;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(37, 134, 239, 0.1);
+}
+section.data-sorting .edit .edit-img img {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.data-sorting .edit a {
+  color: #2586EF;
+  margin: auto 10px;
+  text-decoration: none;
+}
+section.data-sorting .sort-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.data-sorting .sort-head .date {
+  display: flex;
+  align-items: center;
+}
+section.data-sorting .sort-head .date span {
+  margin: auto 0;
+  line-height: 7px;
+}
+section.data-sorting .sort-head .date .day-num {
+  font-size: 40px;
+}
+section.data-sorting .sort-head .sorting-form {
+  display: flex;
+  align-items: center;
+}
+section.data-sorting .footer-pagination {
+  display: flex;
+  padding: 20px 0;
+  background: #fff;
+}
+section.data-sorting .footer-pagination .pagination-input {
+  width: 40px;
+  margin: auto 0;
+  border: 1px solid #90A4AE;
+  border-radius: 4px;
+}
+section.data-sorting .footer-pagination .pagination-input input {
+  width: 100%;
+  border: none;
+}
+section.data-sorting .footer-pagination .pagination-input input::-webkit-outer-spin-button,
+section.data-sorting .footer-pagination .pagination-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+section.data-sorting .footer-pagination p {
+  margin: auto 0;
+  padding: 0 10px;
+}
+section.data-sorting .footer-pagination .pagination a {
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #2586EF;
+  margin-left: 20px;
+}
+section.data-sorting .footer-pagination .pagination a:hover,
+section.data-sorting .footer-pagination .pagination a:active,
+section.data-sorting .footer-pagination .pagination a:focus {
+  border: 1px solid #2586EF;
+  background: #2586EF;
+  color: #fff;
+}
+section.data-sorting .footer-pagination .pagination a:hover img,
+section.data-sorting .footer-pagination .pagination a:active img,
+section.data-sorting .footer-pagination .pagination a:focus img {
+  filter: brightness(0) invert(1);
+}
+section.customer-care .today-date {
+  display: flex !important;
+  align-items: center;
+}
+section.customer-care .today-date .day-num {
+  font-size: 40px;
+}
+section.customer-care .today-date .day {
+  line-height: 10px;
+}
+section.customer-care .dash-rating {
+  text-align: center;
+}
+section.customer-care .dash-rating p:first-child {
+  font-size: 24px;
+}
+section.customer-care .ico {
+  position: relative;
+  background-color: rgba(242, 153, 74, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  /* left: 6px; */
+}
+section.customer-care .ico .day-num {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+section.customer-care .ico1 {
+  position: relative;
+  background-color: rgba(37, 134, 239, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  /* left: 6px; */
+}
+section.customer-care .ico1 .day-num {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+section.customer-care .ico2 {
+  position: relative;
+  background-color: rgba(235, 87, 87, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  /* left: 6px; */
+}
+section.customer-care .ico2 .day-num {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+section.customer-care .ico3 {
+  position: relative;
+  background-color: rgba(20, 238, 131, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  /* left: 6px; */
+}
+section.customer-care .ico3 .day-num {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+section.customer-care .sort {
+  display: flex;
+  align-items: center !important;
+  justify-content: flex-end;
+}
+section.customer-care .sort .dropdown .dropdown-menu {
+  transform: translate(-85%, 50%) !important;
+}
+section.customer-care .accordion {
+  width: 100%;
+  padding: 10px 0;
+}
+section.customer-care .accordion .item {
+  border: none;
+}
+section.customer-care .accordion .accordion-head {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+section.customer-care .accordion .accordion-text {
+  color: #000;
+  padding: 10px 15px 20px;
+}
+section.customer-care .accordion .item-header {
+  border-bottom: none;
+  border-radius: 5px;
+}
+section.customer-care .accordion .accord-btn.collapsed img {
+  transform: rotate(0deg);
+}
+section.customer-care .accordion .accord-btn {
+  width: 100%;
+  display: flex;
+  background-color: transparent !important;
+  border: none !important;
+  align-items: center;
+  text-align: left;
+}
+section.customer-care .accordion .accord-btn .accordion-p {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin: auto 0;
+}
+section.customer-care .accordion .acc-arr {
+  position: relative;
+  margin-right: 35px;
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  background: #2586EF;
+}
+section.customer-care .accordion .acc-arr img {
+  position: absolute;
+  top: 41%;
+  left: 32%;
+}
+section.customer-care .accordion .accord-btn img {
+  transform: rotate(180deg);
+}
+section.customer-care .accordion .pending {
+  background: #EB5757;
+}
+section.customer-care .accordion .balance {
+  background: #2586EF;
+}
+section.customer-care .accordion .processing {
+  background: #F2994A;
+}
+section.customer-care .accordion .paid {
+  background: rgba(0, 128, 0, 0.2);
 }
 
 .color-blue {
@@ -649,6 +1006,81 @@ div.fm .container .checkmark:after {
   height: 10px;
   border-radius: 50%;
   background: #2F80ED;
+}
+
+/* ACCORDION */
+.accordion {
+  padding: 10px 0;
+}
+.accordion .item {
+  border: none;
+}
+.accordion .accordion-head {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.accordion .accordion-text {
+  color: #000;
+  padding: 10px 15px 20px;
+}
+.accordion .item-header {
+  border-bottom: none;
+  border-radius: 5px;
+}
+.accordion .accord-btn.collapsed img {
+  transform: rotate(0deg);
+}
+.accordion .accord-btn {
+  width: 100%;
+  display: flex;
+  background-color: transparent !important;
+  border: none !important;
+  align-items: center;
+  text-align: left;
+}
+.accordion .accord-btn .accordion-p {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin: auto 0;
+}
+.accordion .acc-arr {
+  position: relative;
+  margin-right: 35px;
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  background: #2586EF;
+}
+.accordion .acc-arr img {
+  position: absolute;
+  top: 41%;
+  left: 32%;
+}
+.accordion .accord-btn img {
+  transform: rotate(180deg);
+}
+.accordion .pending {
+  background: #EB5757;
+}
+.accordion .pending-text {
+  color: #EB5757;
+}
+.accordion .processing {
+  background: #2586EF;
+}
+.accordion .balance {
+  background: #F2994A;
+}
+.accordion .balance-text {
+  color: #F2994A;
+}
+.accordion .paid {
+  background: #5FC068;
+}
+.accordion .paid-text {
+  color: #5FC068;
 }
 
 /*# sourceMappingURL=main.css.map */

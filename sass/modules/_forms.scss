@@ -16,7 +16,7 @@ label.checkbox-wrapper {
     height: 0;
     width: 0;
 
-    &:checked ~ .checkmark:after {
+    &:checked~.checkmark:after {
       display: block;
     }
   }
@@ -46,11 +46,11 @@ label.checkbox-wrapper {
     }
   }
 
-  &:hover input ~ .checkmark {
+  &:hover input~.checkmark {
     //background-color: #ccc;
   }
 
-  input:checked ~ .checkmark {
+  input:checked~.checkmark {
     background-color: #2196F3;
   }
 }
@@ -83,7 +83,7 @@ label.radio-wrapper {
     border-radius: 50%;
   }
 
-  input:checked ~ .checkmark {
+  input:checked~.checkmark {
     background-color: $grey;
 
     &::after {
@@ -91,7 +91,7 @@ label.radio-wrapper {
     }
   }
 
-  &:hover input ~ .checkmark {
+  &:hover input~.checkmark {
     background-color: $grey;
   }
 
@@ -109,23 +109,23 @@ label.radio-wrapper {
   }
 }
 
-.btn-row{
+.btn-row {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
 
-.otp-wrapper{
+.otp-wrapper {
   display: flex;
   margin-top: 30px;
 
-  >div{
+  >div {
     margin: 0 3px;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    input{
+    input {
       margin: 0;
       padding: 0 !important;
       font-size: 24px;
@@ -134,7 +134,13 @@ label.radio-wrapper {
   }
 }
 
-input[type="text"], input[type="email"], input[type="date"], input[type="time"], input[type="password"], select, option{
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="password"],
+select,
+option {
   width: 100%;
   border: none;
   border-bottom: 1.5px solid $grey;
@@ -152,6 +158,50 @@ input[type="text"], input[type="email"], input[type="date"], input[type="time"],
   @media only screen and (max-width: $mobile_width) {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    font-weight: $light;  
+    font-weight: $light;
+  }
+}
+
+// Search Section sytling
+.openBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+
+  .overlay-content {
+    position: relative;
+    top: 10%;
+    width: 90%;
+    height: 45px;
+    padding: 0 35px 0px 10px;
+    margin: 0 auto;
+    background: #F2F2F2;
+    border-radius: 50px;
+
+    .search-input {
+      width: 90%;
+      height: 100% !important;
+      margin: auto;
+      border: none;
+    }
+
+    .closebtn {
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+    }
   }
 }
