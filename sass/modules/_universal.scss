@@ -152,20 +152,32 @@ div {
     transform: rotate(180deg);
   }
 
-  // Dropdown arrow color styling
+  // All Dropdown arrow color styling
   .pending {
     background: $orange;
   }
+  .pending-text {
+    color: $orange;
+  }
 
-  .balance {
+  
+  .processing {
     background: $blue;
   }
 
-  .processing {
+
+  .balance {
     background: $yellow;
   }
+  .balance-text {
+  color: $yellow;
+  }
+
 
   .paid {
     background: $green;
+  }
+  .paid-text {
+    color: $green;
   }
 }

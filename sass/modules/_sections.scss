@@ -111,16 +111,13 @@ section {
       margin: 40px 0 25px;
 
       a {
+        text-decoration: none;
         border-bottom: 1px solid $blue;
         color: $blue;
         margin-left: 5px;
       }
     }
 
-    // payment title text styling
-    .amt-txt {
-      margin-bottom: 25px;
-    }
 
     // Order title text styling
     .order-head {
@@ -134,12 +131,12 @@ section {
     // Add-more payment option styling
     .add-paymt {
       display: flex;
-      margin: 40px 0 15px;
-
+      margin: 35px 0 15px;
+      
       p {
         color: $deep-blue;
       }
-
+      
       .add-icon {
         width: 19px;
         height: 19px;
@@ -149,6 +146,7 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
       }
     }
   }
@@ -182,7 +180,6 @@ section {
         margin: auto 10px;
         text-decoration: none;
       }
-
     }
 
     // Comments
@@ -215,7 +212,8 @@ section {
     // Pagination styling
     .footer-pagination {
       display: flex;
-      padding-top: 20px;
+      padding: 20px 0;
+      background: #fff;
 
       .pagination-input {
         width: 40px;
@@ -245,12 +243,11 @@ section {
 
         a {
           background: #fff;
-          padding: 10px;
+          padding: 8px;
           border: 1px solid #E0E0E0;
           border-radius: 4px;
           text-decoration: none;
           color: $blue;
-          margin: auto;
           margin-left: 20px;
         }
 
@@ -273,10 +270,10 @@ section {
   }
 
   &.customer-care {
-    .today-date{
+    .today-date {
       display: flex !important;
       align-items: center;
-      
+
 
       .day-num {
         font-size: 40px;
@@ -288,7 +285,7 @@ section {
     }
 
     .dash-rating {
-      
+
       text-align: center;
 
       p:first-child {
@@ -296,111 +293,115 @@ section {
         // line-height: 10px;
       }
     }
-    .ico {
-       position: relative;
-    background-color: rgb(242, 153, 74, 0.2);
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    /* left: 6px; */
 
-    .day-num {
-      top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    }
+    .ico {
+      position: relative;
+      background-color: rgb(242, 153, 74, 0.2);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      /* left: 6px; */
+
+      .day-num {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
     }
 
     .ico1 {
       position: relative;
-   background-color: rgb(37, 134, 239, 0.2);
-   border-radius: 50%;
-   width: 48px;
-   height: 48px;
-   /* left: 6px; */
+      background-color: rgb(37, 134, 239, 0.2);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      /* left: 6px; */
 
-   .day-num {
-     top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   position: absolute;
-   }
-   }
+      .day-num {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+    }
 
-   .ico2 {
-    position: relative;
- background-color: rgb(235, 87, 87, 0.2);
- border-radius: 50%;
- width: 48px;
- height: 48px;
- /* left: 6px; */
+    .ico2 {
+      position: relative;
+      background-color: rgb(235, 87, 87, 0.2);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      /* left: 6px; */
 
- .day-num {
-   top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- position: absolute;
- }
- }
+      .day-num {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+    }
 
- .ico3 {
-  position: relative;
-background-color: rgb(20, 238, 131, 0.2);
-border-radius: 50%;
-width: 48px;
-height: 48px;
-/* left: 6px; */
+    .ico3 {
+      position: relative;
+      background-color: rgb(20, 238, 131, 0.2);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      /* left: 6px; */
 
-.day-num {
- top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-position: absolute;
-}
-}
+      .day-num {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+    }
 
-    .sort{
+    .sort {
       display: flex;
       align-items: center !important;
       justify-content: flex-end;
 
-      .dropdown{
+      .dropdown {
 
-      .dropdown-menu {
-        transform: translate(-85%, 50%) !important;
-    }}
+        .dropdown-menu {
+          transform: translate(-85%, 50%) !important;
+        }
+      }
     }
 
-    // .mu{
-    //   width: 100% !important;
-    //   transform: translate3d(0px, 30px, 0px) !important;
-    //   border: 0px;
-    // }
 
-    // DROPDOWN // DROPDOWN
+
+    // DROPDOWN 
     .accordion {
       width: 100%;
       padding: 10px 0;
+
       .item {
         border: none;
       }
+
       .accordion-head {
         margin-bottom: 0;
         display: flex;
         align-items: center;
       }
+
       .accordion-text {
         color: #000;
         padding: 10px 15px 20px;
       }
+
       .item-header {
         border-bottom: none;
         border-radius: 5px;
       }
+
       .accord-btn.collapsed img {
         transform: rotate(0deg);
       }
+
       .accord-btn {
         width: 100%;
         display: flex;
@@ -408,6 +409,7 @@ position: absolute;
         border: none !important;
         align-items: center;
         text-align: left;
+
         .accordion-p {
           font-size: 16px;
           color: #000;
@@ -415,6 +417,7 @@ position: absolute;
           margin: auto 0;
         }
       }
+
       .acc-arr {
         position: relative;
         margin-right: 35px;
@@ -422,24 +425,30 @@ position: absolute;
         width: 35px;
         height: 35px;
         background: $blue;
+
         img {
           position: absolute;
           top: 41%;
           left: 32%;
         }
       }
+
       .accord-btn img {
         transform: rotate(180deg);
       }
+
       .pending {
-        background: rgb(235, 87, 87);
+        background: $orange;
       }
+
       .balance {
-        background: blue;
+        background: $blue;
       }
+
       .processing {
-        background: yellow;
+        background: $yellow;
       }
+
       .paid {
         background: rgb(0, 128, 0, 0.2);
       }
