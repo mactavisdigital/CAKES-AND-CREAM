@@ -14,3 +14,16 @@
 
   width: 35%;
 }
+
+
+// Close button
+.close-btn {
+  background: #fff !important;
+  border: 1px solid $blue !important;
+  color: $blue;
+
+  &:hover {
+    background: $blue !important;
+    color: #fff !important;
+  }
+}

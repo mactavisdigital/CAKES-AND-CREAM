@@ -87,13 +87,9 @@ section {
     }
   }
 
-  &.booking-options {
+  &.booking-options {}
 
-  }
-
-  &.customer-details{
-
-  }
+  &.customer-details {}
 
   &.order-summary {
     .shade {
@@ -105,6 +101,174 @@ section {
     .b-t {
       border-top: 2px solid #333333;
       border-bottom: 2px solid #333333;
+    }
+
+    // ACCOUNT-INVOICE STYLING 
+    .print {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 40px 0 25px;
+
+      a {
+        border-bottom: 1px solid $blue;
+        color: $blue;
+        margin-left: 5px;
+      }
+    }
+
+    // payment title text styling
+    .amt-txt {
+      margin-bottom: 25px;
+    }
+
+    // Order title text styling
+    .order-head {
+      color: $deep-black;
+      font-weight: $bold;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $grey;
+    }
+
+
+    // Add-more payment option styling
+    .add-paymt {
+      display: flex;
+      margin: 40px 0 15px;
+
+      p {
+        color: $deep-blue;
+      }
+
+      .add-icon {
+        width: 19px;
+        height: 19px;
+        background-color: $deep-blue;
+        margin-left: 7px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &.data-sorting {
+    height: 100vh;
+
+    // Accordion edit styling
+    .edit {
+      display: flex;
+
+      .edit-img {
+        position: relative;
+        color: $blue;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: rgba(37, 134, 239, 0.1);
+
+        img {
+          margin: 0 auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      a {
+        color: $blue;
+        margin: auto 10px;
+        text-decoration: none;
+      }
+
+    }
+
+    // Comments
+    .sort-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // margin-top: 40px;
+
+      .date {
+        display: flex;
+        align-items: center;
+
+        span {
+          margin: auto 0;
+          line-height: 7px;
+        }
+
+        .day-num {
+          font-size: 40px;
+        }
+      }
+
+      .sorting-form {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    // Pagination styling
+    .footer-pagination {
+      display: flex;
+      padding-top: 20px;
+
+      .pagination-input {
+        width: 40px;
+        margin: auto 0;
+        border: 1px solid $grey;
+        border-radius: 4px;
+
+        input {
+          width: 100%;
+          border: none;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      p {
+        margin: auto 0;
+        padding: 0 10px;
+
+      }
+
+      .pagination {
+
+        a {
+          background: #fff;
+          padding: 10px;
+          border: 1px solid #E0E0E0;
+          border-radius: 4px;
+          text-decoration: none;
+          color: $blue;
+          margin: auto;
+          margin-left: 20px;
+        }
+
+        a:hover,
+        a:active,
+        a:focus {
+          border: 1px solid $blue;
+          background: $blue;
+          color: #fff;
+        }
+
+        // pagination arrow SVG color styling on hover / focus / active 
+        a:hover img,
+        a:active img,
+        a:focus img {
+          filter: brightness(0) invert(1);
+        }
+      }
     }
   }
 }
