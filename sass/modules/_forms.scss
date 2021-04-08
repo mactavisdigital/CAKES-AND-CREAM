@@ -211,3 +211,26 @@ select{
     }
   }
 }
+
+// custon select 
+.custom-selec {
+  position: relative;
+  height: 40px;
+  border: 1px solid $grey;
+  border-radius: 8px 8px 4px 4px;
+  background: #fff;
+  
+  &::after {
+    content: url(../img/arr-down.svg);
+    position: absolute;
+    top: 43%;
+    right: 15px;
+  }
+  
+  select {
+    height: 100%;
+    padding-left: 15px;
+    border: none !important;
+    padding-bottom: 0 !important;
+  }
+}

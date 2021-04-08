@@ -87,9 +87,11 @@ section {
     }
   }
 
-  &.booking-options {}
+  &.booking-options {
+  }
 
-  &.customer-details {}
+  &.customer-details {
+  }
 
   &.order-summary {
     .shade {
@@ -127,16 +129,15 @@ section {
       border-bottom: 1px solid $grey;
     }
 
-
     // Add-more payment option styling
     .add-paymt {
       display: flex;
       margin: 35px 0 15px;
-      
+
       p {
         color: $deep-blue;
       }
-      
+
       .add-icon {
         width: 19px;
         height: 19px;
@@ -187,7 +188,6 @@ section {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      // margin-top: 40px;
 
       .date {
         display: flex;
@@ -266,6 +266,14 @@ section {
           filter: brightness(0) invert(1);
         }
       }
+    }
+
+    // Message writer assigned title header styling
+    .head-text {
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      margin: 35px 0;
     }
   }
 
@@ -372,86 +380,17 @@ section {
     }
 
 
+    .ico2 {
+      left: 15px;
+    }
 
-    // DROPDOWN 
-    .accordion {
-      width: 100%;
-      padding: 10px 0;
+    .paid {
+      background: rgba(0, 128, 0, 0.2);
+    }
 
-      .item {
-        border: none;
-      }
-
-      .accordion-head {
-        margin-bottom: 0;
-        display: flex;
-        align-items: center;
-      }
-
-      .accordion-text {
-        color: #000;
-        padding: 10px 15px 20px;
-      }
-
-      .item-header {
-        border-bottom: none;
-        border-radius: 5px;
-      }
-
-      .accord-btn.collapsed img {
-        transform: rotate(0deg);
-      }
-
-      .accord-btn {
-        width: 100%;
-        display: flex;
-        background-color: transparent !important;
-        border: none !important;
-        align-items: center;
-        text-align: left;
-
-        .accordion-p {
-          font-size: 16px;
-          color: #000;
-          font-weight: $bold;
-          margin: auto 0;
-        }
-      }
-
-      .acc-arr {
-        position: relative;
-        margin-right: 35px;
-        border-radius: 50px;
-        width: 35px;
-        height: 35px;
-        background: $blue;
-
-        img {
-          position: absolute;
-          top: 41%;
-          left: 32%;
-        }
-      }
-
-      .accord-btn img {
-        transform: rotate(180deg);
-      }
-
-      .pending {
-        background: $orange;
-      }
-
-      .balance {
-        background: $blue;
-      }
-
-      .processing {
-        background: $yellow;
-      }
-
-      .paid {
-        background: rgba(0, 128, 0, 0.2);
-      }
+    .ico3 {
+      left: 15px;
     }
   }
+
 }
