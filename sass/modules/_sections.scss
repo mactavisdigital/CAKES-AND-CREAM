@@ -387,6 +387,117 @@ section {
     }
 
 
+
+    // DROPDOWN 
+    .accordion {
+      width: 100%;
+      padding: 10px 0;
+
+      .item {
+        border: none;
+      }
+
+      .accordion-head {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .accordion-text {
+        color: #000;
+        padding: 10px 15px 20px;
+      }
+
+      .item-header {
+        border-bottom: none;
+        border-radius: 5px;
+      }
+
+      .accord-btn.collapsed img {
+        transform: rotate(0deg);
+      }
+
+      .accord-btn {
+        width: 100%;
+        display: flex;
+        background-color: transparent !important;
+        border: none !important;
+        align-items: center;
+        text-align: left;
+
+        .accordion-p {
+          font-size: 16px;
+          color: #000;
+          font-weight: $bold;
+          margin: auto 0;
+        }
+      }
+
+      .acc-arr {
+        position: relative;
+        margin-right: 35px;
+        border-radius: 50px;
+        width: 35px;
+        height: 35px;
+        background: $blue;
+
+        img {
+          position: absolute;
+          top: 41%;
+          left: 32%;
+        }
+      }
+
+      .accord-btn img {
+        transform: rotate(180deg);
+      }
+
+      .pending {
+        background: $orange;
+      }
+
+      .balance {
+        background: $blue;
+      }
+
+      .processing {
+        background: $yellow;
+      }
+
+      .paid {
+        background: rgb(0, 128, 0, 0.2);
+      }
+    }
+
+    
+
+    .a-orders:hover {
+      background-color: rgb(37, 134, 239, 0.2);
+
+      p{
+      color: white !important;
+      }
+    }
+
+    .p-orders:hover {
+      background-color: rgb(235, 87, 87,0.2);
+      p{
+        color: white !important;
+        }
+    }
+
+    .o-orders:hover {
+      background-color: rgb(255, 165, 0, 0.2);
+      p{
+        color: white !important;
+        }
+    }
+
+    .c-orders:hover {
+      background-color: rgb(12, 178, 97, 0.2);
+      p{
+        color: white !important;
+        }
     .ico2 {
       left: 15px;
     }
