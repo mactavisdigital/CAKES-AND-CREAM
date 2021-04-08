@@ -235,6 +235,11 @@ th {
   padding: 0;
 }
 
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #fff !important;
+}
+
 form .form-group ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-size: 12px;
@@ -309,6 +314,10 @@ a {
 
 .shade p {
   color: #999999 !important;
+}
+
+.lack {
+  text-decoration: none;
 }
 
 nav.navbar {
@@ -518,7 +527,7 @@ option {
 }
 
 select {
-  background: url("../img/dropdown.svg") no-repeat -10px;
+  background: url("../img/dropdown.svg") no-repeat 100%;
 }
 
 .openBtn {
@@ -564,7 +573,7 @@ select {
 .custom-selec {
   position: relative;
   height: 40px;
-  border: 1px solid #90A4AE;
+  border: 1px solid #5e6b71;
   border-radius: 8px 8px 4px 4px;
   background: #fff;
 }
@@ -903,6 +912,15 @@ section.customer-care .sort {
 }
 section.customer-care .sort .dropdown .dropdown-menu {
   transform: translate(-85%, 50%) !important;
+}
+section.customer-care .ico2 {
+  left: 15px;
+}
+section.customer-care .paid {
+  background: rgba(0, 128, 0, 0.2);
+}
+section.customer-care .ico3 {
+  left: 15px;
 }
 
 .color-blue {
