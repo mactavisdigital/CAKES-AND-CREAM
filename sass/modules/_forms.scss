@@ -139,6 +139,7 @@ input[type="email"],
 input[type="date"],
 input[type="time"],
 input[type="password"],
+textarea,
 select,
 option {
   width: 100%;
@@ -154,12 +155,17 @@ option {
   outline: none;
   color: $black;
   font-size: 1.8rem;
+  resize: none;
 
   @media only screen and (max-width: $mobile_width) {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: $light;
   }
+}
+
+select{
+  background: url("../img/dropdown.svg") no-repeat -10px;
 }
 
 // Search Section sytling

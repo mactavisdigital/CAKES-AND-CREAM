@@ -248,8 +248,8 @@ html, body {
 
 body {
   font-family: "SFProText", sans-serif;
-  background: url(/img/bgimg2.png) no-repeat;
-  background-size: cover;
+  background: url(/img/bgimg2.png) repeat center;
+  background-size: 100%;
   padding-bottom: 75px;
 }
 
@@ -275,7 +275,7 @@ p, td {
 
 label {
   font-size: 12px;
-  color: #90A4AE;
+  color: #555555;
 }
 
 input {
@@ -391,7 +391,7 @@ label.checkbox-wrapper .checkmark {
   left: 0;
   height: 22px;
   width: 22px;
-  background-color: #90A4AE;
+  background-color: #5e6b71;
 }
 label.checkbox-wrapper .checkmark::after {
   content: "";
@@ -434,17 +434,17 @@ label.radio-wrapper .checkmark {
   left: 0;
   height: 20px;
   width: 20px;
-  background-color: #90A4AE;
+  background-color: #5e6b71;
   border-radius: 50%;
 }
 label.radio-wrapper input:checked ~ .checkmark {
-  background-color: #90A4AE;
+  background-color: #5e6b71;
 }
 label.radio-wrapper input:checked ~ .checkmark::after {
   display: block;
 }
 label.radio-wrapper:hover input ~ .checkmark {
-  background-color: #90A4AE;
+  background-color: #5e6b71;
 }
 label.radio-wrapper .checkmark::after {
   content: "";
@@ -484,11 +484,12 @@ input[type=email],
 input[type=date],
 input[type=time],
 input[type=password],
+textarea,
 select,
 option {
   width: 100%;
   border: none;
-  border-bottom: 1.5px solid #90A4AE;
+  border-bottom: 1.5px solid #5e6b71;
   border-radius: 0;
   background: transparent;
   margin-right: 15px;
@@ -499,6 +500,7 @@ option {
   outline: none;
   color: #555555;
   font-size: 1.8rem;
+  resize: none;
 }
 @media only screen and (max-width: 576px) {
   input[type=text],
@@ -506,12 +508,17 @@ input[type=email],
 input[type=date],
 input[type=time],
 input[type=password],
+textarea,
 select,
 option {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: 300;
   }
+}
+
+select {
+  background: url("../img/dropdown.svg") no-repeat -10px;
 }
 
 .openBtn {
@@ -557,15 +564,23 @@ option {
 .btn {
   border-radius: 8px;
   color: white;
+  border: 1px solid #2586EF;
   font-size: 18px;
   padding: 8px 20px;
   cursor: pointer;
   background: #2586EF;
-  width: 35%;
+  width: 120px;
 }
-.btn:hover {
+.btn:hover, .btn:active, .btn:focus {
   background: white;
   color: #2586EF;
+}
+.btn.grey {
+  background-color: #5e6b71;
+}
+.btn.light-grey {
+  background-color: #90A4AE;
+  border-color: #90A4AE;
 }
 
 .bottom-btns {
@@ -608,7 +623,7 @@ section.login-form .form-wrapper .form-group {
   height: 47px;
   margin-bottom: 15px;
   border-radius: 8px;
-  border: 1px solid #90A4AE;
+  border: 1px solid #5e6b71;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -624,13 +639,13 @@ section.login-form .form-wrapper .form-group::after {
   right: 0;
 }
 section.login-form .form-wrapper .form-group.email::after {
-  background: #90A4AE url("../img/user.svg") no-repeat center;
+  background: #5e6b71 url("../img/user.svg") no-repeat center;
 }
 section.login-form .form-wrapper .form-group.email.active::after {
   background: #2586EF url("../img/user.svg") no-repeat center;
 }
 section.login-form .form-wrapper .form-group.password::after {
-  background: #90A4AE url("../img/padlock.svg") no-repeat center;
+  background: #5e6b71 url("../img/padlock.svg") no-repeat center;
 }
 section.login-form .form-wrapper .form-group.password.active::after {
   background: #2586EF url("../img/padlock.svg") no-repeat center;
@@ -672,7 +687,7 @@ section.order-summary .order-head {
   color: #333333;
   font-weight: bold;
   padding-bottom: 15px;
-  border-bottom: 1px solid #90A4AE;
+  border-bottom: 1px solid #5e6b71;
 }
 section.order-summary .add-paymt {
   display: flex;
@@ -746,7 +761,7 @@ section.data-sorting .footer-pagination {
 section.data-sorting .footer-pagination .pagination-input {
   width: 40px;
   margin: auto 0;
-  border: 1px solid #90A4AE;
+  border: 1px solid #5e6b71;
   border-radius: 4px;
 }
 section.data-sorting .footer-pagination .pagination-input input {
@@ -931,23 +946,6 @@ section.customer-care .accordion .paid {
 
 .color-blue {
   color: #2586EF;
-}
-
-.pad {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.progress {
-  border-radius: 50px;
-}
-.progress .bg-primary {
-  background: #2586EF !important;
-}
-
-.prv {
-  background: #90A4AE !important;
-  border: 1px #90A4AE solid;
 }
 
 div.fm {

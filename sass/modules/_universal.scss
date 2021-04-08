@@ -2,24 +2,6 @@
   color: $blue;
 }
 
-.pad {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.progress {
-  border-radius: 50px;
-
-  .bg-primary {
-    background: #2586EF !important;
-  }
-}
-
-
-.prv {
-  background: #90A4AE !important;
-  border: 1px #90A4AE solid;
-}
 
 div {
   &.fm {
@@ -56,12 +38,12 @@ div {
     }
 
     /* On mouse-over, add a grey background color */
-    .container:hover input~.checkmark {
+    .container:hover input ~ .checkmark {
       background-color: #ccc;
     }
 
     /* When the radio button is checked, add a blue background */
-    .container input:checked~.checkmark {
+    .container input:checked ~ .checkmark {
       background-color: #E0E0E0;
     }
 
@@ -73,7 +55,7 @@ div {
     }
 
     /* Show the indicator (dot/circle) when checked */
-    .container input:checked~.checkmark:after {
+    .container input:checked ~ .checkmark:after {
       display: block;
     }
 
@@ -156,11 +138,12 @@ div {
   .pending {
     background: $orange;
   }
+
   .pending-text {
     color: $orange;
   }
 
-  
+
   .processing {
     background: $blue;
   }
@@ -169,14 +152,16 @@ div {
   .balance {
     background: $yellow;
   }
+
   .balance-text {
-  color: $yellow;
+    color: $yellow;
   }
 
 
   .paid {
     background: $green;
   }
+
   .paid-text {
     color: $green;
   }
