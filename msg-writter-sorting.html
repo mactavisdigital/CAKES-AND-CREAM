@@ -61,49 +61,30 @@
                                         </tr>
 
                                         <tr>
-                                            <td>
-                                                <p>Customer Name</p>
-                                            </td>
-                                            <td>
-                                                <p>Tunji Odumosu</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p>Phone Number</p>
-                                            </td>
-                                            <td>
-                                                <p>08123456789</p>
-                                            </td>
+                                            <td>Icing Color</td>
+                                            <td>Purple</td>
                                         </tr>
 
                                         <tr>
-                                            <td>
-                                                <p>Order Status</p>
-                                            </td>
-                                            <td>
-                                                <p>Ready For Delivery</p>
-                                            </td>
+                                            <td>Message On Cake</td>
+                                            <td>Happy Birthday to
+                                                the best mum in the world</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <p>Payment Status</p>
-                                            </td>
-                                            <td>
-                                                <p>Balance Outstanding</p>
-                                            </td>
+                                            <td>Payment Status</td>
+                                            <td class="pending-text">Pending Payment</td>
                                         </tr>
                                         <tr>
+                                            <td>Writing Status</td>
                                             <td>
-                                                <p>Action</p>
-                                            </td>
-                                            <td>
-                                                <div class="edit">
-                                                    <span class="edit-img">
-                                                        <img src="./img/edit.svg" alt="">
-                                                    </span>
-                                                    <a href="#">Edit</a>
-                                                </div>
+                                                <label class="radio-wrapper">Full
+                                                    <input type="radio" checked="checked" name="order-type">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="radio-wrapper">part
+                                                    <input type="radio" checked="checked" name="order-type">
+                                                    <span class="checkmark"></span>
+                                                </label>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -151,7 +132,7 @@
                                         </tr>
                                         <tr>
                                             <td>Payment Status</td>
-                                            <td>Pending Payment</td>
+                                            <td class="balance-text">Balance Outstanding</td>
                                         </tr>
                                         <tr>
                                             <td>Action</td>
@@ -190,26 +171,46 @@
                                 <table class="table table-borderless">
                                     <tbody>
                                         <tr>
-                                            <td>Tag Number</td>
-                                            <td>201</td>
+                                            <td>
+                                                <p class="my-auto">Tag Number</p>
+                                            </td>
+                                            <td>
+                                                <p class="my-auto">201</p>
+                                            </td>
                                         </tr>
 
                                         <tr>
-                                            <td>Phone Number</td>
-                                            <td>08123456789</td>
+                                            <td>
+                                                <p class="my-auto">Phone Number</p>
+                                            </td>
+                                            <td>
+                                                <p class="my-auto">08123456789</p>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Customer Name</td>
-                                            <td>Tunji Odumosu</td>
+                                            <td>
+                                                <p class="my-auto">Customer Name</p>
+                                            </td>
+                                            <td>
+                                                <p class="my-auto">Tunji Odumosu</p>
+                                            </td>
                                         </tr>
-
+                                        
                                         <tr>
-                                            <td>Gross Amount</td>
-                                            <td>₦40K</td>
+                                            <td>
+                                                <p class="my-auto">Gross Amount</p>
+                                            </td>
+                                            <td>
+                                                <p class="my-auto">₦40K</p>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Payment Status</td>
-                                            <td>Pending Payment</td>
+                                            <td>
+                                                <p class="my-auto">Payment Status</p>
+                                            </td>
+                                            <td>
+                                                <p class="paid-text my-auto">Paid</p>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Action</td>
@@ -266,7 +267,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 
 
-    
+    <script>
+        // Open and Close Button for Search Section
+        function openSearch() {
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function closeSearch() {
+            document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>

@@ -75,27 +75,18 @@ div {
 /* ACCORDION */
 .accordion {
   padding: 10px 0;
-
-  .item {
-    border: none;
-  }
-
+  
   .accordion-head {
     margin-bottom: 0;
     display: flex;
     align-items: center;
   }
-
+  
   .accordion-text {
     color: #000;
     padding: 10px 15px 20px;
+  
   }
-
-  .item-header {
-    border-bottom: none;
-    border-radius: 5px;
-  }
-
   .accord-btn.collapsed img {
     transform: rotate(0deg);
   }
@@ -174,3 +165,11 @@ div {
   font-size: 16px;
   font-weight: $semibold;
 }
+
+
+
+
+
+
+
+
