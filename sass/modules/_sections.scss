@@ -458,18 +458,31 @@ section {
 
     .a-orders:hover {
       background-color: rgb(37, 134, 239, 0.2);
+
+      p{
+      color: white !important;
+      }
     }
 
     .p-orders:hover {
       background-color: rgb(235, 87, 87,0.2);
+      p{
+        color: white !important;
+        }
     }
 
     .o-orders:hover {
       background-color: rgb(255, 165, 0, 0.2);
+      p{
+        color: white !important;
+        }
     }
 
     .c-orders:hover {
       background-color: rgb(12, 178, 97, 0.2);
+      p{
+        color: white !important;
+        }
     }
 
     .i-size {

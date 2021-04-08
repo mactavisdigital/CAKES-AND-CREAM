@@ -11,7 +11,28 @@
 </head>
 
 <body>
-    <section class="customer-care collection">
+    <nav class="navbar navbar-offcanvas navbar-expand-sm">
+        <a class="navbar-brand" href="#"><img src="img/profile.jpg" alt=""> Gbolade O.</a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+            <img src="img/menu.svg">
+        </button>
+    
+        <div class="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="customer-care">
         <div class="container p-7">
             <div class="row justify-content-between">
                 <div class="col-6">
@@ -60,16 +81,16 @@
 
                 <div class="col-12">
                     <div class="row my-5">
-                        <div class="col-4 a-orders" data-toggle="collapse"
+                        <div class="col-6 a-orders" data-toggle="collapse"
                         data-target="#allOrders" aria-controls="collapseOne">
                             <div class="row align-items-center">
-                                <div class="col-sm-6">
+                                <div class="col-4">
                                     <div class="ico1">
                                         <img src="img\box2.svg" class="day-num">
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6">
+                                <div class="col-7">
                                     <div class="dash-rating">
                                         <p class="">252</p>
                                         <p class="">All</p>
@@ -79,16 +100,16 @@
                             </div>
 
                         </div>
-                        <div class="col-4 p-orders" data-toggle="collapse"
+                        <div class="col-6 p-orders" data-toggle="collapse"
                         data-target="#pendingOrders" aria-controls="collapseOne">
                             <div class="row align-items-center">
-                                <div class="col-sm-6">
+                                <div class="col-4">
                                     <div class="ico2">
                                         <img src="img\clock.svg" class="day-num">
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6">
+                                <div class="col-7">
                                     <div class="dash-rating">
                                         <p>32</p>
                                         <p>Pending</p>
@@ -96,62 +117,26 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-4 o-orders" data-toggle="collapse"
-                        data-target="#ongoingOrders" aria-controls="collapseOne">
-
-                            <div class="row align-items-center">
-                                <div class="col-sm-6 text-center">
-                                    <div class="ico3">
-                                        <img src="img\tick.svg" class="day-num">
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="dash-rating">
-                                        <p>32</p>
-                                        <p>Completed</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
                     </div>
 
 
                     <div class="row my-5">
-                        
-
-                        <!-- <div class="col-6 c-orders" data-toggle="collapse"
+                        <div class="col-6 c-orders" data-toggle="collapse"
                         data-target="#completeOrders" aria-controls="collapseOne">
                             <div class="row align-items-center">
                                 <div class="col-4">
-                                    <div class="ico">
-                                        <img src="img\assigned.svg" class="day-num">
+                                    <div class="ico3">
+                                        <img src="img\tick.svg" class="day-num">
                                     </div>
                                 </div>
 
                                 <div class="col-7">
                                     <div class="dash-rating">
                                         <p>32</p>
-                                        <p>Assigned</p>
+                                        <p>Ready</p>
                                     </div>
                                 </div>
-                            </div> -->
-
-                            <!-- <div class="card">
-                                <div class="card-body">
-                                    <div class="today-date justify-content-between">
-                                        <div>
-                                        <img src="img\all2.svg" class="day-num"></div>
-                                        <span class="day">
-                                            <p class="num">32</p>
-                                            <p class="text-center">Completed</p>
-                                        </span>
-                                    </div>
-                                </div>
-                              </div> -->
-
+                            </div>
 
                         </div>
                     </div>
@@ -162,7 +147,7 @@
                     <!-- PENDING ORDERS -->
                     <div class="collapse" id="pendingOrders">
                         <p class="d-inline">Pending Orders</p>
-                        <img class="d-inline" src="img\messages.svg" alt="">
+                        <img class="d-inline" src="img\warning.svg" alt="">
                         <div class="col-12 border-top">
                             <div class="accordion " id="accordionExample">
                                 <div class="item">
@@ -222,7 +207,7 @@
 
 
                         
-    <footer class="container d-flex justify-content-between">
+    <section class="container d-flex justify-content-between">
 
         <div class="d-flex justify-content-between">
         <p>Showing </p> 
@@ -247,7 +232,7 @@
         </nav>
 
 
-    </footer>
+    </section>
 
                     </div>
                 </div>
@@ -256,7 +241,7 @@
                 <div class="col-12">
                     <div class="collapse" id="allOrders">
                         <p class="d-inline">Pending Orders</p>
-                        <img class="d-inline" src="img\messages.svg" alt="">
+                        <img class="d-inline" src="img\warning.svg" alt="">
                         <div class="col-12 border-top">
                             <div class="accordion " id="accordionExample">
                                 <div class="item">
@@ -316,7 +301,7 @@
 
 
                         
-    <footer class="container d-flex justify-content-between">
+    <section class="container d-flex justify-content-between">
 
         <div class="d-flex justify-content-between">
         <p>Showing </p> 
@@ -341,7 +326,7 @@
         </nav>
 
 
-    </footer>
+    </section>
 
                     </div>
                 </div>
@@ -350,7 +335,7 @@
                 <div class="col-12">
                     <div class="collapse" id="ongoingOrders">
                         <p class="d-inline">Pending Orders</p>
-                        <img class="d-inline" src="img\messages.svg" alt="">
+                        <img class="d-inline" src="img\warning.svg" alt="">
                         <div class="col-12 border-top">
                             <div class="accordion " id="accordionExample">
                                 <div class="item">
@@ -410,7 +395,7 @@
 
 
                         
-    <footer class="container d-flex justify-content-between">
+    <section class="container d-flex justify-content-between">
 
         <div class="d-flex justify-content-between">
         <p>Showing </p> 
@@ -435,7 +420,7 @@
         </nav>
 
 
-    </footer>
+    </section>
 
                     </div>
                 </div>
@@ -445,7 +430,7 @@
                 <div class="col-12">
                     <div class="collapse" id="completeOrders">
                         <p class="d-inline">Pending Orders</p>
-                        <img class="d-inline" src="img\messages.svg" alt="">
+                        <img class="d-inline" src="img\warning.svg" alt="">
                         <div class="col-12 border-top">
                             <div class="accordion " id="accordionExample">
                                 <div class="item">
@@ -505,7 +490,7 @@
 
 
                         
-    <footer class="container d-flex justify-content-between">
+    <section class="container d-flex justify-content-between">
 
         <div class="d-flex justify-content-between">
         <p>Showing </p> 
@@ -530,7 +515,7 @@
         </nav>
 
 
-    </footer>
+    </section>
 
                     </div>
                 </div>
@@ -538,6 +523,10 @@
 
         </div>
     </section>
+
+    <footer class="fixed-bottom d-flex align-items-center justify-content-between">
+        <p class="w-100">Customer Service App. &copy; Cakes & Cream.</p>
+    </footer>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
