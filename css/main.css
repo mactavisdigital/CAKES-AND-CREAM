@@ -235,6 +235,11 @@ th {
   padding: 0;
 }
 
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #fff !important;
+}
+
 form .form-group ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-size: 12px;
@@ -248,8 +253,8 @@ html, body {
 
 body {
   font-family: "SFProText", sans-serif;
-  background: url(/img/bgimg2.png) no-repeat;
-  background-size: cover;
+  background: url(/img/bgimg2.png) repeat center;
+  background-size: 100%;
   padding-bottom: 75px;
 }
 
@@ -275,7 +280,7 @@ p, td {
 
 label {
   font-size: 12px;
-  color: #90A4AE;
+  color: #555555;
 }
 
 input {
@@ -309,6 +314,10 @@ a {
 
 .shade p {
   color: #999999 !important;
+}
+
+.lack {
+  text-decoration: none;
 }
 
 nav.navbar {
@@ -391,7 +400,7 @@ label.checkbox-wrapper .checkmark {
   left: 0;
   height: 22px;
   width: 22px;
-  background-color: #90A4AE;
+  background-color: #5e6b71;
 }
 label.checkbox-wrapper .checkmark::after {
   content: "";
@@ -434,17 +443,17 @@ label.radio-wrapper .checkmark {
   left: 0;
   height: 20px;
   width: 20px;
-  background-color: #90A4AE;
+  background-color: #5e6b71;
   border-radius: 50%;
 }
 label.radio-wrapper input:checked ~ .checkmark {
-  background-color: #90A4AE;
+  background-color: #5e6b71;
 }
 label.radio-wrapper input:checked ~ .checkmark::after {
   display: block;
 }
 label.radio-wrapper:hover input ~ .checkmark {
-  background-color: #90A4AE;
+  background-color: #5e6b71;
 }
 label.radio-wrapper .checkmark::after {
   content: "";
@@ -484,11 +493,12 @@ input[type=email],
 input[type=date],
 input[type=time],
 input[type=password],
+textarea,
 select,
 option {
   width: 100%;
   border: none;
-  border-bottom: 1.5px solid #90A4AE;
+  border-bottom: 1.5px solid #5e6b71;
   border-radius: 0;
   background: transparent;
   margin-right: 15px;
@@ -499,6 +509,7 @@ option {
   outline: none;
   color: #555555;
   font-size: 1.8rem;
+  resize: none;
 }
 @media only screen and (max-width: 576px) {
   input[type=text],
@@ -506,12 +517,17 @@ input[type=email],
 input[type=date],
 input[type=time],
 input[type=password],
+textarea,
 select,
 option {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: 300;
   }
+}
+
+select {
+  background: url("../img/dropdown.svg") no-repeat 100%;
 }
 
 .openBtn {
@@ -554,18 +570,46 @@ option {
   cursor: pointer;
 }
 
+.custom-selec {
+  position: relative;
+  height: 40px;
+  border: 1px solid #5e6b71;
+  border-radius: 8px 8px 4px 4px;
+  background: #fff;
+}
+.custom-selec::after {
+  content: url(../img/arr-down.svg);
+  position: absolute;
+  top: 43%;
+  right: 15px;
+}
+.custom-selec select {
+  height: 100%;
+  padding-left: 15px;
+  border: none !important;
+  padding-bottom: 0 !important;
+}
+
 .btn {
   border-radius: 8px;
   color: white;
+  border: 1px solid #2586EF;
   font-size: 18px;
   padding: 8px 20px;
   cursor: pointer;
   background: #2586EF;
-  width: 35%;
+  width: 120px;
 }
-.btn:hover {
+.btn:hover, .btn:active, .btn:focus {
   background: white;
   color: #2586EF;
+}
+.btn.grey {
+  background-color: #5e6b71;
+}
+.btn.light-grey {
+  background-color: #90A4AE;
+  border-color: #90A4AE;
 }
 
 .bottom-btns {
@@ -608,7 +652,7 @@ section.login-form .form-wrapper .form-group {
   height: 47px;
   margin-bottom: 15px;
   border-radius: 8px;
-  border: 1px solid #90A4AE;
+  border: 1px solid #5e6b71;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -624,13 +668,13 @@ section.login-form .form-wrapper .form-group::after {
   right: 0;
 }
 section.login-form .form-wrapper .form-group.email::after {
-  background: #90A4AE url("../img/user.svg") no-repeat center;
+  background: #5e6b71 url("../img/user.svg") no-repeat center;
 }
 section.login-form .form-wrapper .form-group.email.active::after {
   background: #2586EF url("../img/user.svg") no-repeat center;
 }
 section.login-form .form-wrapper .form-group.password::after {
-  background: #90A4AE url("../img/padlock.svg") no-repeat center;
+  background: #5e6b71 url("../img/padlock.svg") no-repeat center;
 }
 section.login-form .form-wrapper .form-group.password.active::after {
   background: #2586EF url("../img/padlock.svg") no-repeat center;
@@ -672,7 +716,7 @@ section.order-summary .order-head {
   color: #333333;
   font-weight: bold;
   padding-bottom: 15px;
-  border-bottom: 1px solid #90A4AE;
+  border-bottom: 1px solid #5e6b71;
 }
 section.order-summary .add-paymt {
   display: flex;
@@ -746,7 +790,7 @@ section.data-sorting .footer-pagination {
 section.data-sorting .footer-pagination .pagination-input {
   width: 40px;
   margin: auto 0;
-  border: 1px solid #90A4AE;
+  border: 1px solid #5e6b71;
   border-radius: 4px;
 }
 section.data-sorting .footer-pagination .pagination-input input {
@@ -782,6 +826,12 @@ section.data-sorting .footer-pagination .pagination a:hover img,
 section.data-sorting .footer-pagination .pagination a:active img,
 section.data-sorting .footer-pagination .pagination a:focus img {
   filter: brightness(0) invert(1);
+}
+section.data-sorting .head-text {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 35px 0;
 }
 section.customer-care .today-date {
   display: flex !important;
@@ -863,91 +913,18 @@ section.customer-care .sort {
 section.customer-care .sort .dropdown .dropdown-menu {
   transform: translate(-85%, 50%) !important;
 }
-section.customer-care .accordion {
-  width: 100%;
-  padding: 10px 0;
+section.customer-care .ico2 {
+  left: 15px;
 }
-section.customer-care .accordion .item {
-  border: none;
-}
-section.customer-care .accordion .accordion-head {
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-}
-section.customer-care .accordion .accordion-text {
-  color: #000;
-  padding: 10px 15px 20px;
-}
-section.customer-care .accordion .item-header {
-  border-bottom: none;
-  border-radius: 5px;
-}
-section.customer-care .accordion .accord-btn.collapsed img {
-  transform: rotate(0deg);
-}
-section.customer-care .accordion .accord-btn {
-  width: 100%;
-  display: flex;
-  background-color: transparent !important;
-  border: none !important;
-  align-items: center;
-  text-align: left;
-}
-section.customer-care .accordion .accord-btn .accordion-p {
-  font-size: 16px;
-  color: #000;
-  font-weight: bold;
-  margin: auto 0;
-}
-section.customer-care .accordion .acc-arr {
-  position: relative;
-  margin-right: 35px;
-  border-radius: 50px;
-  width: 35px;
-  height: 35px;
-  background: #2586EF;
-}
-section.customer-care .accordion .acc-arr img {
-  position: absolute;
-  top: 41%;
-  left: 32%;
-}
-section.customer-care .accordion .accord-btn img {
-  transform: rotate(180deg);
-}
-section.customer-care .accordion .pending {
-  background: #EB5757;
-}
-section.customer-care .accordion .balance {
-  background: #2586EF;
-}
-section.customer-care .accordion .processing {
-  background: #F2994A;
-}
-section.customer-care .accordion .paid {
+section.customer-care .paid {
   background: rgba(0, 128, 0, 0.2);
+}
+section.customer-care .ico3 {
+  left: 15px;
 }
 
 .color-blue {
   color: #2586EF;
-}
-
-.pad {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.progress {
-  border-radius: 50px;
-}
-.progress .bg-primary {
-  background: #2586EF !important;
-}
-
-.prv {
-  background: #90A4AE !important;
-  border: 1px #90A4AE solid;
 }
 
 div.fm {
@@ -1081,6 +1058,12 @@ div.fm .container .checkmark:after {
 }
 .accordion .paid-text {
   color: #5FC068;
+}
+
+.orderid-text {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */

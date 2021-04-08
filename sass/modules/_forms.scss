@@ -139,6 +139,7 @@ input[type="email"],
 input[type="date"],
 input[type="time"],
 input[type="password"],
+textarea,
 select,
 option {
   width: 100%;
@@ -154,12 +155,17 @@ option {
   outline: none;
   color: $black;
   font-size: 1.8rem;
+  resize: none;
 
   @media only screen and (max-width: $mobile_width) {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: $light;
   }
+}
+
+select{
+  background: url("../img/dropdown.svg") no-repeat 100%;
 }
 
 // Search Section sytling
@@ -203,5 +209,28 @@ option {
       right: 10px;
       cursor: pointer;
     }
+  }
+}
+
+// custon select 
+.custom-selec {
+  position: relative;
+  height: 40px;
+  border: 1px solid $grey;
+  border-radius: 8px 8px 4px 4px;
+  background: #fff;
+  
+  &::after {
+    content: url(../img/arr-down.svg);
+    position: absolute;
+    top: 43%;
+    right: 15px;
+  }
+  
+  select {
+    height: 100%;
+    padding-left: 15px;
+    border: none !important;
+    padding-bottom: 0 !important;
   }
 }

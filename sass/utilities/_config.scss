@@ -29,10 +29,8 @@
 @include do-font-face('SFProText', 'sfpro-text-medium', '../fonts/', 'ttf', bold, normal);
 @include do-font-face('Qumpellka', 'qumpellka', '../fonts/', 'otf', normal, normal);
 
-$sfpro : 'SFProText',
-sans-serif;
-$qumpellka : 'Qumpellka',
-cursive;
+$sfpro : 'SFProText', sans-serif;
+$qumpellka : 'Qumpellka', cursive;
 
 $ffh : $qumpellka;
 $ffb : $sfpro;
@@ -47,11 +45,12 @@ $black-weight : 900;
 // Colors
 $blue : #2586EF;
 $deep-blue : #0059BA;
-$grey : #90A4AE;
+$light-grey : #90A4AE;
+$grey : #5e6b71;
 $black : #555555;
 $deep-black : #333333;
 
 
 $green : #5FC068;
-$orange : #EB5757;
-$yellow : #F2994A;
+$red : #EB5757;
+$orange : #F2994A;
