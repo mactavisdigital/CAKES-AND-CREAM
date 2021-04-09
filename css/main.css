@@ -750,9 +750,6 @@ section.order-summary .add-paymt .add-icon img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-section.data-sorting {
-  height: 100vh;
-}
 section.data-sorting .edit {
   display: flex;
 }

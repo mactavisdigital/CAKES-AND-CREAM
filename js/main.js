@@ -18,11 +18,25 @@
     });
 })(jQuery);
 
+
+
 // Open and Close Button for Search Section
 function openSearch() {
 document.getElementById("myOverlay").style.display = "block";
 }
 
+
+// Calender  
 function closeSearch() {
 document.getElementById("myOverlay").style.display = "none";
 }
+
+$(document).ready(function () {
+
+    $(".datepicker").datepicker({
+        prevText: '<i class="fa fa-fw fa-angle-left"></i>',
+        nextText: '<i class="fa fa-fw fa-angle-right"></i>'
+    });
+});
+
+
