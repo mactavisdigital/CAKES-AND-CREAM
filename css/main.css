@@ -608,6 +608,35 @@ select {
   color: #fff !important;
 }
 
+.week-btn {
+  border: none;
+  width: 100%;
+  margin: 0 2px;
+  padding: 5px 0;
+  border-radius: 4px;
+  background: none;
+}
+.week-btn p:first-child {
+  color: #BCC1CD;
+  margin: auto 0;
+}
+.week-btn p:last-child {
+  font-size: 16px;
+  margin: auto 0;
+  color: #333333;
+}
+
+.week-btn:hover,
+.week-btn:active,
+.week-btn:focus {
+  background: #2586EF;
+}
+.week-btn:hover p,
+.week-btn:active p,
+.week-btn:focus p {
+  color: #fff !important;
+}
+
 section.login-form {
   background-image: url(../img/bgimg.png);
   height: 100vh;
@@ -756,16 +785,60 @@ section.data-sorting .sort-head .date {
   display: flex;
   align-items: center;
 }
+section.data-sorting .sort-head .date .day-num {
+  font-size: 40px;
+}
 section.data-sorting .sort-head .date span {
   margin: auto 0;
   line-height: 7px;
 }
-section.data-sorting .sort-head .date .day-num {
-  font-size: 40px;
-}
 section.data-sorting .sort-head .sorting-form {
   display: flex;
   align-items: center;
+}
+section.data-sorting .sort-head .my-today {
+  color: #2586EF;
+  background: rgba(37, 134, 239, 0.29);
+  padding: 8px 18px;
+  border-radius: 4px;
+}
+section.data-sorting .week-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #FAF9F9;
+}
+section.data-sorting .sort-order {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+section.data-sorting .sort-order p {
+  color: #BCC1CD;
+  margin: auto 0;
+}
+section.data-sorting .sort-order img {
+  cursor: pointer;
+}
+section.data-sorting .sort-order span {
+  display: flex;
+}
+section.data-sorting .add-order {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 20px 0;
+  background: #2586EF;
+  box-shadow: 0px 4px 15px rgba(37, 134, 239, 0.25);
+  border-radius: 50%;
+}
+section.data-sorting .add-order img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 section.data-sorting .footer-pagination {
   display: flex;
@@ -899,13 +972,99 @@ section.customer-care .sort {
 section.customer-care .sort .dropdown .dropdown-menu {
   transform: translate(-85%, 50%) !important;
 }
-section.customer-care .ico2 {
-  left: 15px;
+section.customer-care .accordion {
+  width: 100%;
+  padding: 10px 0;
 }
-section.customer-care .paid {
+section.customer-care .accordion .item {
+  border: none;
+}
+section.customer-care .accordion .accordion-head {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+section.customer-care .accordion .accordion-text {
+  color: #000;
+  padding: 10px 15px 20px;
+}
+section.customer-care .accordion .item-header {
+  border-bottom: none;
+  border-radius: 5px;
+}
+section.customer-care .accordion .accord-btn.collapsed img {
+  transform: rotate(0deg);
+}
+section.customer-care .accordion .accord-btn {
+  width: 100%;
+  display: flex;
+  background-color: transparent !important;
+  border: none !important;
+  align-items: center;
+  text-align: left;
+}
+section.customer-care .accordion .accord-btn .accordion-p {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin: auto 0;
+}
+section.customer-care .accordion .acc-arr {
+  position: relative;
+  margin-right: 35px;
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  background: #2586EF;
+}
+section.customer-care .accordion .acc-arr img {
+  position: absolute;
+  top: 41%;
+  left: 32%;
+}
+section.customer-care .accordion .accord-btn img {
+  transform: rotate(180deg);
+}
+section.customer-care .accordion .pending {
+  background: #F2994A;
+}
+section.customer-care .accordion .balance {
+  background: #2586EF;
+}
+section.customer-care .accordion .paid {
   background: rgba(0, 128, 0, 0.2);
 }
-section.customer-care .ico3 {
+section.customer-care .a-orders:hover {
+  background-color: rgba(37, 134, 239, 0.2);
+}
+section.customer-care .a-orders:hover p {
+  color: white !important;
+}
+section.customer-care .p-orders:hover {
+  background-color: rgba(235, 87, 87, 0.2);
+}
+section.customer-care .p-orders:hover p {
+  color: white !important;
+}
+section.customer-care .o-orders:hover {
+  background-color: rgba(255, 165, 0, 0.2);
+}
+section.customer-care .o-orders:hover p {
+  color: white !important;
+}
+section.customer-care .c-orders:hover {
+  background-color: rgba(12, 178, 97, 0.2);
+}
+section.customer-care .c-orders:hover p {
+  color: white !important;
+}
+section.customer-care .c-orders:hover .ico2 {
+  left: 15px;
+}
+section.customer-care .c-orders:hover .paid {
+  background: rgba(0, 128, 0, 0.2);
+}
+section.customer-care .c-orders:hover .ico3 {
   left: 15px;
 }
 
@@ -1043,6 +1202,73 @@ div.fm .container .checkmark:after {
   color: #333333;
   font-size: 16px;
   font-weight: 500;
+}
+
+.order-timeline {
+  position: relative;
+  width: 100%;
+}
+.order-timeline::after {
+  content: "";
+  position: absolute;
+  width: 2.5px;
+  background-color: #FAF9F9;
+  top: 0;
+  left: 50px;
+  height: 100%;
+}
+.order-timeline .order-id {
+  display: flex;
+  justify-content: space-between;
+}
+.order-timeline .order-id p {
+  font-size: 16px !important;
+}
+.order-timeline .order-id img {
+  cursor: pointer;
+}
+.order-timeline .order-type {
+  margin: 5px 0 17px;
+}
+.order-timeline .order-time {
+  font-size: 16px;
+  line-height: 17px;
+  color: #333333;
+}
+.order-timeline .order-time p:last-child {
+  color: #BCC1CD;
+}
+.order-timeline .order-details {
+  width: 100%;
+  background-color: #F6F6F5;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 0 15px 20px;
+  cursor: pointer;
+}
+.order-timeline .order-details p {
+  font-size: 12px;
+  margin: auto 0;
+  color: #333333;
+}
+.order-timeline .order-details .order-name {
+  display: flex;
+  margin-top: 5px;
+}
+.order-timeline .order-details .order-name img {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.order-timeline .order-details:hover {
+  background-color: #2586EF;
+}
+.order-timeline .order-details:hover p {
+  color: #fff;
+}
+.order-timeline .order-details:hover .order-i {
+  filter: brightness(0) invert(1);
 }
 
 /*# sourceMappingURL=main.css.map */

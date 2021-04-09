@@ -199,20 +199,72 @@ section {
       .date {
         display: flex;
         align-items: center;
-
+        .day-num {
+          font-size: 40px;
+        }
+        
         span {
           margin: auto 0;
           line-height: 7px;
-        }
-
-        .day-num {
-          font-size: 40px;
         }
       }
 
       .sorting-form {
         display: flex;
         align-items: center;
+      }
+
+      .my-today {
+        color: $blue;
+        background: rgba(37, 134, 239, 0.29);
+        padding: 8px 18px;
+        border-radius: 4px;
+      }
+
+    }
+    
+    // Order Weekly calender
+    .week-order {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid $dem-grey;
+    }
+
+
+
+    .sort-order {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0;
+      p {
+        color: #BCC1CD;
+        margin: auto 0;
+      }
+
+      img {
+        cursor: pointer;
+      }
+      span {
+        display: flex;
+      }
+    }
+
+    .add-order {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      padding: 20px 0;
+      background: $blue;
+      box-shadow: 0px 4px 15px rgba(37, 134, 239, 0.25);
+      border-radius: 50%;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
 
@@ -461,7 +513,7 @@ section {
       }
 
       .processing {
-        background: $yellow;
+        // background: $yellow;
       }
 
       .paid {
@@ -469,12 +521,10 @@ section {
       }
     }
 
-    
-
     .a-orders:hover {
       background-color: rgb(37, 134, 239, 0.2);
 
-      p{
+      p {
       color: white !important;
       }
     }
@@ -511,4 +561,5 @@ section {
     }
   }
 
+  }
 }
