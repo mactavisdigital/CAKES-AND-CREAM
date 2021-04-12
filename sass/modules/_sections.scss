@@ -87,11 +87,9 @@ section {
     }
   }
 
-  &.booking-options {
-  }
+  &.booking-options {}
 
-  &.customer-details {
-  }
+  &.customer-details {}
 
   &.order-summary {
     .shade {
@@ -147,6 +145,7 @@ section {
         background-color: $deep-blue;
         border-radius: 50%;
         cursor: pointer;
+
         img {
           position: absolute;
           top: 50%;
@@ -155,8 +154,6 @@ section {
         }
       }
     }
-
-    
   }
 
   &.data-sorting {
@@ -198,10 +195,11 @@ section {
       .date {
         display: flex;
         align-items: center;
+
         .day-num {
           font-size: 40px;
         }
-        
+
         span {
           margin: auto 0;
           line-height: 7px;
@@ -221,7 +219,7 @@ section {
       }
 
     }
-    
+
     // Order Weekly calender
     .week-order {
       display: flex;
@@ -232,12 +230,12 @@ section {
       border-bottom: 1px solid $dem-grey;
     }
 
-
-
+    // sort booking order
     .sort-order {
       display: flex;
       justify-content: space-between;
       margin: 15px 0;
+
       p {
         color: #BCC1CD;
         margin: auto 0;
@@ -246,6 +244,7 @@ section {
       img {
         cursor: pointer;
       }
+
       span {
         display: flex;
       }
@@ -259,6 +258,8 @@ section {
       background: $blue;
       box-shadow: 0px 4px 15px rgba(37, 134, 239, 0.25);
       border-radius: 50%;
+      cursor: pointer;
+
       img {
         position: absolute;
         top: 50%;
@@ -279,19 +280,19 @@ section {
         margin: auto 0;
         border: 1px solid $grey;
         border-radius: 4px;
-        
+
         input {
           width: 100%;
           border: none;
         }
-        
+
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
           -webkit-appearance: none;
           margin: 0;
         }
       }
-      
+
       p {
         margin: auto 0;
         padding: 0 10px;
@@ -351,12 +352,10 @@ section {
     }
 
     .dash-rating {
-
       text-align: center;
 
       p:first-child {
         font-size: 24px;
-        // line-height: 10px;
       }
     }
 
@@ -524,41 +523,45 @@ section {
       background-color: rgb(37, 134, 239, 0.2);
 
       p {
-      color: white !important;
+        color: white !important;
       }
     }
 
     .p-orders:hover {
-      background-color: rgb(235, 87, 87,0.2);
-      p{
+      background-color: rgb(235, 87, 87, 0.2);
+
+      p {
         color: white !important;
-        }
+      }
     }
 
     .o-orders:hover {
       background-color: rgb(255, 165, 0, 0.2);
-      p{
+
+      p {
         color: white !important;
-        }
+      }
     }
 
     .c-orders:hover {
       background-color: rgb(12, 178, 97, 0.2);
-      p{
+
+      p {
         color: white !important;
-        }
-    .ico2 {
-      left: 15px;
-    }
+      }
 
-    .paid {
-      background: rgba(0, 128, 0, 0.2);
-    }
+      .ico2 {
+        left: 15px;
+      }
 
-    .ico3 {
-      left: 15px;
+      .paid {
+        background: rgba(0, 128, 0, 0.2);
+      }
+
+      .ico3 {
+        left: 15px;
+      }
     }
-  }
 
   }
 }

@@ -168,6 +168,16 @@ div {
 }
 
 
+.top-accordi {
+  position: relative;
+}
+
+.bottom-accordi {
+  position: absolute;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+
 // Order Timeline 
 .order-timeline {
   position: relative;

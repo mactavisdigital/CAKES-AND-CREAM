@@ -830,6 +830,7 @@ section.data-sorting .add-order {
   background: #2586EF;
   box-shadow: 0px 4px 15px rgba(37, 134, 239, 0.25);
   border-radius: 50%;
+  cursor: pointer;
 }
 section.data-sorting .add-order img {
   position: absolute;
