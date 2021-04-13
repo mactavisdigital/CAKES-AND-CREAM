@@ -11,33 +11,37 @@
 </head>
 
 <body>
-    <section class="customer-care">
+    <section class="customer-care data-sorting">
         <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-6">
+            <div class="row accordion-wrap">
 
-                    <div class="today-date">
-                        <p class="day-num">24</p>
-                        <span class="day">
-                            <p>Wed</p>
-                            <p>Jan 2020</p>
-                        </span>
+                <div class="col-12">
+                    <div class="sort-head">
+                        <div class="date">
+                            <p class="day-num">24</p>
+                            <span>
+                                <p class="day">Wed</p>
+                                <p class="year">Jan 2021</p>
+                            </span>
+                        </div>
+                        <div class="sorting-form">
+                            <div id="myOverlay" class="overlay">
+                                <div class="overlay-content d-flex align-items-center">
+                                    <span><img src="./img/search.svg" alt=""></span>
+                                    <input class="search-input" type="text">
+                                    <div class="closebtn" onclick="closeSearch()"><img src="./img/i-close.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="openBtn" onclick="openSearch()"><img src="./img/search.svg" alt=""></button>
+                        </div>
                     </div>
-
-                </div>
-                <div class="col-6">
-
-                    <div class="sort my-auto">
-                        <a href="#"><img src="img\search.svg" alt=""></a>
-
-                    </div>
-
                 </div>
 
                 <div class="col-12">
                     <div class="d-flex justify-content-between">
                         <div class="d-flex">
-                            <p>Orders</p>
+                            <p class="my-auto pr-2">Orders</p>
                             <img src="img\order.svg" alt="">
                         </div>
 
@@ -47,194 +51,483 @@
                     </div>
                 </div>
 
-                <div class="col-12">
-                    <div class="row my-5">
-                        <div class="col-6 a-orders" data-toggle="collapse" data-target="#allOrders"
-                           >
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-4">
-                                    <div class="ico1">
-                                        <img src="img\all2.svg" class="day-num">
+                <div class="col-12 mt-5">
+                    <div class="row">
+                        <!-- All orders -->
+                        <div class="col-6">
+                            <div class="a-orders" data-toggle="collapse" data-target="#allOrders"
+                                aria-controls="collapseOne">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-4">
+                                        <div class="ico1">
+                                            <img src="img\all2.svg" class="day-num">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-7">
-                                    <div class="dash-rating">
-                                        <p class="">252</p>
-                                        <p class="">All</p>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-6 p-orders" data-toggle="collapse" data-target="#pendingOrders"
-                            >
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-4">
-                                    <div class="ico2">
-                                        <img src="img\clock.svg" class="day-num">
-                                    </div>
-                                </div>
-
-                                <div class="col-7">
-                                    <div class="dash-rating">
-                                        <p>32</p>
-                                        <p>Pending</p>
+                                    <div class="col-7">
+                                        <div class="dash-rating">
+                                            <p>252</p>
+                                            <p>All</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Pending Order -->
+                        <div class="col-6 ">
+                            <div class="p-orders" data-toggle="collapse" data-target="#pendingOrders"
+                                aria-controls="collapseOne">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-4">
+                                        <div class="ico2">
+                                            <img src="img\clock.svg" class="day-num">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-7">
+                                        <div class="dash-rating">
+                                            <p>32</p>
+                                            <p>Pending</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
 
                     <div class="row my-5">
-                        <div class="col-6 o-orders" data-toggle="collapse" data-target="#ongoingOrders"
-                           >
-
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-4">
-                                    <div class="ico">
-                                        <img src="img\ongo.svg" class="day-num">
+                        <div class="col-6">
+                            <div class="o-orders" data-toggle="collapse" data-target="#ongoingOrders" aria-controls="collapseOne">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-4">
+                                        <div class="ico">
+                                            <img src="img\ongo.svg" class="day-num">
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="col-7">
-                                    <div class="dash-rating">
-                                        <p>32</p>
-                                        <p>Ongoing</p>
+    
+                                    <div class="col-7">
+                                        <div class="dash-rating">
+                                            <p>32</p>
+                                            <p>Ongoing</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        <div class="col-6 c-orders" data-toggle="collapse" data-target="#completeOrders"
-                           >
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-4">
-                                    <div class="ico3">
-                                        <img src="img\tick.svg" class="day-num">
+                        <div class="col-6">
+                            <div class="c-orders" data-toggle="collapse" data-target="#completeOrders"  aria-controls="collapseOne">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-4">
+                                        <div class="ico3">
+                                            <img src="img\tick.svg" class="day-num">
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="col-7">
-                                    <div class="dash-rating">
-                                        <p>32</p>
-                                        <p>Completed</p>
+    
+                                    <div class="col-7">
+                                        <div class="dash-rating">
+                                            <p>32</p>
+                                            <p>Completed</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
 
-
-            </div>
-            <div class="row">
-
-                    <!-- PENDING ORDERS -->
-                    <!-- <div class="collapse " id="pendingOrders"> -->
-                        <div class="col-12 border-top">
-                            
-                            <span class="d-flex">
-                                <p class="">Pending Orders</p>
-                                <img class="" src="img\warning.svg" alt="">
-                            </span>
-                            <div class="accordion " id="accordionExample">
-                                <div class="item-header">
-                                    <div class="accordion-head">
-
-                                        <button class="accord-btn" type="button" data-toggle="collapse"
-                                            data-target="#collapseOne">
-                                            <span class="acc-arr pending">
-                                                <img class="img-fluid" src="./img/arrow-up.svg" alt="">
-                                            </span>
-                                            <p class="accordion-p">Order #34567AB</p>
-                                        </button>
-
+                <div class="col-12 ">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- PENDING ORDERS -->
+                            <div class="collapse" id="pendingOrders">
+                                <div class="d-flex mb-3">
+                                    <p class="my-auto pr-2">Pending Orders</p>
+                                    <img src="img\warning.svg" alt="">
+                                </div>
+                                <div class="col-12 border-top">
+                                    <div class="accordion " id="accordionExample">
+                                        <div class="item">
+                                            <div class="item-header">
+                                                <div class="accordion-head">
+                                                    <button class="accord-btn" type="button" data-toggle="collapse"
+                                                        data-target="#collapseOne" aria-controls="collapseOne">
+                                                        <span class="acc-arr pending">
+                                                            <img class="img-fluid" src="./img/arrow-up.svg" alt="">
+                                                        </span>
+                                                        <p class="accordion-p">Order #34567AB</p>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div id="collapseOne" class="collapse">
+                                                <div class="accordion-text">
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Tag Number</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>201</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Phone Number</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>08123456789</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Customer Name</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Tunji Odumosu</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Gross Amount</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>₦40K</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Payment Status</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Pending Payment</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Action</p>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="edit">
+                                                                        <span class="edit-img">
+                                                                            <img src="./img/edit.svg" alt="">
+                                                                        </span>
+                                                                        <a class="lack" href="#">Edit</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div id="collapseOne" class="collapse">
-                                    <div class="accordion-text">
-                                        <table class="table table-borderless">
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <p>Tag Number</p>
-                                                    </td>
-                                                    <td>
-                                                        <p>201</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <p>Phone Number</p>
-                                                    </td>
-                                                    <td>
-                                                        <p>08123456789</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <p>Customer Name</p>
-                                                    </td>
-                                                    <td>
-                                                        <p>Tunji Odumosu</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <p>Gross Amount</p>
-                                                    </td>
-                                                    <td>
-                                                        <p>₦40K</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <p>Payment Status</p>
-                                                    </td>
-                                                    <td>
-                                                        <p>Pending Payment</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <p>Action</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="edit">
-                                                            <span class="edit-img">
-                                                                <img src="./img/edit.svg" alt="">
-                                                            </span>
-                                                            <a class="lack" href="#">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                            </div>
+                        </div>
+
+                        <!-- ALL ORDERS -->
+                        <div class="col-12">
+                            <div class="collapse" id="allOrders">
+                                 <div class="d-flex mb-3">
+                                     <p class="my-auto pr-2">All Orders</p>
+                                     <img src="img\all2.svg" alt="">
+                                 </div>
+                               
+                                <div class="col-12 border-top">
+                                    <div class="accordion " id="accordionExample">
+                                        <div class="item">
+                                            <div class="item-header">
+                                                <div class="accordion-head">
+                                                    <button class="accord-btn" type="button" data-toggle="collapse"
+                                                        data-target="#collapseOne" aria-controls="collapseOne">
+                                                        <span class="acc-arr processing">
+                                                            <img class="img-fluid" src="./img/arrow-up.svg" alt="">
+                                                        </span>
+                                                        <p class="accordion-p">Order #34567AB</p>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div id="collapseOne" class="collapse">
+                                                <div class="accordion-text">
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Tag Number</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>201</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Phone Number</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>08123456789</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Customer Name</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Tunji Odumosu</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Gross Amount</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>₦40K</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Payment Status</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Pending Payment</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Action</p>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="edit">
+                                                                        <span class="edit-img">
+                                                                            <img src="./img/edit.svg" alt="">
+                                                                        </span>
+                                                                        <a class="lack" href="#">Edit</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ONGOING ORDERS -->
+                        <div class="col-12">
+                            <div class="collapse" id="ongoingOrders">
+                               <div class="d-flex mb-3">
+                                   <p class="my-auto pr-2">Ongoing Orders</p>
+                                   <img src="img\ongo.svg" alt="">
+                               </div>
+                                <div class="col-12 border-top">
+                                    <div class="accordion " id="accordionExample">
+                                        <div class="item">
+                                            <div class="item-header">
+                                                <div class="accordion-head">
+                                                    <button class="accord-btn" type="button" data-toggle="collapse"
+                                                        data-target="#collapseOne" aria-controls="collapseOne">
+                                                        <span class="acc-arr balance">
+                                                            <img class="img-fluid" src="./img/arrow-up.svg" alt="">
+                                                        </span>
+                                                        <p class="accordion-p">Order #34567AB</p>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div id="collapseOne" class="collapse">
+                                                <div class="accordion-text">
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Tag Number</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>201</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Phone Number</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>08123456789</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Customer Name</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Tunji Odumosu</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Gross Amount</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>₦40K</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Payment Status</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Pending Payment</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Action</p>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="edit">
+                                                                        <span class="edit-img">
+                                                                            <img src="./img/edit.svg" alt="">
+                                                                        </span>
+                                                                        <a class="lack" href="#">Edit</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
 
-
-
-                    <!-- </div> -->
-                <!-- </div> -->
+                        <!-- COMPLETE ORDERS -->
+                        <div class="col-12">
+                            <div class="collapse" id="completeOrders">
+                                <div class="d-flex mb-3">
+                                    <p class="my-auto pr-2">Complete Orders</p>
+                                    <img src="img\tick.svg" alt="">
+                                </div>
+                                <div class="col-12 border-top">
+                                    <div class="accordion " id="accordionExample">
+                                        <div class="item">
+                                            <div class="item-header">
+                                                <div class="accordion-head">
+                                                    <button class="accord-btn" type="button" data-toggle="collapse"
+                                                        data-target="#collapseOne" aria-controls="collapseOne">
+                                                        <span class="acc-arr paid">
+                                                            <img class="img-fluid" src="./img/arrow-up.svg" alt="">
+                                                        </span>
+                                                        <p class="accordion-p">Order #34567AB</p>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div id="collapseOne" class="collapse">
+                                                <div class="accordion-text">
+                                                    <table class="table table-borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Tag Number</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>201</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Phone Number</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>08123456789</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Customer Name</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Tunji Odumosu</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Gross Amount</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>₦40K</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Payment Status</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Pending Payment</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Action</p>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="edit">
+                                                                        <span class="edit-img">
+                                                                            <img src="./img/edit.svg" alt="">
+                                                                        </span>
+                                                                        <a class="lack" href="#">Edit</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
+    <section class="fixed-bottom align-items-center">
+        <div class="container d-flex justify-content-between">
+
+            <div class="d-flex justify-content-between">
+                <p>Showing </p>
+                <div class="form-group mx-2">
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <p>of 100 entries</p>
+            </div>
+            <div>
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a href="#" class="lack page-link">
+                            <</a> </li> <li class="page-item">
+                                <a href="#" class="lack page-link">></a>
+                    </li>
+                </ul>
+            </div>
 
 
-
-
-
-
+        </div>
+    </section>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
