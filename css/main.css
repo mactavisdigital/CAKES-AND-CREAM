@@ -253,7 +253,7 @@ html, body {
 
 body {
   font-family: "SFProText", sans-serif;
-  background: url(/img/bgimg2.png) repeat center;
+  background: url(/img/bgimg2.png) repeat center fixed;
   background-size: 100%;
   padding-bottom: 75px;
 }
