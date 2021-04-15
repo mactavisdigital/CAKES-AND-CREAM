@@ -5,11 +5,11 @@ html, body {
 
 body{
   font-family: $ffb;
-  background: url(/img/bgimg2.png) repeat center;
+  background: url(/img/bgimg2.png) repeat center fixed;
+  // background-position: fixed !important;
   background-size: 100%;
   padding-bottom: 75px;
 }
-
 h1,h2,h3,h4,h5,h6{
   font-family: $ffh;
   background: url("../img/title-bg.png") no-repeat center;

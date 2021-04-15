@@ -72,6 +72,7 @@ div {
 }
 
 
+
 /* ACCORDION */
 .accordion {
   padding: 10px 0;
@@ -168,6 +169,16 @@ div {
 }
 
 
+.top-accordi {
+  position: relative;
+}
+
+.bottom-accordi {
+  position: absolute;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+
 // Order Timeline 
 .order-timeline {
   position: relative;
@@ -187,9 +198,11 @@ div {
   .order-id {
     display: flex;
     justify-content: space-between;
+
     p {
       font-size: 16px !important;
     }
+
     img {
       cursor: pointer;
     }
@@ -198,52 +211,56 @@ div {
   .order-type {
     margin: 5px 0 17px;
   }
-  
+
   //Order interval time 
   .order-time {
     font-size: 16px;
     line-height: 17px;
     color: $deep-black;
-    
+
     p:last-child {
       color: #BCC1CD;
     }
   }
-  
-  // Order details
-  .order-details {
-    width: 100%;
-    background-color: #F6F6F5;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 0 0 15px 20px;
-    cursor: pointer;
-    p {
-      font-size: 12px;
-      margin: auto 0;
-      color: $deep-black;
-    }
+}
 
-    .order-name {
-      display: flex;
-      margin-top: 5px;
-      img {
-        width: 22px;
-        height: 22px;
-        margin-right: 10px;
-        border-radius: 50%;
-      }
-    }
+// Order details
+.order-details {
+  width: 100%;
+  background-color: #F6F6F5;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 0 15px 20px;
+  cursor: pointer;
+
+  p {
+    font-size: 12px;
+    margin: auto 0;
+    color: $deep-black;
   }
 
-  // Hover state 
-  .order-details:hover {
-    background-color: $blue;
-    p {
-      color: #fff;
+  .order-name {
+    display: flex;
+    margin-top: 5px;
+
+    img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      border-radius: 50%;
     }
-    .order-i {
-      filter: brightness(0) invert(1);
-    }
+  }
+}
+
+// Hover state 
+.order-details:hover {
+  background-color: $blue;
+
+  p {
+    color: #fff;
+  }
+
+  .order-i {
+    filter: brightness(0) invert(1);
   }
 }

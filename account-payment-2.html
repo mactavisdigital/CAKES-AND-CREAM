@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-offcanvas navbar-expand-sm">
         <a class="navbar-brand" href="#"><img src="img/profile.jpg" alt=""> Gbolade O.</a>
 
@@ -45,7 +44,7 @@
                 </div>
                 <div class="col-12">
                     <div class="order-sec">
-                        <p><b>Order #145AB</b></p>
+                        <p class="orderid-text">Order #145AB</p>
                         <p>Monday, May 20 2021 at 4:13pm</p>
                     </div>
                 </div>
@@ -136,29 +135,74 @@
                         </tbody>
                     </table>
 
-                    <table class="table table-borderless mt-5">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <p>Payment Method</p>
-                                </td>
-                                <td>
-                                    <p>POS</p>
+                    <form class="sign-in mt-5" action="#">
+                        <div class="form-group">
+                            <label>Payment Method</label>
+                            <select>
+                                <option>cash</option>
+                                <option>POS</option>
+                                <option>Transfer</option>
+                                <option>Multiple Payment</option>
+                            </select>
+                        </div>
 
-                                </td>
-                            </tr>
+                        <label>Amount Paid (₦)</label>
+                        <label class="radio-wrapper">Full
+                            <input type="radio" checked="checked" name="order-type">
+                            <span class="checkmark"></span>
+                        </label>
+    
+                        <div class="d-flex">
+                            <label class="radio-wrapper my-auto">Part
+                                <input type="radio" checked="checked" name="order-type">
+                                <span class="checkmark"></span>
+                            </label>
+                            <input type="text" class="ml-3">
+                        </div>
+    
+                        <div class="add-paymt">
+                            <p>Add another payment method</p>
+                            <span class="add-icon">
+                                <img class="img-fluid" src="./img/add-i.svg" alt="">
+                            </span>
+                        </div>
 
-                            <tr>
-                                <td>
-                                    <p>Order Status</p>
-                                </td>
-                                <td>
-                                    <p>Ready For Delivery</p>
+                        <div class="form-group">
+                            <label>Payment Method</label>
+                            <select>
+                                <option>cash</option>
+                                <option>POS</option>
+                                <option>Transfer</option>
+                                <option>Multiple Payment</option>
+                            </select>
+                        </div>
 
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <label>Amount Paid (₦)</Label>
+                        <div class="d-flex">
+                            <label class="radio-wrapper my-auto">Balance
+                                <input type="radio" checked="checked" name="order-type">
+                                <span class="checkmark"></span>
+                            </label>
+                            <input type="text" class="ml-3">
+                        </div>
+    
+                        <div class="d-flex">
+                            <label class="radio-wrapper my-auto">Part
+                                <input type="radio" checked="checked" name="order-type">
+                                <span class="checkmark"></span>
+                            </label>
+                            <input type="text" class="ml-3">
+                        </div>
+
+                        <div class="add-paymt">
+                            <p>Add another payment method</p>
+                            <span class="add-icon">
+                                <img class="img-fluid" src="./img/add-i.svg" alt="">
+                            </span>
+                        </div>
+                    </form>
+
+
 
                     <table class="table table-borderless">
                         <p class="order-head">Order Details</p>
@@ -196,13 +240,6 @@
                         </tbody>
                     </table>
 
-                    <div class="d-flex ">
-                        <p>Customer Signature</p>
-                        <select>
-                            <option></option>
-                        </select>
-                    </div>
-
                     <div class="btn-row">
                         <button type="button" class="btn close-btn">Close</button>
                         <button class="btn btn-primary" type="button">Save</button>
@@ -213,7 +250,7 @@
     </section>
 
     <footer class="fixed-bottom d-flex align-items-center justify-content-between">
-        <p class="w-100">Logistic Manager App. &copy; Cakes & Cream.</p>
+        <p class="w-100">Account Officer App. &copy; Cakes & Cream.</p>
     </footer>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"

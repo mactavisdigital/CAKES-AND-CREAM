@@ -18,11 +18,15 @@
     });
 })(jQuery);
 
+
+
 // Open and Close Button for Search Section
 function openSearch() {
-document.getElementById("myOverlay").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
 }
-
 function closeSearch() {
 document.getElementById("myOverlay").style.display = "none";
 }
+
+
+
