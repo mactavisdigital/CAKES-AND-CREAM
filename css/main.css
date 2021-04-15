@@ -362,6 +362,48 @@ nav.navbar .offcanvas-collapse.open {
   /* Account for horizontal padding on navbar */
 }
 
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav .logo {
+  height: 55px;
+  margin: 20% 25% 30px;
+}
+.sidenav .space {
+  margin-bottom: 50px;
+}
+
+.sidenav p {
+  padding: 3px 4px 3px 8px;
+}
+
+.sidenav a {
+  padding: 15px 8px 15px 16px;
+  text-decoration: none;
+  color: #666666;
+  display: block;
+}
+.sidenav a img {
+  padding-right: 20px;
+}
+
+.sidenav a:hover img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(152deg) brightness(170%) contrast(103%);
+}
+
+.sidenav a:hover {
+  color: #FFFFFF;
+  background-color: #2586EF;
+}
+
 footer {
   background-color: #2586EF;
   font-size: 12px;
@@ -641,6 +683,47 @@ section.login-form {
   background-image: url(../img/bgimg.png);
   height: 100vh;
 }
+section.login-form a {
+  text-decoration: none;
+}
+section.login-form .des:active img {
+  filter: invert(49%) sepia(86%) saturate(4052%) hue-rotate(195deg) brightness(98%) contrast(91%);
+}
+section.login-form .des:active p {
+  filter: invert(49%) sepia(86%) saturate(4052%) hue-rotate(195deg) brightness(98%) contrast(91%);
+}
+section.login-form .des:active .filt {
+  border-radius: 50%;
+  border: 3px solid #2586EF;
+  width: 144px;
+  height: 144px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  position: relative;
+}
+section.login-form .des:active::after {
+  position: absolute;
+  content: url(/img/chosen.svg);
+  background: #2586EF;
+  top: 0%;
+  right: 26%;
+  padding: 10px;
+  border-radius: 50%;
+}
+section.login-form .filt {
+  width: 144px;
+  height: 144px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  position: relative;
+}
+section.login-form .filt img {
+  top: 25%;
+  left: 25%;
+  position: absolute;
+}
 section.login-form .blob {
   position: absolute;
   top: 0;
@@ -700,6 +783,61 @@ section.login-form .form-wrapper .form-group input {
   padding-left: 10px;
 }
 section.login-form .form-wrapper button {
+  margin: 20px 0;
+}
+section.des-login {
+  background-image: url(../img/bgimg.png);
+}
+section.des-login a {
+  text-decoration: none;
+}
+section.des-login .blob {
+  position: absolute;
+  top: 0;
+}
+section.des-login .logo {
+  height: 80px;
+  margin: 80px 0 30px;
+}
+section.des-login .form-wrapper {
+  background: white;
+  padding: 165px;
+}
+section.des-login .form-wrapper p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+section.des-login .form-wrapper .form-group {
+  height: 47px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #5e6b71;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+section.des-login .form-wrapper .form-group::after {
+  position: absolute;
+  content: "";
+  height: 45px;
+  width: 45px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-size: 24px !important;
+  right: 0;
+}
+section.des-login .form-wrapper .form-group.active {
+  border: 1px solid #2586EF;
+}
+section.des-login .form-wrapper .form-group label {
+  margin: 3px 0 0 10px;
+}
+section.des-login .form-wrapper .form-group input {
+  border: none;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+section.des-login .form-wrapper button {
   margin: 20px 0;
 }
 section.order-summary .shade p {
@@ -914,7 +1052,6 @@ section.customer-care .ico {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  /* left: 6px; */
 }
 section.customer-care .ico .day-num {
   top: 50%;
@@ -928,7 +1065,6 @@ section.customer-care .ico1 {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  /* left: 6px; */
 }
 section.customer-care .ico1 .day-num {
   top: 50%;
@@ -942,7 +1078,6 @@ section.customer-care .ico2 {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  /* left: 6px; */
 }
 section.customer-care .ico2 .day-num {
   top: 50%;
@@ -956,7 +1091,6 @@ section.customer-care .ico3 {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  /* left: 6px; */
 }
 section.customer-care .ico3 .day-num {
   top: 50%;
@@ -1026,10 +1160,13 @@ section.customer-care .accordion .accord-btn img {
   transform: rotate(180deg);
 }
 section.customer-care .accordion .pending {
-  background: #F2994A;
+  background: #eb5757;
 }
 section.customer-care .accordion .balance {
-  background: #2586EF;
+  background: blue;
+}
+section.customer-care .accordion .processing {
+  background: yellow;
 }
 section.customer-care .accordion .paid {
   background: rgba(0, 128, 0, 0.2);
@@ -1058,14 +1195,24 @@ section.customer-care .c-orders:hover {
 section.customer-care .c-orders:hover p {
   color: white !important;
 }
-section.customer-care .c-orders:hover .ico2 {
-  left: 15px;
+section.customer-care .i-size {
+  height: 18px;
+  padding-left: 4px;
 }
-section.customer-care .c-orders:hover .paid {
-  background: rgba(0, 128, 0, 0.2);
+section.des-ws {
+  margin-left: 160px;
+  /* Same as the width of the sidenav */
+  font-size: 28px;
+  /* Increased text to enable scrolling */
+  padding: 0px 10px;
 }
-section.customer-care .c-orders:hover .ico3 {
-  left: 15px;
+@media screen and (max-height: 450px) {
+  section.des-ws .sidenav {
+    padding-top: 15px;
+  }
+  section.des-ws .sidenav a {
+    font-size: 18px;
+  }
 }
 
 .color-blue {

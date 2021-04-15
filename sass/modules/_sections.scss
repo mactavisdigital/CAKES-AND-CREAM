@@ -3,6 +3,65 @@ section {
     background-image: url(../img/bgimg.png);
     height: 100vh;
 
+    a {
+      text-decoration: none;
+    }
+
+    
+    .des:active {
+       img {
+        filter: invert(49%) sepia(86%) saturate(4052%) hue-rotate(195deg) brightness(98%) contrast(91%);
+       }
+
+       p {
+        filter: invert(49%) sepia(86%) saturate(4052%) hue-rotate(195deg) brightness(98%) contrast(91%);
+       }
+
+       .filt{
+        border-radius: 50%;
+        border: 3px solid #2586EF;
+        width: 144px;
+        height: 144px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        position: relative;
+
+        
+       }
+    }
+
+    .des:active::after {
+      position: absolute;
+      content: url(/img/chosen.svg);
+      background: #2586EF;
+      top: 0%;
+      right: 26%;
+      padding: 10px;
+      border-radius: 50%;
+  
+    }
+
+   
+    .filt{
+      // border-radius: 50%;
+        // border: 3px solid #2586EF;
+        width: 144px;
+        height: 144px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        position: relative;
+
+
+      img {
+    top: 25%;
+    left: 25%;
+    position: absolute;
+      }
+     }
+    
+
     .blob {
       position: absolute;
       top: 0;
@@ -85,6 +144,80 @@ section {
         margin: 20px 0;
       }
     }
+  }
+
+  &.des-login {
+    
+    
+      background-image: url(../img/bgimg.png);
+      // height: 100vh;
+  
+      a {
+        text-decoration: none;
+      }
+  
+     
+  
+      .blob {
+        position: absolute;
+        top: 0;
+      }
+  
+      .logo {
+        height: 80px;
+        margin: 80px 0 30px;
+      }
+  
+      .form-wrapper {
+        background: white;
+        padding: 165px;
+  
+        p {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+  
+        .form-group {
+          height: 47px;
+          margin-bottom: 15px;
+          border-radius: 8px;
+          border: 1px solid $grey;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+  
+          &::after {
+            position: absolute;
+            content: "";
+            height: 45px;
+            width: 45px;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            background-size: 24px !important;
+            right: 0;
+          }
+  
+  
+          &.active {
+            border: 1px solid $blue;
+          }
+  
+          label {
+            margin: 3px 0 0 10px;
+          }
+  
+          input {
+            border: none;
+            border-radius: 8px;
+            padding-left: 10px;
+          }
+        }
+  
+        button {
+          margin: 20px 0;
+        }
+      }
+    
   }
 
   &.booking-options {
@@ -337,10 +470,10 @@ section {
   }
 
   &.customer-care {
-    .today-date {
+    .today-date{
       display: flex !important;
       align-items: center;
-
+      
 
       .day-num {
         font-size: 40px;
@@ -352,7 +485,7 @@ section {
     }
 
     .dash-rating {
-
+      
       text-align: center;
 
       p:first-child {
@@ -360,115 +493,111 @@ section {
         // line-height: 10px;
       }
     }
-
     .ico {
-      position: relative;
-      background-color: rgba(242, 153, 74, 0.2);
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      /* left: 6px; */
+       position: relative;
+    background-color: rgb(242, 153, 74, 0.2);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    // left:15px;
 
-      .day-num {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-      }
+    .day-num {
+      top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    }
     }
 
     .ico1 {
       position: relative;
-      background-color: rgba(37, 134, 239, 0.2);
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      /* left: 6px; */
+   background-color: rgb(37, 134, 239, 0.2);
+   border-radius: 50%;
+   width: 48px;
+   height: 48px;
+  //  left: 15px;
 
-      .day-num {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-      }
-    }
+   .day-num {
+     top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   }
+   }
 
-    .ico2 {
-      position: relative;
-      background-color: rgba(235, 87, 87, 0.2);
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      /* left: 6px; */
+   .ico2 {
+    position: relative;
+ background-color: rgb(235, 87, 87, 0.2);
+ border-radius: 50%;
+ width: 48px;
+ height: 48px;
+//  left: 15px;
 
-      .day-num {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-      }
-    }
+ .day-num {
+   top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ position: absolute;
+ }
+ }
 
-    .ico3 {
-      position: relative;
-      background-color: rgba(20, 238, 131, 0.2);
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      /* left: 6px; */
+ .ico3 {
+  position: relative;
+background-color: rgb(20, 238, 131, 0.2);
+border-radius: 50%;
+width: 48px;
+height: 48px;
+// left:15px;
 
-      .day-num {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-      }
-    }
+.day-num {
+ top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+}
+}
 
-    .sort {
+    .sort{
       display: flex;
       align-items: center !important;
       justify-content: flex-end;
 
-      .dropdown {
+      .dropdown{
 
-        .dropdown-menu {
-          transform: translate(-85%, 50%) !important;
-        }
-      }
+      .dropdown-menu {
+        transform: translate(-85%, 50%) !important;
+    }}
     }
 
+    // .mu{
+    //   width: 100% !important;
+    //   transform: translate3d(0px, 30px, 0px) !important;
+    //   border: 0px;
+    // }
 
-
-    // DROPDOWN 
+    // DROPDOWN // DROPDOWN
     .accordion {
       width: 100%;
       padding: 10px 0;
-
       .item {
         border: none;
       }
-
       .accordion-head {
         margin-bottom: 0;
         display: flex;
         align-items: center;
       }
-
       .accordion-text {
         color: #000;
         padding: 10px 15px 20px;
       }
-
       .item-header {
         border-bottom: none;
         border-radius: 5px;
       }
-
       .accord-btn.collapsed img {
         transform: rotate(0deg);
       }
-
       .accord-btn {
         width: 100%;
         display: flex;
@@ -476,7 +605,6 @@ section {
         border: none !important;
         align-items: center;
         text-align: left;
-
         .accordion-p {
           font-size: 16px;
           color: #000;
@@ -484,7 +612,6 @@ section {
           margin: auto 0;
         }
       }
-
       .acc-arr {
         position: relative;
         margin-right: 35px;
@@ -492,39 +619,34 @@ section {
         width: 35px;
         height: 35px;
         background: $blue;
-
         img {
           position: absolute;
           top: 41%;
           left: 32%;
         }
       }
-
       .accord-btn img {
         transform: rotate(180deg);
       }
-
       .pending {
-        background: $orange;
+        background: rgb(235, 87, 87);
       }
-
       .balance {
-        background: $blue;
+        background: blue;
       }
-
       .processing {
-        // background: $yellow;
+        background: yellow;
       }
-
       .paid {
         background: rgb(0, 128, 0, 0.2);
       }
     }
 
+
     .a-orders:hover {
       background-color: rgb(37, 134, 239, 0.2);
 
-      p {
+      p{
       color: white !important;
       }
     }
@@ -548,18 +670,26 @@ section {
       p{
         color: white !important;
         }
-    .ico2 {
-      left: 15px;
     }
 
-    .paid {
-      background: rgba(0, 128, 0, 0.2);
-    }
-
-    .ico3 {
-      left: 15px;
+    .i-size {
+      height: 18px;
+      padding-left: 4px;
     }
   }
 
+  &.des-ws {
+
+ 
+    
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
   }
 }
