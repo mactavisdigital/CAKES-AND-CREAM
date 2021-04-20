@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Cakes & Cream</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-offcanvas navbar-expand-sm">
+        <a class="navbar-brand" href="#"><img src="img/profile.jpg" alt=""> Gbolade O.</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+            <img src="img/menu.svg">
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="order-summary">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <h1>Cake Details</h1>
+
+                    <form class="sign-in" action="#">
+                        <p class="pt-5">Icing Type</p>
+                        <label class="radio-wrapper">Butter Cream
+                            <input type="radio" checked="checked" name="method">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="radio-wrapper">Fondant
+                            <input type="radio" checked="checked" name="method">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="radio-wrapper">Un-iced
+                            <input type="radio" checked="checked" name="method">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <p class="pt-3">Cake Type</p>
+                        <label class="radio-wrapper">Basic / Regular
+                            <input type="radio" checked="checked" name="method">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="radio-wrapper">Classic
+                            <input type="radio" checked="checked" name="method">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="radio-wrapper">Fruit
+                            <input type="radio" checked="checked" name="method">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <div class="form-group">
+                            <label>Shape</label>
+                            <select>
+                                <option>Custom</option>
+                                <option>Round</option>
+                                <option>Square</option>
+                                <option>Rectangle</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Size</label>
+                            <select>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Flavor</label>
+                            <select>
+                                <option>None</option>
+                                <option>Vanilla</option>
+                                <option>Chocolate</option>
+                                <option>Cream Cheese</option>
+                                <option>Cinnamon Cream Cheese</option>
+                            </select>
+                        </div>
+
+                        <div class="add-paymt">
+                            <p>Add Varieties</p>
+                            <span class="add-icon">
+                                <img class="img-fluid" src="./img/add-i.svg" alt="">
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Varieties</label>
+                            <select>
+                                <option>None</option>
+                                <option>Butter</option>
+                                <option>Fondate</option>
+                                <option>Hybrid</option>
+                            </select>
+                        </div>
+                    </form>
+
+                    <div class="btn-row">
+                        <button class="btn btn-primary ml-auto" type="button">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fixed-bottom d-flex align-items-center justify-content-between">
+        <p class="w-100">Account Officer App. &copy; Cakes & Cream.</p>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
