@@ -362,6 +362,48 @@ nav.navbar .offcanvas-collapse.open {
   /* Account for horizontal padding on navbar */
 }
 
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav .logo {
+  height: 55px;
+  margin: 20% 25% 30px;
+}
+.sidenav .space {
+  margin-bottom: 50px;
+}
+
+.sidenav p {
+  padding: 3px 4px 3px 8px;
+}
+
+.sidenav a {
+  padding: 15px 8px 15px 16px;
+  text-decoration: none;
+  color: #666666;
+  display: block;
+}
+.sidenav a img {
+  padding-right: 20px;
+}
+
+.sidenav a:hover img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(152deg) brightness(170%) contrast(103%);
+}
+
+.sidenav a:hover {
+  color: #FFFFFF;
+  background-color: #2586EF;
+}
+
 footer {
   background-color: #2586EF;
   font-size: 12px;

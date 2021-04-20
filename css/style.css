@@ -641,6 +641,19 @@ section.login-form {
   background-image: url(../img/bgimg.png);
   height: 100vh;
 }
+section.login-form a {
+  text-decoration: none;
+}
+section.login-form .filt:hover {
+  border: 3px solid #2586EF;
+  border-radius: 100px;
+}
+section.login-form .filt:hover img {
+  filter: invert(49%) sepia(86%) saturate(4052%) hue-rotate(195deg) brightness(98%) contrast(91%);
+}
+section.login-form .filt:hover p {
+  filter: invert(49%) sepia(86%) saturate(4052%) hue-rotate(195deg) brightness(98%) contrast(91%);
+}
 section.login-form .blob {
   position: absolute;
   top: 0;
@@ -914,7 +927,6 @@ section.customer-care .ico {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  /* left: 6px; */
 }
 section.customer-care .ico .day-num {
   top: 50%;
@@ -928,7 +940,6 @@ section.customer-care .ico1 {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  /* left: 6px; */
 }
 section.customer-care .ico1 .day-num {
   top: 50%;
@@ -942,7 +953,6 @@ section.customer-care .ico2 {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  /* left: 6px; */
 }
 section.customer-care .ico2 .day-num {
   top: 50%;
@@ -956,7 +966,6 @@ section.customer-care .ico3 {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  /* left: 6px; */
 }
 section.customer-care .ico3 .day-num {
   top: 50%;
@@ -1026,10 +1035,13 @@ section.customer-care .accordion .accord-btn img {
   transform: rotate(180deg);
 }
 section.customer-care .accordion .pending {
-  background: #F2994A;
+  background: #eb5757;
 }
 section.customer-care .accordion .balance {
-  background: #2586EF;
+  background: blue;
+}
+section.customer-care .accordion .processing {
+  background: yellow;
 }
 section.customer-care .accordion .paid {
   background: rgba(0, 128, 0, 0.2);
@@ -1058,14 +1070,9 @@ section.customer-care .c-orders:hover {
 section.customer-care .c-orders:hover p {
   color: white !important;
 }
-section.customer-care .c-orders:hover .ico2 {
-  left: 15px;
-}
-section.customer-care .c-orders:hover .paid {
-  background: rgba(0, 128, 0, 0.2);
-}
-section.customer-care .c-orders:hover .ico3 {
-  left: 15px;
+section.customer-care .i-size {
+  height: 18px;
+  padding-left: 4px;
 }
 
 .color-blue {
