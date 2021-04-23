@@ -10,8 +10,530 @@
     <title>Cakes & Cream</title>
 </head>
 
+
 <body>
-    <section class="data-sorting">
+    <header>
+        <nav class="navbar d-sm-flex d-none  desktop-nav">
+            <div class="dash-search">
+                <img class="img-fluid" src="./img/search.svg" alt="">
+                <input type="text" placeholder="Search Data" autofocus>
+            </div>
+
+            <!-- top nav dropdown Dropdown -->
+            <div class="dash-dropdown">
+                <div class="btn-group">
+                    <button type="button" class="dash-dropdown-toggle" data-toggle="dropdown">
+                        <span class="d-flex">
+                            <img class="img-fluid avatar" src="./img/profile.jpg" alt="">
+                            <p class="my-auto pr-3">Ashley H.</p>
+                            <img class="img-fluid drop-icon" src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </button>
+                    <!-- <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Name</a>
+                            <a class="dropdown-item" href="#">ID</a>
+                            <a class="dropdown-item" href="#">Time</a>
+    
+                            <div class="border-top">
+                                <a class="dropdown-item" href="#">Separated link</a>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile view navbar  -->
+
+        <nav class="navbar mobile-nav d-sm-none d-flex navbar-offcanvas navbar-expand-sm">
+            <a class="navbar-brand" href="#"><img src="img/profile.jpg" alt=""> Gbolade O.</a>
+
+            <button class="navbar-toggler " type="button" data-toggle="offcanvas">
+                <img src="img/menu.svg">
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Desktop view dashboard -->
+    <section class="dashboard-main m-0 d-sm-flex d-none">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Dashboard sidebar -->
+                <div class="sidebar col-md-3 pl-0  d-sm-flex d-none">
+                    <div>
+                        <div class="logo">
+                            <a href="#">
+                                <img class="img-fluid" src="./img/logo.png" alt="">
+                            </a>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <p class="main-txt">GENERAL</p>
+                                <a class="dash-item" href="#">
+                                    <img src="./img/overview.svg" alt="">
+                                    <p>Dashboard</p>
+                                </a>
+                            </li>
+
+                            <p class="main-txt">ORDER STATUS</p>
+                            <li>
+                                <a class="dash-item" href="#">
+                                    <img src="./img/file.svg" alt="">
+                                    <p>All Orders</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dash-item" href="#">
+                                    <img src="./img/clock2.svg" alt="">
+                                    <p>Pending</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dash-item" href="#">
+                                    <img src="./img/recycle.svg" alt="">
+                                    <p>Outstanding</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dash-item" data-target="#submenu1" data-toggle="collapse">
+                                    <img src="./img/checkmarks.svg" alt="">
+                                    <p>Completed</p>
+                                    <!-- <img class="dash-arrow " src="./img/arrow-side.svg" alt=""> -->
+
+                                </a>
+                                <ul id="submenu1" class="submenu collapse">
+                                    <li>
+                                        <a href="#">By Date</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">By Order Number</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">By Tag Number</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">By Customer's Name</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <p class="main-txt">ORDER HISTORY</p>
+                            <li>
+                                <a href="" class="dash-item" data-target="#submenu2" data-toggle="collapse">
+                                    <img src="./img/history.svg" alt="">
+                                    <p>History</p>
+                                </a>
+                                <ul id="submenu2" class="submenu">
+                                    <li>
+                                        <a href="#">Express Orders</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pre-order</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <p class="main-txt">HELP CENTER</p>
+                            <li>
+                                <a class="dash-item" href="#">
+                                    <img src="./img/help.svg" alt="">
+                                    <p>helps</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dash-item mt-5" href="#">
+                                    <img src="./img/logout.svg" alt="">
+                                    <p>Logout</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-9 pr-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="paymt-title">PAYMENT</p>
+                            <div class="row mt-3 mb-5">
+                                <div class="col-md-6">
+                                    <!-- payment navigation bar -->
+                                    <div class="status-nav">
+                                        <a href="#">All</a>
+                                        <a href="#">paid</a>
+                                        <a href="#">Outstanding</a>
+                                        <a href="#">Pending</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <span class="entry ">
+                                        <p>Total Entries:</p>
+                                        <p>508</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 filter-table ">
+                            <div class="dash-filter">
+                                <div class="dash-dropdown filter">
+                                    <div class="btn-group">
+                                        <button type="button" class="dash-dropdown-toggle" data-toggle="dropdown">
+                                            <span class="d-flex">
+                                                <img class="img-fluid pr-2" src="./img/filter.svg" alt="">
+                                                <p class="my-auto">Filter</p>
+                                            </span>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Name</a>
+                                            <a class="dropdown-item" href="#">ID</a>
+                                            <a class="dropdown-item" href="#">Time</a>
+
+                                            <div class="border-top">
+                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                <a class="dropdown-item" href="#">Separated link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="search-filter">
+                                    <img class="img-fluid" src="./img/search.svg" alt="">
+                                    <input type="text"
+                                        placeholder="Search Orders by Order No, Tag No or Customer’s Name" autofocus>
+                                </div>
+                                <button class="btn btn-filter ml-auto" type="button">ADD ORDER</button>
+                            </div>
+                            <div class="accordion table-responsive">
+                                <table class="table table-borderless mb-0">
+                                    <thead class="table-secondary">
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>&nbsp;</th>
+                                            <th>
+                                                <p>ORDER NUMBER</p>
+                                            </th>
+                                            <th>
+                                                <p>TAG NUMBER</p>
+                                            </th>
+                                            <th>
+                                                <p>NAME</p>
+                                            </th>
+                                            <th>
+                                                <p>PAYMENT STATUS</p>
+                                            </th>
+                                            <th>
+                                                <p>AMOUNT</p>
+                                            </th>
+                                            <th>&nbsp;</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <!-- table header start -->
+                                    <tbody class="border-top">
+                                        <tr>
+                                            <td>
+                                                <label class="checkbox-wrapper">
+                                                    <input type="checkbox" checked="checked">
+                                                    <span class="table-check checkmark"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <span class="acc-arr" data-toggle="collapse" data-target="#collapseOne"
+                                                    aria-controls="collapseOne">
+                                                    <img class="img-fluid" src="./img/border-dropdown.svg" alt="">
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <p>F924977359</p>
+                                            </td>
+                                            <td>
+                                                <p>025</p>
+                                            </td>
+                                            <td>
+                                                <p>Justin Septimus</p>
+                                                <p class="text-smal">09058975994</p>
+                                            </td>
+                                            <td>
+
+                                                <p><span class="status-color green">&#9679 paid</span> </p>
+                                                <p class="text-smal">paid on 15/APR/2020 </p>
+                                            </td>
+                                            <td>
+                                                <p>N200</p>
+                                                <p class="text-smal">NAIRA</p>
+                                            </td>
+                                            <td>
+                                                <p><a class="txt-view" href="#">View More</a> </p>
+                                            </td>
+                                            <td>
+                                                <img class="img-fluid more-menu" src="./img/More.svg" alt="">
+                                            </td>
+                                            <!-- Table dropdown for displaying paid orders -->
+                                            <!-- <span class=" collapse" id="collapseOne">
+                                                <tr class="thead-light">
+                                                    <th></th>
+                                                    <th scope="col">DATE</th>
+                                                    <th scope="col">PAYMENT RECORD</th>
+                                                    <th scope="col"> DETAIL <img src="./img/caution.svg" alt="">
+                                                    </th>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th> </th>
+                                                    <td>12/APR/2020</td>
+                                                    <td>Due in 3 days</td>
+                                                    <td>N 100,000 balance due in 3 days</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>10/APR/2020</td>
+                                                    <td>Transfer</td>
+                                                    <td>N 50,000 paid via GTB account</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>08/APR/2020</td>
+                                                    <td>Cash</td>
+                                                    <td>N 70,000 cash payment</td>
+                                                </tr>
+                                            </span> -->
+                                        </tr>
+
+                                        <tr class="border-top">
+                                            <td>
+                                                <label class="checkbox-wrapper">
+                                                    <input type="checkbox" checked="checked">
+                                                    <span class="table-check checkmark"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <span class="acc-arr" data-toggle="collapse" data-target="#collapseOne"
+                                                    aria-controls="collapseOne">
+                                                    <img class="img-fluid" src="./img/border-dropdown.svg" alt="">
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <p>F924977359</p>
+                                            </td>
+                                            <td>
+                                                <p>025</p>
+                                            </td>
+                                            <td>
+                                                <p>Anika Rhiel Madsen</p>
+                                                <p class="text-smal">09058975994</p>
+                                            </td>
+                                            <td>
+
+                                                <p><span class="status-color red">&#9679 Pending </span> </p>
+                                                <p class="text-smal">paid on 15/APR/2020 </p>
+                                            </td>
+                                            <td>
+                                                <p>N200</p>
+                                                <p class="text-smal">NAIRA</p>
+                                            </td>
+                                            <td>
+                                                <p><a class="txt-view" href="#">View More</a> </p>
+                                            </td>
+                                            <td>
+                                                <img class="img-fluid more-menu" src="./img/More.svg" alt="">
+                                            </td>
+                                            <!-- Table dropdown for displaying pending orders-->
+                                            <!-- <span class=" collapse" id="collapseOne">
+                                                <tr class="thead-light">
+                                                    <th></th>
+                                                    <th scope="col">DATE</th>
+                                                    <th scope="col">PAYMENT RECORD</th>
+                                                    <th scope="col"> DETAIL <img src="./img/caution.svg" alt="">
+                                                    </th>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th> </th>
+                                                    <td>12/APR/2020</td>
+                                                    <td>Due in 3 days</td>
+                                                    <td>N 100,000 balance due in 3 days</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>10/APR/2020</td>
+                                                    <td>Transfer</td>
+                                                    <td>N 50,000 paid via GTB account</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>08/APR/2020</td>
+                                                    <td>Cash</td>
+                                                    <td>N 70,000 cash payment</td>
+                                                </tr>
+                                            </span> -->
+                                        </tr>
+                                        <tr class="border-top">
+                                            <td>
+                                                <label class="checkbox-wrapper">
+                                                    <input type="checkbox" checked="checked">
+                                                    <span class="table-check checkmark"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <span class="acc-arr" data-toggle="collapse" data-target="#collapseOne"
+                                                    aria-controls="collapseOne">
+                                                    <img class="img-fluid" src="./img/border-dropdown.svg" alt="">
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <p>F924977359</p>
+                                            </td>
+                                            <td>
+                                                <p>025</p>
+                                            </td>
+                                            <td>
+                                                <p>Justin Septimus</p>
+                                                <p class="text-smal">example@email.com</p>
+                                            </td>
+                                            <td>
+                                                <p><span class="status-color orange">&#9679 Outstanding</span> </p>
+                                                <p class="text-smal">paid on 15/APR/2020 </p>
+                                            </td>
+                                            <td>
+                                                <p>N200</p>
+                                                <p class="text-smal">NAIRA</p>
+                                            </td>
+                                            <td>
+                                                <p><a class="txt-view" href="#">View More</a> </p>
+                                            </td>
+                                            <td>
+                                                <img class="img-fluid more-menu" src="./img/More.svg" alt="">
+                                            </td>
+                                            <!-- Table dropdown for outstanding orders-->
+                                            <!-- <span class=" collapse" id="collapseOne">
+                                                <tr class="thead-light">
+                                                    <th></th>
+                                                    <th scope="col">DATE</th>
+                                                    <th scope="col">PAYMENT RECORD</th>
+                                                    <th scope="col"> DETAIL <img src="./img/caution.svg" alt="">
+                                                    </th>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th> </th>
+                                                    <td>12/APR/2020</td>
+                                                    <td>Due in 3 days</td>
+                                                    <td>N 100,000 balance due in 3 days</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>10/APR/2020</td>
+                                                    <td>Transfer</td>
+                                                    <td>N 50,000 paid via GTB account</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>08/APR/2020</td>
+                                                    <td>Cash</td>
+                                                    <td>N70,000 cash payment</td>
+                                                </tr>
+                                            </span> -->
+                                        </tr>
+                                        <tr class="border-top">
+                                            <td>
+                                                <label class=" checkbox-wrapper">
+                                                    <input type="checkbox" checked="checked">
+                                                    <span class="table-check checkmark"></span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <span class="acc-arr" data-toggle="collapse" data-target="#collapseTwo"
+                                                    aria-controls="collapseOne">
+                                                    <img class="img-fluid" src="./img/border-dropdown.svg" alt="">
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <p>F924977359</p>
+                                            </td>
+                                            <td>
+                                                <p>025</p>
+                                            </td>
+                                            <td>
+                                                <p>Justin Septimus</p>
+                                                <p class="text-smal">example@email.com</p>
+                                            </td>
+                                            <td>
+                                                <p><span class="status-color red">&#9679 Pending</span> </p>
+                                                <p class="text-smal">paid on 15/APR/2020 </p>
+                                            </td>
+                                            <td>
+                                                <p>N200</p>
+                                                <p class="text-smal">NAIRA</p>
+                                            </td>
+                                            <td>
+                                                <p><a class="txt-view" href="#">View More</a> </p>
+                                            </td>
+                                            <td>
+                                                <img class="img-fluid more-menu" src="./img/More.svg" alt="">
+                                            </td>
+                                            <!-- Table dropdown for displaying no record found  -->
+                                            <!-- <span class="table collapse" id="collapseTwo">
+                                                <tr class="thead-light">
+                                                    <th></th>
+                                                    <th scope="col">DATE</th>
+                                                    <th scope="col">PAYMENT RECORD</th>
+                                                    <th scope="col"> DETAIL <img src="./img/caution.svg" alt="">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4" class="full-width-td">NO RECORDS FOUND</td>
+                                                </tr>
+                                            </span> -->
+                                        </tr>
+                                    <tfoot>
+                                        <tr class="table-light border-top">
+                                            <th colspan="9">
+                                                <div class="table-pagination">
+                                                    <p class="pagi-label">Row per page:</p>
+
+                                                    <div class="form-group">
+                                                        <select>
+                                                            <option>41</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <p class="pagi-label"> 1-10 of 254 </p>
+                                                    <div class="pagi-nav">
+                                                        <img src="./img/pagi-prev.svg" alt="">
+                                                        <img src="./img/pagi-next.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </tfoot>
+                                    </tbody>
+
+
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="data-sorting d-sm-none d-block">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -249,7 +771,7 @@
 
 
 
- 
+
     <script src="js/main.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -258,9 +780,7 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+        d < /body>
 
-
-    
-</body>
-
-</html>
+            <
+            /html>

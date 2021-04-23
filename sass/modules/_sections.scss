@@ -89,8 +89,9 @@ section {
 
   &.booking-options {}
 
-  &.customer-details {}
+  &.customer-details {
 
+  }
   &.order-summary {
     .shade {
       p {
@@ -428,7 +429,7 @@ section {
       }
     }
 
-    
+
 
 
     // customer care page All-orders styling
@@ -460,6 +461,7 @@ section {
 
         .ico1 {
           background-color: rgba(255, 255, 255, 0.3);
+
           img {
             filter: brightness(0) invert(1);
           }
@@ -470,6 +472,7 @@ section {
         }
       }
     }
+
     // customer care page pending-orders styling
     .p-orders {
       padding: 0 10px;
@@ -499,6 +502,7 @@ section {
 
         .ico2 {
           background-color: rgba(255, 255, 255, 0.3);
+
           img {
             filter: brightness(0) invert(1);
           }
@@ -539,6 +543,7 @@ section {
 
         .ico {
           background-color: rgba(255, 255, 255, 0.3);
+
           img {
             filter: brightness(0) invert(1);
           }
@@ -580,6 +585,7 @@ section {
 
         .ico3 {
           background-color: rgba(255, 255, 255, 0.3);
+
           img {
             filter: brightness(0) invert(1);
           }
@@ -590,25 +596,111 @@ section {
         }
       }
     }
-    // .c-orders:hover {
-    //   background-color: rgb(12, 178, 97, 0.2);
+  }
 
-    //   p {
-    //     color: white !important;
-    //   }
+  &.dashboard-main {
 
-    //   .ico2 {
-    //     // left: 15px;
-    //   }
+    // dashboard Sidebar navigation  
+    .dash-body {
+      background: #fff;
+      margin: 30px 0;
+      padding: 35px 50px;
+    }
 
-    //   .paid {
-    //     background: rgba(0, 128, 0, 0.2);
-    //   }
+    .text-smal {
+      font-size: 12px;
+      color: #6E6893;
+    }
 
-    //   .ico3 {
-    //     left: 15px;
-    //   }
-    // }
+    .txt-view {
+      font-size: 12px;
+      color: #6E6893;
+      text-decoration: none;
+    }
 
+    .more-menu {
+      cursor: pointer;
+
+      &:hover {
+        filter: invert(36%) sepia(98%) saturate(1210%) hue-rotate(194deg) brightness(98%) contrast(91%);
+      }
+    }
+
+    // payment status sorting navigation sect
+    .paymt-title {
+      margin-top: 55px;
+      font-weight: $bold;
+      color: $deep-black;
+    }
+
+    .status-nav {
+      display: flex;
+
+      a {
+        position: relative;
+        text-decoration: none;
+        margin-right: 15px;
+        padding: 7px 5px;
+        color: #90A4AE;
+
+        &:hover {
+          color: #000;
+        }
+
+        &:hover:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2.5px;
+          background-color: $blue;
+          border-radius: 3px;
+          top: 95%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .entry {
+      display: flex;
+      justify-content: flex-end;
+
+      p:first-child {
+        margin: auto 0;
+        font-size: 12px;
+        font-weight: $semibold;
+        padding-right: 5px;
+      }
+
+      p:last-child {
+        margin: auto 0;
+        font-weight: $bold;
+        color: $blue;
+      }
+    }
+
+    .filter-table {
+      overflow-x: auto !important;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 20px 0 0;
+
+      .dash-filter {
+        display: flex;
+        padding: 10px;
+
+        .filter {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid #cfcfcf;
+          margin-right: 15px;
+          border-radius: 5px;
+          height: 50px;
+          width: 100px;
+        }
+      }
+    }
   }
 }
