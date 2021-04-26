@@ -12,39 +12,132 @@
 
 
 <body>
+    <!-- Desktop view side-navigation -->
     <header>
-        <nav class="navbar d-sm-flex d-none  desktop-nav">
-            <div class="dash-search">
-                <img class="img-fluid" src="./img/search.svg" alt="">
-                <input type="text" placeholder="Search Data" autofocus>
+        <nav class="navbar sidebar  d-sm-flex d-none">
+            <!-- sidebar Logo -->
+            <div class="brand-logo">
+                <a href="#">
+                    <img class="img-fluid" src="./img/logo.png" alt="">
+                </a>
             </div>
-
-            <!-- top nav dropdown Dropdown -->
-            <div class="dash-dropdown">
-                <div class="btn-group">
-                    <button type="button" class="dash-dropdown-toggle" data-toggle="dropdown">
-                        <span class="d-flex">
-                            <img class="img-fluid avatar" src="./img/profile.jpg" alt="">
-                            <p class="my-auto pr-3">Ashley H.</p>
-                            <img class="img-fluid drop-icon" src="./img/dropdown-i.svg" alt="">
+            <!-- Sidebar menu -->
+            <ul>
+                <p class="main-txt">GENERAL</p>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/overview.svg" alt="">
                         </span>
-                    </button>
-                    <!-- <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Name</a>
-                            <a class="dropdown-item" href="#">ID</a>
-                            <a class="dropdown-item" href="#">Time</a>
-    
-                            <div class="border-top">
-                                <a class="dropdown-item" href="#">Separated link</a>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                        </div> -->
-                </div>
-            </div>
+                        Dashboard
+                    </a>
+                </li>
+
+                <p class="main-txt">ORDER STATUS</p>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/file.svg" alt="">
+                        </span>
+                        All Orders
+                    </a>
+                </li>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/clock2.svg" alt="">
+                        </span>
+                        Pending
+                    </a>
+                </li>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/recycle.svg" alt="">
+                        </span>
+                        Outstanding
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu1" data-toggle="collapse" aria-expanded="false">
+                        <span class="dash-icon">
+                            <img src="./img/checkmarks.svg" alt="">
+                        </span>
+                        Completed
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu1" class="submenu collapse">
+                        <li>
+                            <a href="#">By Date</a>
+                        </li>
+                        <li>
+                            <a href="#">By Order Number</a>
+                        </li>
+                        <li>
+                            <a href="#">By Tag Number</a>
+                        </li>
+                        <li>
+                            <a href="#">By Customer's Name</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <p class="main-txt">ORDER HISTORY</p>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu2" data-toggle="collapse">
+                        <span class="dash-icon">
+                            <img src="./img/history.svg" alt="">
+                        </span>
+                        History
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu2" class="submenu">
+                        <li>
+                            <a href="#">Express Orders</a>
+                        </li>
+                        <li>
+                            <a href="#">Pre-order</a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <p class="main-txt">HELP CENTER</p>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu3" data-toggle="collapse">
+                        <span class="dash-icon">
+                            <img src="./img/help.svg" alt="">
+                        </span>
+                        Help
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu3" class="submenu">
+                        <li>
+                            <a href="#">Complaints</a>
+                        </li>
+                        <li>
+                            <a href="#">Feedback</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dash-item sidebar-footer" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/logout.svg" alt="">
+                        </span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
         </nav>
 
         <!-- Mobile view navbar  -->
-
         <nav class="navbar mobile-nav d-sm-none d-flex navbar-offcanvas navbar-expand-sm">
             <a class="navbar-brand" href="#"><img src="img/profile.jpg" alt=""> Gbolade O.</a>
 
@@ -69,104 +162,40 @@
     </header>
 
     <!-- Desktop view dashboard -->
-    <section class="dashboard-main m-0 d-sm-flex d-none">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Dashboard sidebar -->
-                <div class="sidebar col-md-3 pl-0  d-sm-flex d-none">
-                    <div>
-                        <div class="logo">
-                            <a href="#">
-                                <img class="img-fluid" src="./img/logo.png" alt="">
-                            </a>
+    <section class="dashboard-main d-sm-block d-none content-wrapper">
+        <nav class="navbar d-sm-flex d-none  desktop-nav">
+            <div class="dash-search">
+                <img class="img-fluid" src="./img/search.svg" alt="">
+                <input type="text" placeholder="Search Data">
+            </div>
+
+            <!-- top nav dropdown Dropdown -->
+            <div class="dash-dropdown">
+                <div class="btn-group">
+                    <button type="button" class="dash-dropdown-toggle" data-toggle="dropdown">
+                        <div class="d-flex">
+                            <img class="img-fluid avatar" src="./img/profile.jpg" alt="">
+                            <p class="my-auto pr-3">Ashley H.</p>
+                            <span class=" drop-icon">
+                                <img class="img-fluid" src="./img/dropdown-i.svg" alt="">
+                            </span>
                         </div>
-
-                        <ul>
-                            <li>
-                                <p class="main-txt">GENERAL</p>
-                                <a class="dash-item" href="#">
-                                    <img src="./img/overview.svg" alt="">
-                                    <p>Dashboard</p>
-                                </a>
-                            </li>
-
-                            <p class="main-txt">ORDER STATUS</p>
-                            <li>
-                                <a class="dash-item" href="#">
-                                    <img src="./img/file.svg" alt="">
-                                    <p>All Orders</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dash-item" href="#">
-                                    <img src="./img/clock2.svg" alt="">
-                                    <p>Pending</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dash-item" href="#">
-                                    <img src="./img/recycle.svg" alt="">
-                                    <p>Outstanding</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="dash-item" data-target="#submenu1" data-toggle="collapse">
-                                    <img src="./img/checkmarks.svg" alt="">
-                                    <p>Completed</p>
-                                    <!-- <img class="dash-arrow " src="./img/arrow-side.svg" alt=""> -->
-
-                                </a>
-                                <ul id="submenu1" class="submenu collapse">
-                                    <li>
-                                        <a href="#">By Date</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">By Order Number</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">By Tag Number</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">By Customer's Name</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <p class="main-txt">ORDER HISTORY</p>
-                            <li>
-                                <a href="" class="dash-item" data-target="#submenu2" data-toggle="collapse">
-                                    <img src="./img/history.svg" alt="">
-                                    <p>History</p>
-                                </a>
-                                <ul id="submenu2" class="submenu">
-                                    <li>
-                                        <a href="#">Express Orders</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Pre-order</a>
-                                    </li>
-                                </ul>
-
-                            </li>
-                            <p class="main-txt">HELP CENTER</p>
-                            <li>
-                                <a class="dash-item" href="#">
-                                    <img src="./img/help.svg" alt="">
-                                    <p>helps</p>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dash-item mt-5" href="#">
-                                    <img src="./img/logout.svg" alt="">
-                                    <p>Logout</p>
-                                </a>
-                            </li>
-                        </ul>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">My profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activiy</a>
+                        <div class="border-top">
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
 
-                <div class="col-9 pr-5">
+                <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
                             <p class="paymt-title">PAYMENT</p>
@@ -533,6 +562,8 @@
         </div>
     </section>
 
+
+    <!-- Mobile dashboard -->
     <section class="data-sorting d-sm-none d-block">
         <div class="container-fluid">
             <div class="row">
@@ -769,6 +800,11 @@
         </div>
     </section>
 
+    <!-- Mobile footer -->
+    <footer class="fixed-bottom d-sm-none d-flex align-items-center justify-content-between ">
+        <p class="w-100">Customer Service App. &copy; Cakes & Cream.</p>
+    </footer>
+
 
 
 
@@ -780,7 +816,6 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
-        d < /body>
-
-            <
-            /html>
+    </script>
+</body>
+</html>

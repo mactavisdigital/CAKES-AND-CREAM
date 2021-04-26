@@ -368,21 +368,40 @@ nav.navbar .offcanvas-collapse.open {
 nav.desktop-nav {
   background: #fff;
   padding: 15px 20px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0 2.6px;
 }
 
 .sidebar {
-  margin-top: -8%;
-  background-color: #fff;
+  width: 300px !important;
+  background-color: #fff !important;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: block;
+  overflow: hidden;
+  overflow-y: auto;
+  padding-right: 0;
+  padding-left: 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0 2.6px;
+  /*  scrollbar dsiplay  => none  */
   /* sidebar logo postioning */
   /* sidebar items styling */
 }
+@media (max-width: 992px) {
+  .sidebar {
+    width: 250px !important;
+  }
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
 .sidebar ul {
   list-style: none;
+  width: 100%;
 }
-.sidebar .logo {
+.sidebar .brand-logo {
   width: 50%;
-  margin: 45px auto;
+  margin: 0 auto;
 }
 .sidebar .main-txt {
   color: #90A4AE;
@@ -390,32 +409,37 @@ nav.desktop-nav {
   font-weight: 900;
 }
 .sidebar .dash-item {
-  background-color: #fff;
   display: flex;
+  font-size: 16px;
   align-items: center;
-  padding: 15px 25px;
-  margin-bottom: 10px;
+  color: #5e6b71;
+  background-color: #fff;
+  padding: 13px 20px;
+  margin-top: 5px;
   text-decoration: none;
+  /*  Rotate menu icon dropdown arrow */
   /* sidebar items (on-focus) styling*/
 }
-.sidebar .dash-item img {
+.sidebar .dash-item .dash-icon {
+  width: 40px;
   filter: invert(54%) sepia(35%) saturate(6740%) hue-rotate(193deg) brightness(93%) contrast(101%);
 }
-.sidebar .dash-item p {
-  margin: auto 0;
-  padding-left: 10px;
-  font-size: 18px;
+.sidebar .dash-item .dash-arrow {
+  margin-left: auto;
+  filter: invert(54%) sepia(35%) saturate(6740%) hue-rotate(193deg) brightness(93%) contrast(101%);
+}
+.sidebar .dash-item[aria-expanded=false] > .dash-arrow {
+  transform: rotate(-90deg);
 }
 .sidebar .dash-item:focus {
   border-radius: 8px;
   background-color: #2586EF;
   transition: all 0.5s;
-}
-.sidebar .dash-item:focus img {
-  filter: brightness(0) invert(1);
-}
-.sidebar .dash-item:focus p {
   color: #fff;
+}
+.sidebar .dash-item:focus .dash-icon,
+.sidebar .dash-item:focus .dash-arrow {
+  filter: brightness(0) invert(1);
 }
 .sidebar .dash-item:focus::before {
   position: absolute;
@@ -430,7 +454,7 @@ nav.desktop-nav {
   list-style: none;
 }
 .sidebar .submenu li {
-  margin-left: 20px;
+  margin-left: 25px;
   padding: 10px 0 !important;
 }
 .sidebar .submenu li a {
@@ -648,15 +672,12 @@ select {
 /*  Desktop navbar  search bar */
 .dash-search {
   display: flex;
-  width: 50%;
   height: 50px;
-  position: relative;
   top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
   padding: 10px 20px;
   background-color: #f4f4f4;
   border-radius: 50px;
+  /* Add extra width animation to search  */
 }
 .dash-search img {
   width: 16px;
@@ -668,6 +689,14 @@ select {
 .dash-search ::placeholder {
   color: #cfcfcf;
   font-size: 16px;
+}
+.dash-search input:focus {
+  width: 350px;
+}
+@media (max-width: 992px) {
+  .dash-search input:focus {
+    width: 230px;
+  }
 }
 
 /* Desktop view table search */
@@ -1540,8 +1569,7 @@ div.fm .container .checkmark:after {
 
 .desk-layout {
   background: #fff;
-  padding: 40px 50px;
-  margin: 50px;
+  padding: 15px 20px;
   border-radius: 5px;
   box-shadow: 0 0 4px #ccc;
 }
@@ -1557,6 +1585,7 @@ div.fm .container .checkmark:after {
 /* Top Navbar profile section */
 .dash-dropdown .drop-icon {
   width: 15px;
+  margin: auto 0;
 }
 .dash-dropdown .avatar {
   width: 50px;
@@ -1569,6 +1598,29 @@ div.fm .container .checkmark:after {
 }
 .dash-dropdown .dash-dropdown-toggle::after {
   display: none !important;
+}
+.dash-dropdown .dropdown-menu {
+  width: 100%;
+  border: none;
+  box-shadow: 1px 1px 3px #999;
+}
+.dash-dropdown .dropdown-menu .dropdown-item {
+  text-decoration: none;
+  padding: 6px 12px;
+}
+/* Desktop view content area */
+.content-wrapper {
+  margin-left: 300px;
+}
+@media (max-width: 992px) {
+  .content-wrapper {
+    margin-left: 250px;
+  }
+}
+@media (max-width: 576px) {
+  .content-wrapper {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

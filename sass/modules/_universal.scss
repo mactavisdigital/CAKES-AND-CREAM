@@ -109,25 +109,27 @@ div {
     }
 
     .status-color {
-        font-size: 12px;
-        padding: 0 8px;
-        border-radius: 47px; 
-        
-        &.green  {
-            color: #007F00;
-            background: #5fc06972;
-            border: 1px solid $green;
-        }
-        &.orange  {
-            color: $orange;
-            background: #f2984a90;
-            border: 1px solid $orange;
-        }
-        &.red  {
-            color: $red;
-            background: #ff000056;
-            border: 1px solid $red;
-        }  
+      font-size: 12px;
+      padding: 0 8px;
+      border-radius: 47px;
+
+      &.green {
+        color: #007F00;
+        background: #5fc06972;
+        border: 1px solid $green;
+      }
+
+      &.orange {
+        color: $orange;
+        background: #f2984a90;
+        border: 1px solid $orange;
+      }
+
+      &.red {
+        color: $red;
+        background: #ff000056;
+        border: 1px solid $red;
+      }
     }
 
   }
@@ -344,19 +346,17 @@ div {
 
 // forms background  shows on Desktop view  and removed on mobile view
 .desk-layout {
-  
-    background: #fff;
-    padding: 40px 50px;
-    margin: 50px;
-    border-radius: 5px;
-    box-shadow: 0 0 4px #ccc;
-    
-    
-    @media (max-width: $mobile_width) {
-      background: none;
-      padding: 0;
-      margin: 0;
-      box-shadow: none;
+
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #ccc;
+
+  @media (max-width: $mobile_width) {
+    background: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
   }
 }
 
@@ -364,6 +364,7 @@ div {
 .dash-dropdown {
   .drop-icon {
     width: 15px;
+    margin: auto 0;
   }
 
   .avatar {
@@ -381,10 +382,31 @@ div {
     }
   }
 
-  // .dropdown-menu {
-  //     top: 65px !important;
-  //     width: 100%;
-  //     border: none;
-  //     box-shadow: 1px 1px 3px #999;
-  // }
+  .dropdown-menu {
+      // top: 65px !important;
+      width: 100%;
+      border: none;
+      box-shadow: 1px 1px 3px #999;
+
+      .dropdown-item {
+        text-decoration: none;
+        padding: 6px 12px;
+
+        &:hover {
+
+        }
+      }
+  }
+}
+
+/* Desktop view content area */
+.content-wrapper {
+  margin-left: 300px;
+
+  @media (max-width: $desktop_width) {
+    margin-left: 250px;
+  }
+  @media (max-width: $mobile_width) {
+    margin: 0;
+  }
 }

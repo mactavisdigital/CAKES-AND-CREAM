@@ -238,12 +238,8 @@ select {
 /*  Desktop navbar  search bar */
 .dash-search {
   display: flex;
-  width: 50%;
   height: 50px;
-  position: relative;
   top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
   padding: 10px 20px;
   background-color: #f4f4f4;
   border-radius: 50px;
@@ -256,10 +252,17 @@ select {
   input {
     border-bottom: none !important;
   }
-  
   ::placeholder {
     color: #cfcfcf;
     font-size: 16px;
+  }
+  /* Add extra width animation to search  */
+  input:focus {
+    width: 350px;  
+
+    @media (max-width:$desktop_width) {
+      width: 230px;
+    }
   }
 }
  /* Desktop view table search */ 
