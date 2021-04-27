@@ -190,7 +190,6 @@ section {
     // header date
     .sort-head {
       display: flex;
-      justify-content: space-between;
       align-items: center;
 
       .date {
@@ -210,6 +209,7 @@ section {
       .sorting-form {
         display: flex;
         align-items: center;
+        margin-left: auto;
       }
 
       .my-today {
@@ -217,6 +217,40 @@ section {
         background: rgba(37, 134, 239, 0.29);
         padding: 8px 18px;
         border-radius: 4px;
+      }
+
+
+      /* Sorting dropdown */
+      .sort-dropdown {
+        button {
+          border: none;
+          background-color: transparent !important;
+        }
+        .dropdown-menu {
+          width: 180px;
+          padding: 15px;
+          top: -8px !important;
+          left: -54px;
+          background-color: #fff;
+          border: none;
+          border-radius: 4px;
+          box-shadow: 16px 16px 32px rgba(102, 102, 102, 0.15);
+          .dropdown-item {
+            color: $grey;
+            text-decoration: none;
+            padding: 8px 0;
+
+          }
+          .dropdown-item:focus {
+            color: #000;
+            background-color: transparent !important;
+          }
+          .drop-checked::after {
+            position: absolute;
+            content: url(../img/drop-check.svg);
+            right: 5px;
+          }
+        }
       }
 
     }

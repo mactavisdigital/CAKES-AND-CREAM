@@ -11,10 +11,581 @@
 </head>
 
 <body>
-    <section class="data-sorting">
+    <header>
+        <!-- Desktop view side-navigation -->
+        <nav class="navbar sidebar  d-sm-flex d-none">
+            <!-- sidebar Logo -->
+            <div class="brand-logo">
+                <a href="#">
+                    <img class="img-fluid" src="./img/logo.png" alt="">
+                </a>
+            </div>
+            <!-- Sidebar menu -->
+            <ul>
+                <p class="main-txt">GENERAL</p>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/overview.svg" alt="">
+                        </span>
+                        Dashboard
+                    </a>
+                </li>
+
+                <p class="main-txt">ORDER STATUS</p>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/file.svg" alt="">
+                        </span>
+                        All Orders
+                    </a>
+                </li>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/clock2.svg" alt="">
+                        </span>
+                        Pending
+                    </a>
+                </li>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/recycle.svg" alt="">
+                        </span>
+                        Outstanding
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu1" data-toggle="collapse" aria-expanded="false">
+                        <span class="dash-icon">
+                            <img src="./img/checkmarks.svg" alt="">
+                        </span>
+                        Completed
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu1" class="submenu collapse">
+                        <li>
+                            <a href="#">By Date</a>
+                        </li>
+                        <li>
+                            <a href="#">By Order Number</a>
+                        </li>
+                        <li>
+                            <a href="#">By Tag Number</a>
+                        </li>
+                        <li>
+                            <a href="#">By Customer's Name</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <p class="main-txt">ORDER HISTORY</p>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu2" data-toggle="collapse">
+                        <span class="dash-icon">
+                            <img src="./img/history.svg" alt="">
+                        </span>
+                        History
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu2" class="submenu">
+                        <li>
+                            <a href="#">Express Orders</a>
+                        </li>
+                        <li>
+                            <a href="#">Pre-order</a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <p class="main-txt">HELP CENTER</p>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu3" data-toggle="collapse">
+                        <span class="dash-icon">
+                            <img src="./img/help.svg" alt="">
+                        </span>
+                        Help
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu3" class="submenu">
+                        <li>
+                            <a href="#">Complaints</a>
+                        </li>
+                        <li>
+                            <a href="#">Feedback</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dash-item sidebar-footer" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/logout.svg" alt="">
+                        </span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Mobile view navbar  -->
+        <nav class="navbar mobile-nav d-sm-none d-flex navbar-offcanvas navbar-expand-sm">
+            <a class="navbar-brand" href="#"><img src="img/profile.jpg" alt=""> Gbolade O.</a>
+
+            <button class="navbar-toggler " type="button" data-toggle="offcanvas">
+                <img src="img/menu.svg">
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="dashboard-main  d-sm-block d-none content-wrapper">
+        <nav class="navbar d-sm-flex d-none  desktop-nav">
+            <div class="dash-search">
+                <img class="img-fluid" src="./img/search.svg" alt="">
+                <input type="text" placeholder="Search Data">
+            </div>
+
+            <!-- top nav dropdown Dropdown -->
+            <div class="dash-dropdown">
+                <div class="btn-group">
+                    <button type="button" class="dash-dropdown-toggle" data-toggle="dropdown">
+                        <div class="d-flex">
+                            <img class="img-fluid avatar" src="./img/profile.jpg" alt="">
+                            <p class="my-auto pr-3">Ashley H.</p>
+                            <span class=" drop-icon">
+                                <img class="img-fluid" src="./img/dropdown-i.svg" alt="">
+                            </span>
+                        </div>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">My profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activiy</a>
+                        <div class="border-top">
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row m-1">
+                <!-- Dashboard sidebar -->
+                <div class="col-md-12">
+                    <p class="paymt-title">PAYMENT</p>
+                    <div class="row mt-3 mb-5">
+                        <div class="col-md-6">
+                            <!-- payment navigation bar -->
+                            <div class="status-nav">
+                                <a href="#">All</a>
+                                <a href="#">paid</a>
+                                <a href="#">Outstanding</a>
+                                <a href="#">Pending</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="entry ">
+                                <p>Total Entries:</p>
+                                <p>508</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 filter-table ">
+                    <div class="dash-filter">
+                        <div class="dash-dropdown filter">
+                            <div class="btn-group">
+                                <button type="button" class="dash-dropdown-toggle" data-toggle="dropdown">
+                                    <span class="d-flex">
+                                        <img class="img-fluid pr-2" src="./img/filter.svg" alt="">
+                                        <p class="my-auto">Filter</p>
+                                    </span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Name</a>
+                                    <a class="dropdown-item" href="#">ID</a>
+                                    <a class="dropdown-item" href="#">Time</a>
+
+                                    <div class="border-top">
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dash-search search-filter">
+                            <img class="img-fluid" src="./img/search.svg" alt="">
+                            <input type="text" placeholder="Search Orders by Order No, Tag No or Customer’s Name"
+                                autofocus>
+                        </div>
+                        <button class="btn btn-filter ml-auto" type="button">ADD ORDER</button>
+                    </div>
+                    <div class="accordion table-responsive">
+                        <table class="table mb-0">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>
+                                        <p>ORDER NUMBER</p>
+                                    </th>
+                                    <th>
+                                        <p>TAG NUMBER</p>
+                                    </th>
+                                    <th>
+                                        <p>NAME</p>
+                                    </th>
+                                    <th>
+                                        <p>MESSAGE ON CAKE</p>
+                                    </th>
+                                    <th>
+                                        <p>TYPE OF CAKE/ICING</p>
+                                    </th>
+                                    <th>
+                                        <p>CAKE DESIGN</p>
+                                    </th>
+                                    <th>
+                                        <p>EXTRAS</p>
+                                    </th>
+                                    <th>
+                                        <p>MESSAGE COLOR</p>
+                                    </th>
+                                    <th>
+                                        <p>STAFF ASSIGNED</p>
+                                    </th>
+                                    <th>
+                                        <p>TASK STATUS</p>
+                                    </th>
+                                    <th>
+                                        <p>LAYERS</p>
+                                    </th>
+                                    <th>
+                                        <p>AMOUNT</p>
+                                    </th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <!-- table header start -->
+                            <tbody>
+                                <tr class="border-top">
+                                    <td>
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox" checked="checked">
+                                            <span class="table-check checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <span class="accord-btn" data-toggle="collapse" data-target="#collapseOne"
+                                            aria-controls="collapseOne">
+                                            <img class="img-fluid" src="./img/border-dropdown.svg" alt="">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <p>F924977359</p>
+                                    </td>
+                                    <td>
+                                        <p>025</p>
+                                    </td>
+                                    <td>
+                                        <p>Justin Septimus</p>
+                                        <p class="text-smal">09058975994</p>
+                                    </td>
+                                    <td>
+                                        <p>Happy Birthday</p>
+                                    </td>
+                                    <td>
+                                        <p>Coconut</p>
+                                        <p class="text-smal">BUTTER ICING</p>
+                                    </td>
+                                    <td>
+                                        <p>Roses</p>
+                                    </td>
+                                    <td>
+                                        <p>Dripping Chocolate</p>
+                                    </td>
+                                    <td>
+                                        <p>Blue</p>
+                                    </td>
+                                    <td>
+                                        <p>Justin Septimus</p>
+                                        <p class="text-smal">074</p>
+                                    </td>
+                                    <td>
+                                        <p><span class="status-color green">&#9679&nbsp;Assigned</span> </p>
+                                        <p class="text-smal">on 15/APR/2020 </p>
+                                    </td>
+                                    <td>
+                                        <p>2</p>
+                                        <p class="text-smal">LAYERS</p>
+                                    </td>
+                                    <td>
+                                        <p><a class="txt-view" href="#">View More</a> </p>
+                                    </td>
+                                    <td>
+                                        <img class="img-fluid more-menu" src="./img/more.svg" alt="">
+                                    </td>
+                                    <!-- Table dropdown for displaying paid orders -->
+                                    <!-- <span class=" collapse" id="collapseOne">
+                                                <tr class="thead-light">
+                                                    <th></th>
+                                                    <th scope="col">DATE</th>
+                                                    <th scope="col">PAYMENT RECORD</th>
+                                                    <th scope="col"> DETAIL <img src="./img/caution.svg" alt="">
+                                                    </th>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th> </th>
+                                                    <td>12/APR/2020</td>
+                                                    <td>Due in 3 days</td>
+                                                    <td>N 100,000 balance due in 3 days</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>10/APR/2020</td>
+                                                    <td>Transfer</td>
+                                                    <td>N 50,000 paid via GTB account</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>08/APR/2020</td>
+                                                    <td>Cash</td>
+                                                    <td>N 70,000 cash payment</td>
+                                                </tr>
+                                            </span> -->
+                                </tr>
+                                <tr class="border-top">
+                                    <td>
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox" checked="checked">
+                                            <span class="table-check checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <span class="accord-btn" data-toggle="collapse" data-target="#collapseTwo"
+                                            aria-controls="collapseTwo">
+                                            <img class="img-fluid" src="./img/border-dropdown.svg" alt="">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <p>F924977359</p>
+                                    </td>
+                                    <td>
+                                        <p>025</p>
+                                    </td>
+                                    <td>
+                                        <p>Justin Septimus</p>
+                                        <p class="text-smal">09058975994</p>
+                                    </td>
+                                    <td>
+                                        <p>Happy Birthday</p>
+                                    </td>
+                                    <td>
+                                        <p>Coconut</p>
+                                        <p class="text-smal">BUTTER ICING</p>
+                                    </td>
+                                    <td>
+                                        <p>Roses</p>
+                                    </td>
+                                    <td>
+                                        <p>Dripping Chocolate</p>
+                                    </td>
+                                    <td>
+                                        <p>Blue</p>
+                                    </td>
+                                    <td>
+                                        <p>Justin Septimus</p>
+                                        <p class="text-smal">074</p>
+                                    </td>
+                                    <td>
+                                        <p><span class="status-color green">&#9679&nbsp;Assigned</span> </p>
+                                        <p class="text-smal"> on 15/APR/2020 </p>
+                                    </td>
+                                    <td>
+                                        <p>2</p>
+                                        <p class="text-smal">LAYERS</p>
+                                    </td>
+                                    <td>
+                                        <p><a class="txt-view" href="#">View More</a> </p>
+                                    </td>
+                                    <td>
+                                        <img class="img-fluid more-menu" src="./img/more.svg" alt="">
+                                    </td>
+                                    <!-- Table dropdown for displaying paid orders -->
+                                    <!-- <span class=" collapse" id="collapseOne">
+                                                <tr class="thead-light">
+                                                    <th></th>
+                                                    <th scope="col">DATE</th>
+                                                    <th scope="col">PAYMENT RECORD</th>
+                                                    <th scope="col"> DETAIL <img src="./img/caution.svg" alt="">
+                                                    </th>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th> </th>
+                                                    <td>12/APR/2020</td>
+                                                    <td>Due in 3 days</td>
+                                                    <td>N 100,000 balance due in 3 days</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>10/APR/2020</td>
+                                                    <td>Transfer</td>
+                                                    <td>N 50,000 paid via GTB account</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>08/APR/2020</td>
+                                                    <td>Cash</td>
+                                                    <td>N 70,000 cash payment</td>
+                                                </tr>
+                                            </span> -->
+                                </tr>
+                                <tr class="border-top">
+                                    <td>
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox" checked="checked">
+                                            <span class="table-check checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <span class="accord-btn" data-toggle="collapse" data-target="#collapseThree"
+                                            aria-controls="collapseThree">
+                                            <img class="img-fluid" src="./img/border-dropdown.svg" alt="">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <p>F924977359</p>
+                                    </td>
+                                    <td>
+                                        <p>025</p>
+                                    </td>
+                                    <td>
+                                        <p>Justin Septimus</p>
+                                        <p class="text-smal">09058975994</p>
+                                    </td>
+                                    <td>
+                                        <p>Happy Birthday</p>
+                                    </td>
+                                    <td>
+                                        <p>Coconut</p>
+                                        <p class="text-smal">BUTTER ICING</p>
+                                    </td>
+                                    <td>
+                                        <p>Roses</p>
+                                    </td>
+                                    <td>
+                                        <p>Dripping Chocolate</p>
+                                    </td>
+                                    <td>
+                                        <p>Blue</p>
+                                    </td>
+                                    <td>
+                                        <p>Justin Septimus</p>
+                                        <p class="text-smal">074</p>
+                                    </td>
+                                    <td>
+                                        <p><span class="status-color red">&#9679&nbsp;Unassigned</span> </p>
+                                        <p class="text-smal">Due on 15/APR/2020 </p>
+                                    </td>
+                                    <td>
+                                        <p>2</p>
+                                        <p class="text-smal">LAYERS</p>
+                                    </td>
+                                    <td>
+                                        <p><a class="txt-view" href="#">View More</a> </p>
+                                    </td>
+                                    <td>
+                                        <img class="img-fluid more-menu" src="./img/more.svg" alt="">
+                                    </td>
+                                    <!-- Table dropdown for displaying paid orders -->
+                                    <!-- <span class=" collapse" id="collapseOne">
+                                                <tr class="thead-light">
+                                                    <th></th>
+                                                    <th scope="col">DATE</th>
+                                                    <th scope="col">PAYMENT RECORD</th>
+                                                    <th scope="col"> DETAIL <img src="./img/caution.svg" alt="">
+                                                    </th>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th> </th>
+                                                    <td>12/APR/2020</td>
+                                                    <td>Due in 3 days</td>
+                                                    <td>N 100,000 balance due in 3 days</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>10/APR/2020</td>
+                                                    <td>Transfer</td>
+                                                    <td>N 50,000 paid via GTB account</td>
+                                                </tr>
+                                                <tr class="table-info">
+                                                    <th></th>
+                                                    <td>08/APR/2020</td>
+                                                    <td>Cash</td>
+                                                    <td>N 70,000 cash payment</td>
+                                                </tr>
+                                            </span> -->
+                                </tr>
+
+                            </tbody>
+
+                            <tfoot>
+                                <tr class="table-light border-top">
+                                    <th colspan="16">
+                                        <div class="table-pagination">
+                                            <p class="pagi-label">Row per page:</p>
+
+                                            <div class="form-group">
+                                                <select>
+                                                    <option>41</option>
+                                                </select>
+                                            </div>
+
+                                            <p class="pagi-label"> 1-10 of 254 </p>
+                                            <div class="pagi-nav">
+                                                <img src="./img/pagi-prev.svg" alt="">
+                                                <img src="./img/pagi-next.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="data-sorting d-sm-none d-block">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                    <!-- Mobile view sorting header -->
+                    <!-- Header date -->
                     <div class="sort-head">
                         <div class="date">
                             <p class="day-num">24</p>
@@ -23,6 +594,7 @@
                                 <p class="year">Jan 2021</p>
                             </span>
                         </div>
+                        <!-- Header search -->
                         <div class="sorting-form">
                             <div id="myOverlay" class="overlay">
                                 <div class="overlay-content d-flex align-items-center">
@@ -34,9 +606,23 @@
                             </div>
                             <button class="openBtn" onclick="openSearch()"><img src="./img/search.svg" alt=""></button>
                         </div>
+                        <!-- Header dropdown -->
+                        <div class="sort-dropdown">
+                            <button type="button" class="dash-dropdown-toggle" data-toggle="dropdown">
+                                <img src="./img/updown-i.svg" alt="">
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item drop-checked" href="#">My profile</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Activiy</a>
+                                <div class="border-top">
+                                    <a class="dropdown-item" href="#">Ascending <img src="./img/ascend.svg" alt=""></a>
+                                    <a class="dropdown-item" href="#">Descending <img src="./img/decend.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <div class="col-12 border-top">
                     <div class="accordion" id="accordionExample">
                         <div class="item-header">
@@ -486,6 +1072,11 @@
             </div>
         </div>
     </section>
+
+    <!-- Mobile footer -->
+    <footer class="fixed-bottom d-sm-none d-flex align-items-center justify-content-between ">
+        <p class="w-100">Customer Service App. &copy; Cakes & Cream.</p>
+    </footer>
 
 
 

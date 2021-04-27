@@ -11,96 +11,257 @@
 </head>
 
 <body>
+    <header>
+        <!-- Desktop view side-navigation -->
+        <nav class="navbar sidebar  d-sm-flex d-none">
+            <!-- sidebar Logo -->
+            <div class="brand-logo">
+                <a href="#">
+                    <img class="img-fluid" src="./img/logo.png" alt="">
+                </a>
+            </div>
+            <!-- Sidebar menu -->
+            <ul>
+                <p class="main-txt">GENERAL</p>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/overview.svg" alt="">
+                        </span>
+                        Dashboard
+                    </a>
+                </li>
 
-<nav class="navbar navbar-offcanvas navbar-expand-sm">
-    <a class="navbar-brand" href="#"><img src="img/profile.jpg" alt=""> Gbolade O.</a>
+                <p class="main-txt">ORDER STATUS</p>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/file.svg" alt="">
+                        </span>
+                        All Orders
+                    </a>
+                </li>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/clock2.svg" alt="">
+                        </span>
+                        Pending
+                    </a>
+                </li>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/recycle.svg" alt="">
+                        </span>
+                        Outstanding
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu1" data-toggle="collapse" aria-expanded="false">
+                        <span class="dash-icon">
+                            <img src="./img/checkmarks.svg" alt="">
+                        </span>
+                        Completed
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu1" class="submenu collapse">
+                        <li>
+                            <a href="#">By Date</a>
+                        </li>
+                        <li>
+                            <a href="#">By Order Number</a>
+                        </li>
+                        <li>
+                            <a href="#">By Tag Number</a>
+                        </li>
+                        <li>
+                            <a href="#">By Customer's Name</a>
+                        </li>
+                    </ul>
+                </li>
 
-    <button class="navbar-toggler" type="button" data-toggle="offcanvas">
-        <img src="img/menu.svg">
-    </button>
+                <p class="main-txt">ORDER HISTORY</p>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu2" data-toggle="collapse">
+                        <span class="dash-icon">
+                            <img src="./img/history.svg" alt="">
+                        </span>
+                        History
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu2" class="submenu">
+                        <li>
+                            <a href="#">Express Orders</a>
+                        </li>
+                        <li>
+                            <a href="#">Pre-order</a>
+                        </li>
+                    </ul>
 
-    <div class="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+                </li>
 
-<section class="customer-details">
-    <div class="container">
-        <div class="row">
-            <div class="col">
+                <p class="main-txt">HELP CENTER</p>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu3" data-toggle="collapse">
+                        <span class="dash-icon">
+                            <img src="./img/help.svg" alt="">
+                        </span>
+                        Help
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu3" class="submenu">
+                        <li>
+                            <a href="#">Complaints</a>
+                        </li>
+                        <li>
+                            <a href="#">Feedback</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dash-item sidebar-footer" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/logout.svg" alt="">
+                        </span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-                <h1>Cake Details</h1>
+        <!-- Mobile view navbar  -->
+        <nav class="navbar mobile-nav d-sm-none d-flex navbar-offcanvas navbar-expand-sm">
+            <a class="navbar-brand" href="#"><img src="img/profile.jpg" alt=""> Gbolade O.</a>
 
-                <form class="sign-in" action="#">
-                    <div class="form-group">
-                        <label>Tag Number</label>
-                        <select>
-                            <option>001</option>
-                            <option>002</option>
-                            <option>003</option>
-                            <option>004</option>
-                        </select>
+            <button class="navbar-toggler " type="button" data-toggle="offcanvas">
+                <img src="img/menu.svg">
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="customer-details content-wrapper">
+        <nav class="navbar d-sm-flex d-none  desktop-nav">
+            <div class="dash-search">
+                <img class="img-fluid" src="./img/search.svg" alt="">
+                <input type="text" placeholder="Search Data">
+            </div>
+            <!-- top nav dropdown Dropdown -->
+            <div class="dash-dropdown">
+                <div class="btn-group">
+                    <button type="button" class="dash-dropdown-toggle" data-toggle="dropdown">
+                        <div class="d-flex">
+                            <img class="img-fluid avatar" src="./img/profile.jpg" alt="">
+                            <p class="my-auto pr-3">Ashley H.</p>
+                            <span class=" drop-icon">
+                                <img class="img-fluid" src="./img/dropdown-i.svg" alt="">
+                            </span>
+                        </div>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">My profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activiy</a>
+                        <div class="border-top">
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="desk-layout">
+                        <h1>Cake Details</h1>
+                        <form class="sign-in" action="#">
+                            <div class="form-group">
+                                <label>Tag Number</label>
+                                <select>
+                                    <option>001</option>
+                                    <option>002</option>
+                                    <option>003</option>
+                                    <option>004</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group password">
+                                <label>Message On Cake</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Icing color of message</label>
+                                <select>
+                                    <option>Purple</option>
+                                    <option>Red</option>
+                                    <option>White</option>
+                                    <option>Blue</option>
+                                    <option>Purple</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Reason For Cake</label>
+                                <select>
+                                    <option>Birthday</option>
+                                    <option>Anniversary</option>
+                                    <option>Wedding</option>
+                                    <option>Naming Ceremony</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Extras</label>
+                                <textarea placeholder="Please include any additional information here"
+                                    type="text"></textarea>
+                            </div>
+                        </form>
+
+                        <div class="btn-row">
+                            <button class="btn light-grey" type="button">Previous</button>
+                            <button class="btn" type="button">Next</button>
+                        </div>
                     </div>
 
-                    <div class="form-group password">
-                        <label>Message On Cake</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Icing color of message</label>
-                        <select>
-                            <option>Purple</option>
-                            <option>Red</option>
-                            <option>White</option>
-                            <option>Blue</option>
-                            <option>Purple</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Reason For Cake</label>
-                        <select>
-                            <option>Birthday</option>
-                            <option>Anniversary</option>
-                            <option>Wedding</option>
-                            <option>Naming Ceremony</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Extras</label>
-                        <textarea placeholder="Please include any additional information here" type="text"></textarea>
-                    </div>
-                </form>
-
-                <div class="btn-row">
-                    <button class="btn light-grey" type="button">Previous</button>
-                    <button class="btn" type="button">Next</button>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="fixed-bottom d-flex align-items-center justify-content-between">
-    <p class="w-100">Customer Service App. &copy; Cakes & Cream.</p>
-</footer>
+    <footer class="fixed-bottom d-sm-none d-flex align-items-center justify-content-between ">
+        <p class="w-100">Customer Service App. &copy; Cakes & Cream.</p>
+    </footer>
 
-<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -74,7 +74,8 @@ div {
 
 
 /* ACCORDION */
-.accordion {
+.accordion,
+.dash-accordion {
   padding: 10px 0;
 
   .accordion-head {
@@ -107,31 +108,6 @@ div {
       font-weight: $bold;
       margin: auto 0;
     }
-
-    .status-color {
-      font-size: 12px;
-      padding: 0 8px;
-      border-radius: 47px;
-
-      &.green {
-        color: #007F00;
-        background: #5fc06972;
-        border: 1px solid $green;
-      }
-
-      &.orange {
-        color: $orange;
-        background: #f2984a90;
-        border: 1px solid $orange;
-      }
-
-      &.red {
-        color: $red;
-        background: #ff000056;
-        border: 1px solid $red;
-      }
-    }
-
   }
 
   .acc-arr {
@@ -157,34 +133,55 @@ div {
   .pending {
     background: $red;
   }
-
   .pending-text {
     color: $red;
   }
-
-
   .processing {
     background: $blue;
   }
-
-
   .balance {
     background: $orange;
   }
-
   .balance-text {
-    //color: $yellow;
     color: $orange;
   }
-
-
   .paid {
     background: $green;
   }
-
   .paid-text {
     color: $green;
   }
+
+
+  /* -- payment status indicatorn --- */
+  .status-color {
+    font-size: 12px;
+    padding: 0 8px;
+    border-radius: 47px;
+
+    &.green {
+      color: $green;
+      background: #CDFFCD;
+      border: 1px solid $green;
+    }
+    &.orange {
+      color: $orange;
+      background: #FFECCC;
+      border: 1px solid $orange;
+    }
+
+    &.red {
+      color: $red;
+      background: #FFE0E0;
+      border: 1px solid $red;
+    }
+  }
+
+  .tab-arrow [aria-expanded="false"] {
+    transform: rotate(190deg);
+  }
+
+
 }
 
 .orderid-text {
@@ -249,59 +246,6 @@ div {
   }
 }
 
-
-/* DASHBOARD ACCORDION */
-.dash-accordion {
-  padding: 10px 0 0;
-
-  .acc-arr {
-    cursor: pointer;
-
-    img {
-      max-width: 24px;
-    }
-  }
-
-  .acc-arr.collapsed img {
-    transform: rotate(0deg);
-  }
-
-  .acc-arr img {
-    transform: rotate(180deg);
-  }
-
-
-  .status-color {
-    font-size: 12px;
-    padding: 0 8px;
-    border-radius: 47px;
-
-    &.green {
-      color: #007F00;
-      background: #5fc06972;
-      border: 1px solid $green;
-    }
-
-    &.orange {
-      color: $orange;
-      background: #f2984a90;
-      border: 1px solid $orange;
-    }
-
-    &.red {
-      color: $red;
-      background: #ff000056;
-      border: 1px solid $red;
-    }
-  }
-
-  .full-width-td {
-    padding: 20px 0;
-    text-align: center;
-    color: #ccc;
-  }
-}
-
 // Order details
 .order-details {
   width: 100%;
@@ -343,7 +287,6 @@ div {
   }
 }
 
-
 // forms background  shows on Desktop view  and removed on mobile view
 .desk-layout {
 
@@ -383,19 +326,17 @@ div {
   }
 
   .dropdown-menu {
-      // top: 65px !important;
-      width: 100%;
-      border: none;
-      box-shadow: 1px 1px 3px #999;
+    // top: 65px !important;
+    width: 100%;
+    border: none;
+    box-shadow: 1px 1px 3px #999;
 
-      .dropdown-item {
-        text-decoration: none;
-        padding: 6px 12px;
+    .dropdown-item {
+      text-decoration: none;
+      padding: 6px 12px;
 
-        &:hover {
-
-        }
-      }
+      &:hover {}
+    }
   }
 }
 
@@ -406,7 +347,38 @@ div {
   @media (max-width: $desktop_width) {
     margin-left: 250px;
   }
-  @media (max-width: $mobile_width) {
-    margin: 0;
+
+}
+
+/*  Table pagination  */
+.table-pagination {
+  display: flex;
+  align-items: center !important;
+  justify-content: flex-end;
+  padding: 10px 0;
+
+  .form-group {
+    padding: 0 10px;
+    margin: 0 45px 0 0px;
+
+    select {
+      border-bottom: none;
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+
+  .pagi-label {
+    font-weight: 600;
+    margin: auto 0;
+  }
+
+  .pagi-nav {
+    margin-left: 30px;
+
+    img {
+      cursor: pointer;
+      padding: 0 15px;
+    }
   }
 }

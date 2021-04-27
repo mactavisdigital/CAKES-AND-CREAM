@@ -929,8 +929,8 @@ section.data-sorting .edit a {
 }
 section.data-sorting .sort-head {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  /* Sorting dropdown */
 }
 section.data-sorting .sort-head .date {
   display: flex;
@@ -946,12 +946,41 @@ section.data-sorting .sort-head .date span {
 section.data-sorting .sort-head .sorting-form {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 section.data-sorting .sort-head .my-today {
   color: #2586EF;
   background: rgba(37, 134, 239, 0.29);
   padding: 8px 18px;
   border-radius: 4px;
+}
+section.data-sorting .sort-head .sort-dropdown button {
+  border: none;
+  background-color: transparent !important;
+}
+section.data-sorting .sort-head .sort-dropdown .dropdown-menu {
+  width: 180px;
+  padding: 15px;
+  top: -8px !important;
+  left: -54px;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 16px 16px 32px rgba(102, 102, 102, 0.15);
+}
+section.data-sorting .sort-head .sort-dropdown .dropdown-menu .dropdown-item {
+  color: #5e6b71;
+  text-decoration: none;
+  padding: 8px 0;
+}
+section.data-sorting .sort-head .sort-dropdown .dropdown-menu .dropdown-item:focus {
+  color: #000;
+  background-color: transparent !important;
+}
+section.data-sorting .sort-head .sort-dropdown .dropdown-menu .drop-checked::after {
+  position: absolute;
+  content: url(../img/drop-check.svg);
+  right: 5px;
 }
 section.data-sorting .week-order {
   display: flex;
@@ -1353,22 +1382,28 @@ div.fm .container .checkmark:after {
 }
 
 /* ACCORDION */
-.accordion {
+.accordion,
+.dash-accordion {
   padding: 10px 0;
+  /* -- payment status indicatorn --- */
 }
-.accordion .accordion-head {
+.accordion .accordion-head,
+.dash-accordion .accordion-head {
   margin-bottom: 0;
   display: flex;
   align-items: center;
 }
-.accordion .accordion-text {
+.accordion .accordion-text,
+.dash-accordion .accordion-text {
   color: #000;
   padding: 10px 15px 20px;
 }
-.accordion .accord-btn.collapsed img {
+.accordion .accord-btn.collapsed img,
+.dash-accordion .accord-btn.collapsed img {
   transform: rotate(0deg);
 }
-.accordion .accord-btn {
+.accordion .accord-btn,
+.dash-accordion .accord-btn {
   width: 100%;
   display: flex;
   background-color: transparent !important;
@@ -1376,33 +1411,15 @@ div.fm .container .checkmark:after {
   align-items: center;
   text-align: left;
 }
-.accordion .accord-btn .accordion-p {
+.accordion .accord-btn .accordion-p,
+.dash-accordion .accord-btn .accordion-p {
   font-size: 16px;
   color: #000;
   font-weight: bold;
   margin: auto 0;
 }
-.accordion .accord-btn .status-color {
-  font-size: 12px;
-  padding: 0 8px;
-  border-radius: 47px;
-}
-.accordion .accord-btn .status-color.green {
-  color: #007F00;
-  background: #5fc06972;
-  border: 1px solid #5FC068;
-}
-.accordion .accord-btn .status-color.orange {
-  color: #F2994A;
-  background: #f2984a90;
-  border: 1px solid #F2994A;
-}
-.accordion .accord-btn .status-color.red {
-  color: #EB5757;
-  background: #ff000056;
-  border: 1px solid #EB5757;
-}
-.accordion .acc-arr {
+.accordion .acc-arr,
+.dash-accordion .acc-arr {
   position: relative;
   margin-right: 35px;
   border-radius: 50px;
@@ -1410,34 +1427,71 @@ div.fm .container .checkmark:after {
   height: 35px;
   background: #2586EF;
 }
-.accordion .acc-arr img {
+.accordion .acc-arr img,
+.dash-accordion .acc-arr img {
   position: absolute;
   top: 41%;
   left: 32%;
 }
-.accordion .accord-btn img {
+.accordion .accord-btn img,
+.dash-accordion .accord-btn img {
   transform: rotate(180deg);
 }
-.accordion .pending {
+.accordion .pending,
+.dash-accordion .pending {
   background: #EB5757;
 }
-.accordion .pending-text {
+.accordion .pending-text,
+.dash-accordion .pending-text {
   color: #EB5757;
 }
-.accordion .processing {
+.accordion .processing,
+.dash-accordion .processing {
   background: #2586EF;
 }
-.accordion .balance {
+.accordion .balance,
+.dash-accordion .balance {
   background: #F2994A;
 }
-.accordion .balance-text {
+.accordion .balance-text,
+.dash-accordion .balance-text {
   color: #F2994A;
 }
-.accordion .paid {
+.accordion .paid,
+.dash-accordion .paid {
   background: #5FC068;
 }
-.accordion .paid-text {
+.accordion .paid-text,
+.dash-accordion .paid-text {
   color: #5FC068;
+}
+.accordion .status-color,
+.dash-accordion .status-color {
+  font-size: 12px;
+  padding: 0 8px;
+  border-radius: 47px;
+}
+.accordion .status-color.green,
+.dash-accordion .status-color.green {
+  color: #5FC068;
+  background: #CDFFCD;
+  border: 1px solid #5FC068;
+}
+.accordion .status-color.orange,
+.dash-accordion .status-color.orange {
+  color: #F2994A;
+  background: #FFECCC;
+  border: 1px solid #F2994A;
+}
+.accordion .status-color.red,
+.dash-accordion .status-color.red {
+  color: #EB5757;
+  background: #FFE0E0;
+  border: 1px solid #EB5757;
+}
+.accordion .tab-arrow [aria-expanded=false],
+.dash-accordion .tab-arrow [aria-expanded=false] {
+  transform: rotate(190deg);
 }
 
 .orderid-text {
@@ -1489,48 +1543,6 @@ div.fm .container .checkmark:after {
 }
 .order-timeline .order-time p:last-child {
   color: #BCC1CD;
-}
-
-/* DASHBOARD ACCORDION */
-.dash-accordion {
-  padding: 10px 0 0;
-}
-.dash-accordion .acc-arr {
-  cursor: pointer;
-}
-.dash-accordion .acc-arr img {
-  max-width: 24px;
-}
-.dash-accordion .acc-arr.collapsed img {
-  transform: rotate(0deg);
-}
-.dash-accordion .acc-arr img {
-  transform: rotate(180deg);
-}
-.dash-accordion .status-color {
-  font-size: 12px;
-  padding: 0 8px;
-  border-radius: 47px;
-}
-.dash-accordion .status-color.green {
-  color: #007F00;
-  background: #5fc06972;
-  border: 1px solid #5FC068;
-}
-.dash-accordion .status-color.orange {
-  color: #F2994A;
-  background: #f2984a90;
-  border: 1px solid #F2994A;
-}
-.dash-accordion .status-color.red {
-  color: #EB5757;
-  background: #ff000056;
-  border: 1px solid #EB5757;
-}
-.dash-accordion .full-width-td {
-  padding: 20px 0;
-  text-align: center;
-  color: #ccc;
 }
 
 .order-details {
@@ -1617,10 +1629,33 @@ div.fm .container .checkmark:after {
     margin-left: 250px;
   }
 }
-@media (max-width: 576px) {
-  .content-wrapper {
-    margin: 0;
-  }
+
+/*  Table pagination  */
+.table-pagination {
+  display: flex;
+  align-items: center !important;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
+.table-pagination .form-group {
+  padding: 0 10px;
+  margin: 0 45px 0 0px;
+}
+.table-pagination .form-group select {
+  border-bottom: none;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.table-pagination .pagi-label {
+  font-weight: 600;
+  margin: auto 0;
+}
+.table-pagination .pagi-nav {
+  margin-left: 30px;
+}
+.table-pagination .pagi-nav img {
+  cursor: pointer;
+  padding: 0 15px;
 }
 
 /*# sourceMappingURL=main.css.map */
