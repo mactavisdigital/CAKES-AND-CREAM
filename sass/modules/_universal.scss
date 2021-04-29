@@ -347,6 +347,9 @@ div {
   @media (max-width: $desktop_width) {
     margin-left: 250px;
   }
+  @media (max-width: $mobile_width) {
+    margin-left: 0;
+  }
 
 }
 

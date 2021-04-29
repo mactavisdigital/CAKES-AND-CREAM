@@ -1629,6 +1629,11 @@ div.fm .container .checkmark:after {
     margin-left: 250px;
   }
 }
+@media (max-width: 576px) {
+  .content-wrapper {
+    margin-left: 0;
+  }
+}
 
 /*  Table pagination  */
 .table-pagination {
