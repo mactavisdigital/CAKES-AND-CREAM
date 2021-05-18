@@ -257,6 +257,11 @@ body {
   background-size: 100%;
   padding-bottom: 75px;
 }
+@media (max-width: 767px) {
+  body {
+    background-repeat: no-repeat;
+  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Qumpellka", cursive;
@@ -367,7 +372,7 @@ nav.navbar .offcanvas-collapse.open {
 }
 nav.desktop-nav {
   background: #fff;
-  padding: 15px 20px;
+  padding: 15px 20px 15px 0;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0 2.6px;
 }
 
@@ -401,7 +406,7 @@ nav.desktop-nav {
 }
 .sidebar .brand-logo {
   width: 50%;
-  margin: 0 auto;
+  margin: 35px auto;
 }
 .sidebar .main-txt {
   color: #90A4AE;
@@ -449,6 +454,9 @@ nav.desktop-nav {
   left: 0;
   background: #2586EF;
   border-radius: 0 8px 8px 0;
+}
+.sidebar .sidebar-footer {
+  margin-top: 62px;
 }
 .sidebar .submenu {
   list-style: none;

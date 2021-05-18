@@ -8,6 +8,11 @@ body{
   background: url(/img/bgimg2.png) repeat center fixed;
   background-size: 100%;
   padding-bottom: 75px;
+  
+  @media (max-width: $tablet_width) {
+    background-repeat:  no-repeat;
+  }
+
 }
 h1,h2,h3,h4,h5,h6{
   font-family: $ffh;
@@ -71,7 +76,6 @@ a{
     color: #999999 !important;
   }
 }
-
 
 .lack {
   text-decoration: none;
