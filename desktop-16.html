@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Cakes & Cream</title>
+</head>
+
+<body>
+    <header>
+        <!-- Desktop view side-navigation -->
+        <nav class="navbar sidebar  d-sm-flex d-none">
+            <!-- sidebar Logo -->
+            <div class="brand-logo">
+                <a href="#">
+                    <img class="img-fluid" src="./img/logo.png" alt="">
+                </a>
+            </div>
+            <!-- Sidebar menu -->
+            <ul>
+                <p class="main-txt">GENERAL</p>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/overview.svg" alt="">
+                        </span>
+                        Dashboard
+                    </a>
+                </li>
+
+                <p class="main-txt">ORDER STATUS</p>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/file.svg" alt="">
+                        </span>
+                        All Orders
+                    </a>
+                </li>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/clock2.svg" alt="">
+                        </span>
+                        Pending
+                    </a>
+                </li>
+                <li>
+                    <a class="dash-item" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/recycle.svg" alt="">
+                        </span>
+                        Outstanding
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu1" data-toggle="collapse" aria-expanded="false">
+                        <span class="dash-icon">
+                            <img src="./img/checkmarks.svg" alt="">
+                        </span>
+                        Completed
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu1" class="submenu collapse">
+                        <li>
+                            <a href="#">By Date</a>
+                        </li>
+                        <li>
+                            <a href="#">By Order Number</a>
+                        </li>
+                        <li>
+                            <a href="#">By Tag Number</a>
+                        </li>
+                        <li>
+                            <a href="#">By Customer's Name</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <p class="main-txt">ORDER HISTORY</p>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu2" data-toggle="collapse">
+                        <span class="dash-icon">
+                            <img src="./img/history.svg" alt="">
+                        </span>
+                        History
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu2" class="submenu">
+                        <li>
+                            <a href="#">Express Orders</a>
+                        </li>
+                        <li>
+                            <a href="#">Pre-order</a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <p class="main-txt">HELP CENTER</p>
+                <li>
+                    <a href="" class="dash-item" data-target="#submenu3" data-toggle="collapse">
+                        <span class="dash-icon">
+                            <img src="./img/help.svg" alt="">
+                        </span>
+                        Help
+                        <span class="dash-arrow">
+                            <img src="./img/dropdown-i.svg" alt="">
+                        </span>
+                    </a>
+                    <ul id="submenu3" class="submenu">
+                        <li>
+                            <a href="#">Complaints</a>
+                        </li>
+                        <li>
+                            <a href="#">Feedback</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dash-item sidebar-footer" href="#">
+                        <span class="dash-icon">
+                            <img src="./img/logout.svg" alt="">
+                        </span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Mobile view navbar  -->
+        <nav class="navbar mobile-nav d-sm-none d-flex navbar-offcanvas navbar-expand-sm">
+            <a class="navbar-brand" href="#"><img src="img/profile.jpg" alt=""> Gbolade O.</a>
+
+            <button class="navbar-toggler " type="button" data-toggle="offcanvas">
+                <img src="img/menu.svg">
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="customer-details content-wrapper">
+        <nav class="navbar d-sm-flex d-none  desktop-nav">
+            <div class="dash-search">
+                <img class="img-fluid" src="./img/search.svg" alt="">
+                <input type="text" placeholder="Search Data">
+            </div>
+
+            <!-- top nav dropdown Dropdown -->
+            <div class="dash-dropdown">
+                <div class="btn-group">
+                    <button type="button" class="dash-dropdown-toggle" data-toggle="dropdown">
+                        <div class="d-flex">
+                            <img class="img-fluid avatar" src="./img/profile.jpg" alt="">
+                            <p class="my-auto pr-3">Ashley H.</p>
+                            <span class=" drop-icon">
+                                <img class="img-fluid" src="./img/dropdown-i.svg" alt="">
+                            </span>
+                        </div>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">My profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activiy</a>
+                        <div class="border-top">
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class=" col-md-12 ">
+                    <div class="desk-layout">
+                        <div class="form-wrapper">
+                            <h1>Customer Details</h1>
+                            
+                            <form class="sign-in" action="#">
+                                <div class="form-group">
+                                    <label>Type</label>
+                                    <select>
+                                        <option>Carrot</option>
+                                        <option>Cinnamon</option>
+                                        <option>Coconut</option>
+                                        <option>Sponge</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+            
+                                <div class="form-group">
+                                    <label>Shape</label>
+                                    <select>
+                                        <option>Round</option>
+                                        <option>Square</option>
+                                        <option>Rectangle</option>
+                                        <option>Custom</option>
+                                    </select>
+                                </div>
+
+                                <form action="#">
+                                    <div class="mb-5">
+                                        <label>Size</label>
+                                        <label class="radio-wrapper">6 inch
+                                            <input type="radio" checked="checked" name="order-type">
+                                            <span class="checkmark"></span>
+                                        </label>
+        
+                                        <label class="radio-wrapper">8 inch
+                                            <input type="radio" name="order-type">
+                                            <span class="checkmark"></span>
+                                        </label>
+        
+                                        <label class="radio-wrapper">10 inch
+                                            <input type="radio" name="order-type">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="radio-wrapper">12 inch
+                                            <input type="radio" name="order-type">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    </form>
+            
+                                <div class="form-group">
+                                    <label>Design</label>
+                                    <select>
+                                        <option>Animal Print</option>
+                                        <option>Basket Weave</option>
+                                        <option>Damask</option>
+                                        <option>Drip Cake</option>
+                                        <option>Ombre</option>
+                                        <option>Ruffles</option>
+                                    </select>
+                                </div>
+            
+                                <div class="form-group">
+                                    <label>Icing Type</label>
+                                    <select>
+                                        <option>None</option>
+                                        <option>Butter</option>
+                                        <option>Fondant</option>
+                                        <option>Hybrid</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Fondant Design</label>
+                                    <select>
+                                        <option>Figure (animal, sports,</option>
+                                        <option>Letters</option>
+                                        <option>Numbers</option>
+                                        <option>Roses</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div> 
+                                
+                                <div class="form-group">
+                                    
+                                    <textarea type="text"></textarea>
+                                    <label>Please Specify</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Icing Flavour</label>
+                                    <select>
+                                        <option>None</option>
+                                        <option>Chocolate</option>
+                                        <option>Cream Cheese</option>
+                                        <option>Cinnamon Cream Cheese</option>
+                                        <option>Vanilla</option>
+                                    </select>
+                                </div>
+            
+                               
+                            </form>
+            
+                            <div class="btn-row">
+                                <button class="btn" type="button">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="fixed-bottom d-sm-none d-flex align-items-center justify-content-between ">
+        <p class="w-100">Customer Service App. &copy; Cakes & Cream.</p>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

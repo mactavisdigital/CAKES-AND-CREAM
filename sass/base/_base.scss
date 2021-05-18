@@ -4,6 +4,10 @@ html, body {
 }
 
 body{
+  &.graybg {
+    background: url(/img/graybg.png) repeat center fixed;
+  }
+
   font-family: $ffb;
   background: url(/img/bgimg2.png) repeat center fixed;
   background-size: 100%;

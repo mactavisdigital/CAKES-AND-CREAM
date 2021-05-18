@@ -267,3 +267,21 @@ select {
     color: #6E6893;
   }
 }
+
+.form-group {
+  .upload {
+    border: 1px dashed #000000;
+    border-radius: 10px;
+
+    .btn-row {
+      display:block;
+    }
+  }
+
+  .c-red {
+  
+      color:#EA352B;
+      margin: auto 0;
+  
+  }
+}

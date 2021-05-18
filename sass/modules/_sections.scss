@@ -1,4 +1,146 @@
 section {
+
+  
+  &.home-sec {
+
+    .logo {
+      width: 198px;
+    }
+
+    .des {
+      a {
+        text-decoration: none;
+      }
+    }
+    
+    .des:active {
+      img {
+       filter: invert(49%) sepia(86%) saturate(4052%) hue-rotate(195deg) brightness(98%) contrast(91%);
+      }
+
+      p {
+       filter: invert(49%) sepia(86%) saturate(4052%) hue-rotate(195deg) brightness(98%) contrast(91%);
+      }
+
+      .filt{
+       border-radius: 50%;
+       border: 3px solid #2586EF;
+       width: 144px;
+       height: 144px;
+       top: 0;
+       left: 50%;
+       transform: translate(-50%, 0%);
+       position: relative;
+
+       
+      }
+   }
+
+  .des:active::after {
+    position: absolute;
+    content: url(/img/chosen.svg);
+    background: #2586EF;
+    top: 0%;
+    right: 26%;
+    padding: 10px;
+    border-radius: 50%;
+
+  }
+
+  
+  .filt{
+     // border-radius: 50%;
+       // border: 3px solid #2586EF;
+       width: 144px;
+       height: 144px;
+       top: 0;
+       left: 50%;
+       transform: translate(-50%, 0%);
+       position: relative;
+
+
+     img {
+   top: 25%;
+   left: 25%;
+   position: absolute;
+     }
+  }
+
+  .form-wrapper {
+    background: white;
+    padding: 15px;
+
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      height: 47px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid $grey;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 45px;
+        width: 45px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-size: 24px !important;
+        right: 0;
+      }
+
+      &.email {
+        &::after {
+          background: $grey url("../img/user.svg") no-repeat center;
+        }
+
+        &.active {
+          &::after {
+            background: $blue url("../img/user.svg") no-repeat center;
+          }
+        }
+      }
+
+      &.password {
+        &::after {
+          background: $grey url("../img/padlock.svg") no-repeat center;
+        }
+
+        &.active {
+          &::after {
+            background: $blue url("../img/padlock.svg") no-repeat center;
+          }
+        }
+      }
+
+      &.active {
+        border: 1px solid $blue;
+      }
+
+      label {
+        margin: 3px 0 0 10px;
+      }
+
+      input {
+        border: none;
+        border-radius: 8px;
+        padding-left: 10px;
+      }
+    }
+
+    button {
+      margin: 20px 0;
+    }
+  }
+
+}
+
   &.login-form {
     background-image: url(../img/bgimg.png);
     height: 100vh;
