@@ -923,6 +923,14 @@ section {
           th {
             border: 2px solid white;
             vertical-align:initial;
+
+            .today-date {
+        
+              p {
+                color: #5D6F7A;
+              }
+            }
+            ;
           }
         }
       }

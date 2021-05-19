@@ -1475,6 +1475,9 @@ section.ad-table .a-table thead tr th {
   border: 2px solid white;
   vertical-align: initial;
 }
+section.ad-table .a-table thead tr th .today-date p {
+  color: #5D6F7A;
+}
 section.ad-table .a-table tbody tr th {
   border: 0px solid white;
 }
