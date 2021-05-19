@@ -328,6 +328,10 @@ a {
   text-decoration: none;
 }
 
+.green {
+  color: #219653 !important;
+}
+
 nav {
   /* Desktop view navigation */
 }
@@ -731,6 +735,7 @@ select {
 }
 
 .form-group .upload {
+  padding: 20px;
   border: 1px dashed #000000;
   border-radius: 10px;
 }
@@ -1437,6 +1442,54 @@ section.dashboard-main .filter-table .dash-filter .filter {
   border-radius: 5px;
   height: 50px;
   width: 100px;
+}
+section.ad-table .ahead {
+  font-size: 24px;
+  margin-bottom: 73px;
+}
+section.ad-table .mar {
+  margin-bottom: 60px;
+}
+section.ad-table .a-btn1 {
+  height: 50px;
+  width: 100%;
+}
+section.ad-table .a-btn2 {
+  height: 50px;
+  width: 100%;
+  color: #2586EF;
+  background: white;
+}
+section.ad-table select {
+  background: none;
+  border: 1px solid #BDBDBD;
+  border-radius: 4px;
+  padding: 5px;
+  height: 50px;
+}
+section.ad-table .a-table .fc {
+  text-align: center;
+  padding-left: 0rem;
+}
+section.ad-table .a-table thead tr th {
+  border: 2px solid white;
+  vertical-align: initial;
+}
+section.ad-table .a-table tbody tr th {
+  border: 0px solid white;
+}
+section.ad-table .today-date {
+  display: flex !important;
+  align-items: center;
+}
+section.ad-table .today-date .day {
+  float: right;
+  line-height: 0px;
+  margin-left: auto;
+}
+section.ad-table .today-date .day a {
+  display: block;
+  margin-bottom: 1rem;
 }
 
 .color-blue {
