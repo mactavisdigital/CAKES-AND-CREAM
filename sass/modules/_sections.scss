@@ -911,6 +911,8 @@ section {
       height: 50px;
     }
 
+
+
     .a-table {
       .fc {
         text-align:center;
@@ -931,6 +933,36 @@ section {
             border: 0px solid white
           }
         }
+      }
+
+      tfoot {
+        background-color: #FBFBFB;
+        ;
+        th {
+          border-top: 0px solid #dee2e6;
+        }
+        input[type=text], input[type=email], input[type=date], input[type=time], input[type=password], textarea, select, option {
+          width: 20%
+      }
+        select {
+          height: 26px;
+          background: url(../img/dropd-2.svg) no-repeat 100%;
+          border: 0px solid #BDBDBD;
+        }
+
+        .page-link {
+          color: #666666;
+          background-color: #FBFBFB;
+          border: 0px solid #dee2e6;
+      }
+
+        
+
+        .mighty {
+          display: inline;
+          width:15%
+        }
+      
       }
     }
 

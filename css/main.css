@@ -1478,6 +1478,29 @@ section.ad-table .a-table thead tr th {
 section.ad-table .a-table tbody tr th {
   border: 0px solid white;
 }
+section.ad-table .a-table tfoot {
+  background-color: #FBFBFB;
+}
+section.ad-table .a-table tfoot th {
+  border-top: 0px solid #dee2e6;
+}
+section.ad-table .a-table tfoot input[type=text], section.ad-table .a-table tfoot input[type=email], section.ad-table .a-table tfoot input[type=date], section.ad-table .a-table tfoot input[type=time], section.ad-table .a-table tfoot input[type=password], section.ad-table .a-table tfoot textarea, section.ad-table .a-table tfoot select, section.ad-table .a-table tfoot option {
+  width: 20%;
+}
+section.ad-table .a-table tfoot select {
+  height: 26px;
+  background: url(../img/dropd-2.svg) no-repeat 100%;
+  border: 0px solid #BDBDBD;
+}
+section.ad-table .a-table tfoot .page-link {
+  color: #666666;
+  background-color: #FBFBFB;
+  border: 0px solid #dee2e6;
+}
+section.ad-table .a-table tfoot .mighty {
+  display: inline;
+  width: 15%;
+}
 section.ad-table .today-date {
   display: flex !important;
   align-items: center;
