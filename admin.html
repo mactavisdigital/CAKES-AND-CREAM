@@ -160,7 +160,7 @@
         </nav>
     </header>
 
-    <section class="customer-details content-wrapper">
+    <section class="ad-table content-wrapper">
         <nav class="navbar d-sm-flex d-none  desktop-nav">
             <div class="dash-search">
                 <img class="img-fluid" src="./img/search.svg" alt="">
@@ -192,69 +192,159 @@
         </nav>
         <div class="container-fluid">
             <div class="row">
-                <div class=" col-md-12 ">
+                <div class="col-md-12">
                     <div class="desk-layout">
                         <div class="form-wrapper">
-                            <h1>Customer Details</h1>
-                            
-                            <form class="sign-in" action="#">
-                              
-                                <div class="form-group password">
-                                    <label>Picture Code {optional}</label>
-                                    <input type="text">
-                                </div>
+                            <p class="ahead">Admins</p>
 
-                                <div class="form-group">
-                                    <label>Printed Out Picture</label>
-
-                                   <a class="d-block pb-2" href="#">Upload Image</a>
-
-                                   <div class="text-center upload">
-                                       <p>Drop files here to start uploading</p>
-                                       <p>or</p>
-                                       <div class="btn-row">
-                                        <button class="btn" type="button">Select</button>
+                            <div class="row mar">
+                                <div class="col-4">
+                                    <div>
+                                        <span>
+                                            <label>By User Type</label>
+                                            <select>
+                                                <option>All</option>
+                                                <option>Anniversary</option>
+                                                <option>Wedding</option>
+                                                <option>Naming Ceremony</option>
+                                            </select>
+                                        </span>
                                     </div>
-                                   </div>
                                 </div>
-
+                                <div class="col-4">
+                                    <div>
+                                        <span>
+                                            <label>By Status</label>
+                                            <select>
+                                                <option>All</option>
+                                                <option>Anniversary</option>
+                                                <option>Wedding</option>
+                                                <option>Naming Ceremony</option>
+                                            </select>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-4 d-flex align-items-end">
                                 
-                                <div class="form-group">
-                                    <label>Reason For Cake</label>
-                                    <select>
-                                        <option>Birthday</option>
-                                        <option>Anniversary</option>
-                                        <option>Wedding</option>
-                                        <option>Naming Ceremony</option>
-                                    </select>
-                                </div>
+                                        <button class="btn a-btn1 mr-3" type="button">Apply Filter</button>
+                                        <button class="btn a-btn2" type="button">Reset Filter</button>
+                                
 
-                                <div class="form-group password">
-                                    <label>Message On Cake</label>
-                                    <input type="text">
                                 </div>
-            
-                                <div class="form-group">
-                                    <label>Icing color of message</label>
-                                    <select>
-                                        <option>Purple</option>
-                                        <option>Red</option>
-                                        <option>White</option>
-                                        <option>Blue</option>
-                                        <option>Purple</option>
-                                    </select>
-                                </div>
-            
-            
-                                <div class="form-group">
-                                    <label>Extras</label>
-                                    <textarea placeholder="Please include any additional information here" type="text"></textarea>
-                                </div>
-                            </form>
-            
-                            <div class="btn-row">
-                                <button class="btn" type="button">Next</button>
                             </div>
+                            
+                            <table class="table a-table">
+                                <thead>
+                                    <tr style="background-color:#EDF0F2;">
+                                    
+                                        <th><div class="form-check fc">
+                                            <input type="checkbox" id="exampleCheck1">
+                                          </div></th>
+                                          <th><div class="today-date">
+                                            <p>Name</p>
+                                            <span class="day">
+                                                <a><img src="img/sort-up.svg" alt=""></a>
+                                                <a><img src="img/sort-down.svg" alt=""></a>
+                                            </span>
+                                        </div></th>
+                                        <th><div class="today-date">
+                                            <p>Email</p>
+                                            <span class="day">
+                                                <a><img src="img/sort-up.svg" alt=""></a>
+                                                <a><img src="img/sort-down.svg" alt=""></a>
+                                            </span>
+                                        </div></th>
+                                        <th><div class="today-date">
+                                            <p>User Type</p>
+                                            <span class="day">
+                                                <a><img src="img/sort-up.svg" alt=""></a>
+                                                <a><img src="img/sort-down.svg" alt=""></a>
+                                            </span>
+                                        </div></th>
+                                        <th><div class="today-date">
+                                            <p>Department</p>
+                                            <span class="day">
+                                                <a><img src="img/sort-up.svg" alt=""></a>
+                                                <a><img src="img/sort-down.svg" alt=""></a>
+                                            </span>
+                                        </div></th>
+                                        <th><div class="today-date">
+                                            <p>Status</p>
+                                            <span class="day">
+                                                <a><img src="img/sort-up.svg" alt=""></a>
+                                                <a><img src="img/sort-down.svg" alt=""></a>
+                                            </span>
+                                        </div></th>
+                                        <th>
+                                            
+                                            <p class="text-center">Action</p>
+                                            </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th><div class="form-check fc">
+                                            <input type="checkbox" id="exampleCheck1">
+                                          </div></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Super Admin</p></th>
+                                        <th><p>Customer Care</p></th>
+                                        <th><p class="green">Available</p></th>
+                                        <th class="text-center">
+                                            <a class="mr-4" href=""><img src="img/a-edit.svg" alt=""></a>
+                                            <a href=""><img src="img/a-trash.svg" alt=""></a>
+                                        </th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th><div class="form-check fc">
+                                            <input type="checkbox" id="exampleCheck1">
+                                          </div></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Cashier</p></th>
+                                        <th><p class="green">Available</p></th>
+                                        <th class="text-center">
+                                            <a class="mr-4" href=""><img src="img/a-edit.svg" alt=""></a>
+                                            <a href=""><img src="img/a-trash.svg" alt=""></a>
+                                        </th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th><div class="form-check fc">
+                                            <input type="checkbox" id="exampleCheck1">
+                                          </div></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Logistics</p></th>
+                                        <th><p class="green">Available</p></th>
+                                        <th class="text-center">
+                                            <a class="mr-4" href=""><img src="img/a-edit.svg" alt=""></a>
+                                            <a href=""><img src="img/a-trash.svg" alt=""></a>
+                                        </th>
+                                    </tr>
+
+                                     <tr>
+                                        <th><div class="form-check fc">
+                                            <input type="checkbox" id="exampleCheck1">
+                                          </div></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Row Content</p></th>
+                                        <th><p>Production</p></th>
+                                        <th><p class="green">Available</p></th>
+                                        <th class="text-center">
+                                            <a class="mr-4" href=""><img src="img/a-edit.svg" alt=""></a>
+                                            <a href=""><img src="img/a-trash.svg" alt=""></a>
+                                        </th>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+
                         </div>
                     </div>
                 </div>
