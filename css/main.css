@@ -254,7 +254,7 @@ html, body {
 body {
   font-family: "SFProText", sans-serif;
   background: url(/img/bgimg2.png) repeat center fixed;
-  background-size: 100%;
+  background-size: cover;
   padding-bottom: 75px;
 }
 body.graybg {
@@ -814,6 +814,45 @@ select {
   padding: 10px 5px;
 }
 
+section.customer-dets .tag-srh-img .tagged-img {
+  border-radius: 10px;
+}
+section.customer-dets .tag-srh-img .tagged-img img {
+  border-radius: 5px 5px 0px 0px;
+  width: 100%;
+}
+section.customer-dets .tag-srh-img .tagged-img .tag-txt {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #C4C4C4;
+  border-radius: 0px 0 5px 5px;
+}
+section.customer-dets .tag-srh-img .tagged-img .tag-txt p {
+  color: #333;
+  margin: auto;
+}
+section.customer-dets .tag-srh-img .tag-descrip {
+  margin-top: 20px;
+  text-align: center;
+}
+section.customer-dets .tag-srh-img .tag-descrip p {
+  color: #333;
+  font-size: 18px;
+}
+@media (max-width: 576px) {
+  section.customer-dets .tag-srh-img .tag-descrip p {
+    font-size: 14px;
+  }
+}
+section.customer-dets .tag-srh-img .tag-descrip p:nth-child(2) {
+  font-size: 24px;
+  font-weight: #semibold;
+}
+@media (max-width: 576px) {
+  section.customer-dets .tag-srh-img .tag-descrip p:nth-child(2) {
+    font-size: 18px;
+  }
+}
 section.home-sec .logo {
   width: 198px;
 }
@@ -1701,7 +1740,7 @@ div.fm .container .checkmark:after {
 
 .desk-layout {
   background: #fff;
-  padding: 15px 20px;
+  padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 0 4px #ccc;
 }
